@@ -18,6 +18,7 @@
 		236359411DBF08300087B2CE /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236359401DBF08300087B2CE /* Signin.storyboard */; };
 		236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359421DBF08C10087B2CE /* SigninViewController.swift */; };
 		23AC225D1DBF409300199203 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC225C1DBF409300199203 /* SignupViewController.swift */; };
+		23AC22611DBF593200199203 /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC22601DBF593200199203 /* CustomUITextField.swift */; };
 		3FCB5DEA2D486649A168FD67 /* Pods_omotenashiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */; };
 		A0F6BFAF3005DC32F46EC10B /* Pods_omotenashiAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */; };
 		B493FA4F6A02BC1983656600 /* Pods_omotenashiAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */; };
@@ -63,6 +64,7 @@
 		236359401DBF08300087B2CE /* Signin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
 		236359421DBF08C10087B2CE /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		23AC225C1DBF409300199203 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		23AC22601DBF593200199203 /* CustomUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
 		343705C4D2B9E8261E0D2394 /* Pods-omotenashiAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4129F556552004C32E5F95A8 /* Pods-omotenashiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiApp/Pods-omotenashiApp.release.xcconfig"; sourceTree = "<group>"; };
 		4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 		236359061DBF01740087B2CE /* omotenashiApp */ = {
 			isa = PBXGroup;
 			children = (
+				23AC225F1DBF58FD00199203 /* customView */,
 				CAD39EDA1DBF4E8B00497D77 /* image */,
 				236359071DBF01740087B2CE /* AppDelegate.swift */,
 				236359091DBF01740087B2CE /* ViewController.swift */,
@@ -177,6 +180,14 @@
 				2363592C1DBF01740087B2CE /* Info.plist */,
 			);
 			path = omotenashiAppUITests;
+			sourceTree = "<group>";
+		};
+		23AC225F1DBF58FD00199203 /* customView */ = {
+			isa = PBXGroup;
+			children = (
+				23AC22601DBF593200199203 /* CustomUITextField.swift */,
+			);
+			name = customView;
 			sourceTree = "<group>";
 		};
 		F6E1CD53AF8ED7BCC3C04C20 /* Frameworks */ = {
@@ -474,6 +485,7 @@
 				236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */,
 				2363590A1DBF01740087B2CE /* ViewController.swift in Sources */,
 				236359101DBF01740087B2CE /* omotenashiApp.xcdatamodeld in Sources */,
+				23AC22611DBF593200199203 /* CustomUITextField.swift in Sources */,
 				236359081DBF01740087B2CE /* AppDelegate.swift in Sources */,
 				CAD39ED61DBF48DE00497D77 /* SearchResultViewController.swift in Sources */,
 				CAD39ED21DBF31D500497D77 /* MainViewController.swift in Sources */,
