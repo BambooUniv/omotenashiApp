@@ -14,19 +14,20 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DS3-hH-zKh">
-                                <rect key="frame" x="233" y="285" width="135" height="30"/>
+                                <rect key="frame" x="120" y="278" width="135" height="30"/>
                                 <state key="normal" title="助け人探索中画面へ"/>
                                 <connections>
-                                    <segue destination="cr0-g7-bYU" kind="presentation" id="SBr-6t-3h3"/>
+                                    <segue destination="cr0-g7-bYU" kind="presentation" identifier="" id="SBr-6t-3h3"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,17 +41,17 @@
                         <viewControllerLayoutGuide type="bottom" id="oze-cd-JZj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5hD-nX-tnM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="助け人画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-r6-JiH">
-                                <rect key="frame" x="258" y="102" width="85" height="21"/>
+                                <rect key="frame" x="145" y="97" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjB-Uq-CQw">
-                                <rect key="frame" x="210" y="353" width="180" height="30"/>
+                                <rect key="frame" x="97" y="348" width="180" height="30"/>
                                 <state key="normal" title="助け人探索結果出力画面へ"/>
                                 <connections>
                                     <segue destination="BBl-sx-nkU" kind="presentation" id="aC0-mr-JOT"/>
@@ -62,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggo-DC-ClR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="524"/>
+            <point key="canvasLocation" x="680.5" y="248.5"/>
         </scene>
         <!--Search Result View Controller-->
         <scene sceneID="GTc-rB-Mj3">
@@ -73,11 +74,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Ocz-Pl-ild"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PV2-Nc-dwo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="助け人探索結果出力画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-Qs-YBK">
-                                <rect key="frame" x="207" y="103" width="187" height="21"/>
+                                <rect key="frame" x="94" y="105" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkZ-lb-EZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="524"/>
+            <point key="canvasLocation" x="1216.5" y="210.5"/>
         </scene>
     </scenes>
 </document>
