@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		236359081DBF01740087B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359071DBF01740087B2CE /* AppDelegate.swift */; };
+		2363590A1DBF01740087B2CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359091DBF01740087B2CE /* ViewController.swift */; };
+		2363590D1DBF01740087B2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2363590B1DBF01740087B2CE /* Main.storyboard */; };
+		236359101DBF01740087B2CE /* omotenashiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2363590E1DBF01740087B2CE /* omotenashiApp.xcdatamodeld */; };
+		236359121DBF01740087B2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236359111DBF01740087B2CE /* Assets.xcassets */; };
+		236359151DBF01740087B2CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236359131DBF01740087B2CE /* LaunchScreen.storyboard */; };
+		236359201DBF01740087B2CE /* omotenashiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363591F1DBF01740087B2CE /* omotenashiAppTests.swift */; };
+		2363592B1DBF01740087B2CE /* omotenashiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2363592A1DBF01740087B2CE /* omotenashiAppUITests.swift */; };
+		236359411DBF08300087B2CE /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236359401DBF08300087B2CE /* Signin.storyboard */; };
+		236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359421DBF08C10087B2CE /* SigninViewController.swift */; };
+		3FCB5DEA2D486649A168FD67 /* Pods_omotenashiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */; };
+		A0F6BFAF3005DC32F46EC10B /* Pods_omotenashiAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */; };
+		B493FA4F6A02BC1983656600 /* Pods_omotenashiAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2363591C1DBF01740087B2CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 236358FC1DBF01740087B2CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 236359031DBF01740087B2CE;
+			remoteInfo = omotenashiApp;
+		};
+		236359271DBF01740087B2CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 236358FC1DBF01740087B2CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 236359031DBF01740087B2CE;
+			remoteInfo = omotenashiApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22825C1374D83358ED762829 /* Pods-omotenashiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiApp/Pods-omotenashiApp.debug.xcconfig"; sourceTree = "<group>"; };
+		236359041DBF01740087B2CE /* omotenashiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omotenashiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		236359071DBF01740087B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		236359091DBF01740087B2CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2363590C1DBF01740087B2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2363590F1DBF01740087B2CE /* omotenashiApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = omotenashiApp.xcdatamodel; sourceTree = "<group>"; };
+		236359111DBF01740087B2CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		236359141DBF01740087B2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		236359161DBF01740087B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2363591B1DBF01740087B2CE /* omotenashiAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = omotenashiAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2363591F1DBF01740087B2CE /* omotenashiAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omotenashiAppTests.swift; sourceTree = "<group>"; };
+		236359211DBF01740087B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		236359261DBF01740087B2CE /* omotenashiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = omotenashiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2363592A1DBF01740087B2CE /* omotenashiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = omotenashiAppUITests.swift; sourceTree = "<group>"; };
+		2363592C1DBF01740087B2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		236359401DBF08300087B2CE /* Signin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
+		236359421DBF08C10087B2CE /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		343705C4D2B9E8261E0D2394 /* Pods-omotenashiAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4129F556552004C32E5F95A8 /* Pods-omotenashiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiApp/Pods-omotenashiApp.release.xcconfig"; sourceTree = "<group>"; };
+		4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50DF7DB0C81E5CA935CA487D /* Pods-omotenashiAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppUITests/Pods-omotenashiAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CF2AB336738F948A514B20A /* Pods-omotenashiAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppUITests/Pods-omotenashiAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5D5CEAE5DF22C72F03982CEA /* Pods-omotenashiAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		236359011DBF01740087B2CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FCB5DEA2D486649A168FD67 /* Pods_omotenashiApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236359181DBF01740087B2CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B493FA4F6A02BC1983656600 /* Pods_omotenashiAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236359231DBF01740087B2CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F6BFAF3005DC32F46EC10B /* Pods_omotenashiAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D07C5A15778A2D546BDF8E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22825C1374D83358ED762829 /* Pods-omotenashiApp.debug.xcconfig */,
+				4129F556552004C32E5F95A8 /* Pods-omotenashiApp.release.xcconfig */,
+				343705C4D2B9E8261E0D2394 /* Pods-omotenashiAppTests.debug.xcconfig */,
+				5D5CEAE5DF22C72F03982CEA /* Pods-omotenashiAppTests.release.xcconfig */,
+				50DF7DB0C81E5CA935CA487D /* Pods-omotenashiAppUITests.debug.xcconfig */,
+				5CF2AB336738F948A514B20A /* Pods-omotenashiAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		236358FB1DBF01740087B2CE = {
+			isa = PBXGroup;
+			children = (
+				236359061DBF01740087B2CE /* omotenashiApp */,
+				2363591E1DBF01740087B2CE /* omotenashiAppTests */,
+				236359291DBF01740087B2CE /* omotenashiAppUITests */,
+				236359051DBF01740087B2CE /* Products */,
+				1D07C5A15778A2D546BDF8E5 /* Pods */,
+				F6E1CD53AF8ED7BCC3C04C20 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		236359051DBF01740087B2CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				236359041DBF01740087B2CE /* omotenashiApp.app */,
+				2363591B1DBF01740087B2CE /* omotenashiAppTests.xctest */,
+				236359261DBF01740087B2CE /* omotenashiAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		236359061DBF01740087B2CE /* omotenashiApp */ = {
+			isa = PBXGroup;
+			children = (
+				236359071DBF01740087B2CE /* AppDelegate.swift */,
+				236359091DBF01740087B2CE /* ViewController.swift */,
+				2363590B1DBF01740087B2CE /* Main.storyboard */,
+				236359111DBF01740087B2CE /* Assets.xcassets */,
+				236359131DBF01740087B2CE /* LaunchScreen.storyboard */,
+				236359161DBF01740087B2CE /* Info.plist */,
+				2363590E1DBF01740087B2CE /* omotenashiApp.xcdatamodeld */,
+				236359401DBF08300087B2CE /* Signin.storyboard */,
+				236359421DBF08C10087B2CE /* SigninViewController.swift */,
+			);
+			path = omotenashiApp;
+			sourceTree = "<group>";
+		};
+		2363591E1DBF01740087B2CE /* omotenashiAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2363591F1DBF01740087B2CE /* omotenashiAppTests.swift */,
+				236359211DBF01740087B2CE /* Info.plist */,
+			);
+			path = omotenashiAppTests;
+			sourceTree = "<group>";
+		};
+		236359291DBF01740087B2CE /* omotenashiAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2363592A1DBF01740087B2CE /* omotenashiAppUITests.swift */,
+				2363592C1DBF01740087B2CE /* Info.plist */,
+			);
+			path = omotenashiAppUITests;
+			sourceTree = "<group>";
+		};
+		F6E1CD53AF8ED7BCC3C04C20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */,
+				BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */,
+				87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		236359031DBF01740087B2CE /* omotenashiApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2363592F1DBF01740087B2CE /* Build configuration list for PBXNativeTarget "omotenashiApp" */;
+			buildPhases = (
+				89EC403C9AA503F6023C239B /* [CP] Check Pods Manifest.lock */,
+				236359001DBF01740087B2CE /* Sources */,
+				236359011DBF01740087B2CE /* Frameworks */,
+				236359021DBF01740087B2CE /* Resources */,
+				517AC97384D8632F99871238 /* [CP] Embed Pods Frameworks */,
+				B791535184134EBD8C2CBF9B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = omotenashiApp;
+			productName = omotenashiApp;
+			productReference = 236359041DBF01740087B2CE /* omotenashiApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2363591A1DBF01740087B2CE /* omotenashiAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 236359321DBF01740087B2CE /* Build configuration list for PBXNativeTarget "omotenashiAppTests" */;
+			buildPhases = (
+				35215AEF2EE8DD1674F27880 /* [CP] Check Pods Manifest.lock */,
+				236359171DBF01740087B2CE /* Sources */,
+				236359181DBF01740087B2CE /* Frameworks */,
+				236359191DBF01740087B2CE /* Resources */,
+				CDE4029CA1E334640222A836 /* [CP] Embed Pods Frameworks */,
+				F325445354409829F9723433 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2363591D1DBF01740087B2CE /* PBXTargetDependency */,
+			);
+			name = omotenashiAppTests;
+			productName = omotenashiAppTests;
+			productReference = 2363591B1DBF01740087B2CE /* omotenashiAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		236359251DBF01740087B2CE /* omotenashiAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 236359351DBF01740087B2CE /* Build configuration list for PBXNativeTarget "omotenashiAppUITests" */;
+			buildPhases = (
+				0410C2788E38BB8BC5C0D4E8 /* [CP] Check Pods Manifest.lock */,
+				236359221DBF01740087B2CE /* Sources */,
+				236359231DBF01740087B2CE /* Frameworks */,
+				236359241DBF01740087B2CE /* Resources */,
+				B07D940B6A0606DE45D6328E /* [CP] Copy Pods Resources */,
+				EBA07EE75B5D27D79022E0DA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				236359281DBF01740087B2CE /* PBXTargetDependency */,
+			);
+			name = omotenashiAppUITests;
+			productName = omotenashiAppUITests;
+			productReference = 236359261DBF01740087B2CE /* omotenashiAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		236358FC1DBF01740087B2CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = TMT;
+				TargetAttributes = {
+					236359031DBF01740087B2CE = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2363591A1DBF01740087B2CE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 236359031DBF01740087B2CE;
+					};
+					236359251DBF01740087B2CE = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 236359031DBF01740087B2CE;
+					};
+				};
+			};
+			buildConfigurationList = 236358FF1DBF01740087B2CE /* Build configuration list for PBXProject "omotenashiApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 236358FB1DBF01740087B2CE;
+			productRefGroup = 236359051DBF01740087B2CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				236359031DBF01740087B2CE /* omotenashiApp */,
+				2363591A1DBF01740087B2CE /* omotenashiAppTests */,
+				236359251DBF01740087B2CE /* omotenashiAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		236359021DBF01740087B2CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236359411DBF08300087B2CE /* Signin.storyboard in Resources */,
+				236359151DBF01740087B2CE /* LaunchScreen.storyboard in Resources */,
+				236359121DBF01740087B2CE /* Assets.xcassets in Resources */,
+				2363590D1DBF01740087B2CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236359191DBF01740087B2CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236359241DBF01740087B2CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0410C2788E38BB8BC5C0D4E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35215AEF2EE8DD1674F27880 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		517AC97384D8632F99871238 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-omotenashiApp/Pods-omotenashiApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89EC403C9AA503F6023C239B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B07D940B6A0606DE45D6328E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-omotenashiAppUITests/Pods-omotenashiAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B791535184134EBD8C2CBF9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-omotenashiApp/Pods-omotenashiApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDE4029CA1E334640222A836 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBA07EE75B5D27D79022E0DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-omotenashiAppUITests/Pods-omotenashiAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F325445354409829F9723433 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		236359001DBF01740087B2CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */,
+				2363590A1DBF01740087B2CE /* ViewController.swift in Sources */,
+				236359101DBF01740087B2CE /* omotenashiApp.xcdatamodeld in Sources */,
+				236359081DBF01740087B2CE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236359171DBF01740087B2CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236359201DBF01740087B2CE /* omotenashiAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236359221DBF01740087B2CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2363592B1DBF01740087B2CE /* omotenashiAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2363591D1DBF01740087B2CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 236359031DBF01740087B2CE /* omotenashiApp */;
+			targetProxy = 2363591C1DBF01740087B2CE /* PBXContainerItemProxy */;
+		};
+		236359281DBF01740087B2CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 236359031DBF01740087B2CE /* omotenashiApp */;
+			targetProxy = 236359271DBF01740087B2CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2363590B1DBF01740087B2CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2363590C1DBF01740087B2CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		236359131DBF01740087B2CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				236359141DBF01740087B2CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2363592D1DBF01740087B2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2363592E1DBF01740087B2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		236359301DBF01740087B2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22825C1374D83358ED762829 /* Pods-omotenashiApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = omotenashiApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.omotenashiApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		236359311DBF01740087B2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4129F556552004C32E5F95A8 /* Pods-omotenashiApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = omotenashiApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.omotenashiApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		236359331DBF01740087B2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343705C4D2B9E8261E0D2394 /* Pods-omotenashiAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = omotenashiAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.omotenashiAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/omotenashiApp.app/omotenashiApp";
+			};
+			name = Debug;
+		};
+		236359341DBF01740087B2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D5CEAE5DF22C72F03982CEA /* Pods-omotenashiAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = omotenashiAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.omotenashiAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/omotenashiApp.app/omotenashiApp";
+			};
+			name = Release;
+		};
+		236359361DBF01740087B2CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50DF7DB0C81E5CA935CA487D /* Pods-omotenashiAppUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = omotenashiAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.omotenashiAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = omotenashiApp;
+			};
+			name = Debug;
+		};
+		236359371DBF01740087B2CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CF2AB336738F948A514B20A /* Pods-omotenashiAppUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = omotenashiAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Univ.omotenashiAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = omotenashiApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		236358FF1DBF01740087B2CE /* Build configuration list for PBXProject "omotenashiApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2363592D1DBF01740087B2CE /* Debug */,
+				2363592E1DBF01740087B2CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2363592F1DBF01740087B2CE /* Build configuration list for PBXNativeTarget "omotenashiApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				236359301DBF01740087B2CE /* Debug */,
+				236359311DBF01740087B2CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		236359321DBF01740087B2CE /* Build configuration list for PBXNativeTarget "omotenashiAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				236359331DBF01740087B2CE /* Debug */,
+				236359341DBF01740087B2CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		236359351DBF01740087B2CE /* Build configuration list for PBXNativeTarget "omotenashiAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				236359361DBF01740087B2CE /* Debug */,
+				236359371DBF01740087B2CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2363590E1DBF01740087B2CE /* omotenashiApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2363590F1DBF01740087B2CE /* omotenashiApp.xcdatamodel */,
+			);
+			currentVersion = 2363590F1DBF01740087B2CE /* omotenashiApp.xcdatamodel */;
+			path = omotenashiApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 236358FC1DBF01740087B2CE /* Project object */;
+}
