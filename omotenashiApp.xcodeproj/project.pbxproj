@@ -20,6 +20,7 @@
 		3FCB5DEA2D486649A168FD67 /* Pods_omotenashiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */; };
 		A0F6BFAF3005DC32F46EC10B /* Pods_omotenashiAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */; };
 		B493FA4F6A02BC1983656600 /* Pods_omotenashiAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */; };
+		CAD39ED21DBF31D500497D77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED11DBF31D500497D77 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5D5CEAE5DF22C72F03982CEA /* Pods-omotenashiAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD39ED11DBF31D500497D77 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				236359071DBF01740087B2CE /* AppDelegate.swift */,
 				236359091DBF01740087B2CE /* ViewController.swift */,
 				2363590B1DBF01740087B2CE /* Main.storyboard */,
+				CAD39ED11DBF31D500497D77 /* MainViewController.swift */,
 				236359111DBF01740087B2CE /* Assets.xcassets */,
 				236359131DBF01740087B2CE /* LaunchScreen.storyboard */,
 				236359161DBF01740087B2CE /* Info.plist */,
@@ -457,6 +460,7 @@
 				2363590A1DBF01740087B2CE /* ViewController.swift in Sources */,
 				236359101DBF01740087B2CE /* omotenashiApp.xcdatamodeld in Sources */,
 				236359081DBF01740087B2CE /* AppDelegate.swift in Sources */,
+				CAD39ED21DBF31D500497D77 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
