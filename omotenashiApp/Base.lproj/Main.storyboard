@@ -22,5 +22,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="6i8-QM-HJ6">
+            <objects>
+                <viewController id="cr0-g7-bYU" customClass="SearchViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="isu-SW-ypv"/>
+                        <viewControllerLayoutGuide type="bottom" id="oze-cd-JZj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5hD-nX-tnM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ggo-DC-ClR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1247" y="524"/>
+        </scene>
     </scenes>
 </document>

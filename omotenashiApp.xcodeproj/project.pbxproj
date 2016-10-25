@@ -21,6 +21,7 @@
 		A0F6BFAF3005DC32F46EC10B /* Pods_omotenashiAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */; };
 		B493FA4F6A02BC1983656600 /* Pods_omotenashiAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */; };
 		CAD39ED21DBF31D500497D77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED11DBF31D500497D77 /* MainViewController.swift */; };
+		CAD39ED41DBF35A900497D77 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED31DBF35A900497D77 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD39ED11DBF31D500497D77 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CAD39ED31DBF35A900497D77 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				236359071DBF01740087B2CE /* AppDelegate.swift */,
 				236359091DBF01740087B2CE /* ViewController.swift */,
 				2363590B1DBF01740087B2CE /* Main.storyboard */,
+				CAD39ED31DBF35A900497D77 /* SearchViewController.swift */,
 				CAD39ED11DBF31D500497D77 /* MainViewController.swift */,
 				236359111DBF01740087B2CE /* Assets.xcassets */,
 				236359131DBF01740087B2CE /* LaunchScreen.storyboard */,
@@ -456,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD39ED41DBF35A900497D77 /* SearchViewController.swift in Sources */,
 				236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */,
 				2363590A1DBF01740087B2CE /* ViewController.swift in Sources */,
 				236359101DBF01740087B2CE /* omotenashiApp.xcdatamodeld in Sources */,
