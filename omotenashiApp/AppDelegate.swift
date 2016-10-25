@@ -17,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
+    
+    /*-------------------------
+     * ログイン判定
+     *------------------------*/
+    let ud = NSUserDefaults.standardUserDefaults()
+    let isLogin: Bool? = ud.objectForKey("isSignin") as? Bool
+    
+    // ログインしていない場合
+    if isLogin == nil {
+      let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+      let signInViewController = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
+      self.window?.rootViewController = signInViewController
+      self.window?.makeKeyAndVisible()
+    }
+    
     return true
   }
 
