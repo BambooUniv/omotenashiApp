@@ -24,6 +24,7 @@
 		CAD39ED21DBF31D500497D77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED11DBF31D500497D77 /* MainViewController.swift */; };
 		CAD39ED41DBF35A900497D77 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED31DBF35A900497D77 /* SearchViewController.swift */; };
 		CAD39ED61DBF48DE00497D77 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED51DBF48DE00497D77 /* SearchResultViewController.swift */; };
+		CAD39EDB1DBF4E8B00497D77 /* image in Resources */ = {isa = PBXBuildFile; fileRef = CAD39EDA1DBF4E8B00497D77 /* image */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		CAD39ED11DBF31D500497D77 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CAD39ED31DBF35A900497D77 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CAD39ED51DBF48DE00497D77 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		CAD39EDA1DBF4E8B00497D77 /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		236359061DBF01740087B2CE /* omotenashiApp */ = {
 			isa = PBXGroup;
 			children = (
+				CAD39EDA1DBF4E8B00497D77 /* image */,
 				236359071DBF01740087B2CE /* AppDelegate.swift */,
 				236359091DBF01740087B2CE /* ViewController.swift */,
 				2363590B1DBF01740087B2CE /* Main.storyboard */,
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				236359411DBF08300087B2CE /* Signin.storyboard in Resources */,
+				CAD39EDB1DBF4E8B00497D77 /* image in Resources */,
 				236359151DBF01740087B2CE /* LaunchScreen.storyboard in Resources */,
 				236359121DBF01740087B2CE /* Assets.xcassets in Resources */,
 				2363590D1DBF01740087B2CE /* Main.storyboard in Resources */,
