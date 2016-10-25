@@ -25,6 +25,7 @@ class SignInViewController: UIViewController {
     var response: NSURLResponse?
     do {
       
+      /* デバッグのため一時的にサインイン処理を停止
       // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
       let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
       let userInfo:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
@@ -38,6 +39,7 @@ class SignInViewController: UIViewController {
         userDefault.synchronize()
         
       }
+      */
       
     } catch (let e) {
       print(e)
