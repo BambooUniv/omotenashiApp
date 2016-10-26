@@ -19,12 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     
     /*-------------------------
-     * ログイン判定
+     * サインイン判定
      *------------------------*/
     let ud = NSUserDefaults.standardUserDefaults()
     let isSignin: Bool? = ud.objectForKey("isSignin") as? Bool
     
-    // ログインしていない場合
+    // サインインしていない場合
     if isSignin == nil {
       let storyboard = UIStoryboard(name: "Signin", bundle: nil)
       let signInViewController = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
