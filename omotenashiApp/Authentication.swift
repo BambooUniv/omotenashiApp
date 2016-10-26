@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class Authentication {
   
+  
+  /*----------------------------------------
+  * メールアドレスとパスワードでサインイン処理を行う
+  *----------------------------------------*/
   class func signin(email: String, password: String)->Bool {
     
     // POSTでAPIを叩く
@@ -47,5 +52,34 @@ class Authentication {
     }
     return false // サインインできなければfalseを返す
   }
+  
+  
+  /*----------------------------------------
+   * サインアウト処理
+   *----------------------------------------*/
+  class func signout() {
+    
+    let userDefault = NSUserDefaults.standardUserDefaults()
+    let isSignin = userDefault.objectForKey("isSignin") as? Bool
+    
+    if (isSignin == true) {
+      userDefault.setObject(false, forKey: "isSignin")
+    }
+    
+    // サインイン画面に遷移
+    let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+    let signInViewController = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
+
+    
+    var tc = UIApplication.sharedApplication().keyWindow?.rootViewController;
+    tc?.dismissViewControllerAnimated(true, completion: nil)
+    while ((tc!.presentedViewController) != nil) {
+      tc = tc!.presentedViewController;
+    }
+    tc?.presentViewController(signInViewController, animated: true, completion: nil)
+  }
+  
+  
+  
   
 }
