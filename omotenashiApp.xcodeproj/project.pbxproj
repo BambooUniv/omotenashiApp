@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2351E22E1DC0A2D400F50C27 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2351E22D1DC0A2D400F50C27 /* Authentication.swift */; };
 		236359081DBF01740087B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359071DBF01740087B2CE /* AppDelegate.swift */; };
 		2363590A1DBF01740087B2CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359091DBF01740087B2CE /* ViewController.swift */; };
 		2363590D1DBF01740087B2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2363590B1DBF01740087B2CE /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		22825C1374D83358ED762829 /* Pods-omotenashiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiApp/Pods-omotenashiApp.debug.xcconfig"; sourceTree = "<group>"; };
+		2351E22D1DC0A2D400F50C27 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		236359041DBF01740087B2CE /* omotenashiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omotenashiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236359071DBF01740087B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236359091DBF01740087B2CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				236359401DBF08300087B2CE /* Signin.storyboard */,
 				236359421DBF08C10087B2CE /* SigninViewController.swift */,
 				23AC225C1DBF409300199203 /* SignupViewController.swift */,
+				2351E22D1DC0A2D400F50C27 /* Authentication.swift */,
 			);
 			path = omotenashiApp;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				CAD39ED41DBF35A900497D77 /* SearchViewController.swift in Sources */,
 				23AC225D1DBF409300199203 /* SignupViewController.swift in Sources */,
 				236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */,
+				2351E22E1DC0A2D400F50C27 /* Authentication.swift in Sources */,
 				2363590A1DBF01740087B2CE /* ViewController.swift in Sources */,
 				236359101DBF01740087B2CE /* omotenashiApp.xcdatamodeld in Sources */,
 				23AC22611DBF593200199203 /* CustomUITextField.swift in Sources */,
