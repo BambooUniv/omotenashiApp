@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      * ログイン判定
      *------------------------*/
     let ud = NSUserDefaults.standardUserDefaults()
-    let isLogin: Bool? = ud.objectForKey("isSignin") as? Bool
+    let isSignin: Bool? = ud.objectForKey("isSignin") as? Bool
     
     // ログインしていない場合
-    if isLogin == nil {
+    if isSignin == nil {
       let storyboard = UIStoryboard(name: "Signin", bundle: nil)
       let signInViewController = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
       self.window?.rootViewController = signInViewController
