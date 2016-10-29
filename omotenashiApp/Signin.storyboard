@@ -138,6 +138,9 @@
                                 <state key="normal" title="確 認">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="l9M-qF-5aR" kind="show" id="0h3-ze-tZs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,7 +149,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6W-hc-9tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1387.5" y="375.5"/>
+            <point key="canvasLocation" x="1096.5" y="375.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W96-la-uIb">
+            <objects>
+                <viewController id="l9M-qF-5aR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9ru-il-Pae"/>
+                        <viewControllerLayoutGuide type="bottom" id="De8-CU-Hv5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Isp-Es-y50">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="2Cd-xT-hSW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f0p-hh-2Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551.5" y="375.5"/>
         </scene>
     </scenes>
     <resources>
