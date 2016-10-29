@@ -8,7 +8,10 @@ import UIKit
 
 class SignupViewController: UIViewController {
   
-  override func viewDidLoad() {
+  @IBOutlet weak var nameTextField: CustomUITextField!
+  @IBOutlet weak var passwordTextField: CustomUITextField!
+  
+    override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
@@ -20,6 +23,8 @@ class SignupViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  @IBAction func signupButton(sender: AnyObject) {
+  }
   
   /*
    // MARK: - Navigation

@@ -138,11 +138,18 @@
                                 <state key="normal" title="登録">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupButton:" destination="fgV-YG-iVQ" eventType="touchUpInside" id="32Z-qU-0vN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="zjt-PZ-kjZ" id="xQz-r9-r31"/>
+                        <outlet property="passwordTextField" destination="weR-Gg-5mQ" id="c6L-iL-2rs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6W-hc-9tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
