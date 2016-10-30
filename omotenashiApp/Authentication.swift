@@ -11,6 +11,28 @@ import UIKit
 
 class Authentication {
   
+  class func signup() {
+    // POSTでAPIを叩く
+    let url = NSURL(string:"http:omotenashi.prodrb.com/api/signup.php")
+    let request = NSMutableURLRequest(URL: url!)
+    let str = "name=test4&email=test4@gmail.com&password=test4&img=test4&languages=japanese,english&nationality=japan"
+    let strData = str.dataUsingEncoding(NSUTF8StringEncoding)
+    request.HTTPMethod = "POST"
+    request.HTTPBody = strData
+    request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
+    request.timeoutInterval = 10.0
+    
+    var response: NSURLResponse?
+    do {
+      
+      // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
+      let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+   
+    } catch (let e) {
+      print(e)
+    }
+  }
+  
   
   /*----------------------------------------
   * メールアドレスとパスワードでサインイン処理を行う
