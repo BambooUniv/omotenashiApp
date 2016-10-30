@@ -24,6 +24,8 @@ class SignupViewController: UIViewController {
   }
   
   @IBAction func signupButton(sender: AnyObject) {
+    let nameStr = self.nameTextField.text
+    let passwordStr = self.passwordTextField.text
   }
   
   /*
