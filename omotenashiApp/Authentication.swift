@@ -11,9 +11,9 @@ import UIKit
 
 class Authentication {
   
-  class func signup() {
+  class func signup(name: String, email: String, password: String, img: String, languages: String, nationality: String)->Bool {
     // POSTでAPIを叩く
-    let url = NSURL(string:"http:omotenashi.prodrb.com/api/signup.php")
+    let url = NSURL(string:Const.apiSignupUrl)
     let request = NSMutableURLRequest(URL: url!)
     let str = "name=test4&email=test4@gmail.com&password=test4&img=test4&languages=japanese,english&nationality=japan"
     let strData = str.dataUsingEncoding(NSUTF8StringEncoding)
@@ -27,10 +27,12 @@ class Authentication {
       
       // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
       let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-   
+      return true
     } catch (let e) {
       print(e)
     }
+    
+    return false
   }
   
   
