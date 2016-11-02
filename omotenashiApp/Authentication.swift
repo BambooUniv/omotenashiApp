@@ -10,7 +10,7 @@ import UIKit
 
 class Authentication {
   
-  class func signup(name: String, email: String, password: String, img: String, languages: String, nationality: String)->Bool {
+  class func signup(name: String, email: String, password: String, sex: String, img: String, languages: String, nationality: String)->Bool {
     
     // POSTでAPIを叩く
     let url = NSURL(string:Const.apiSignupUrl)
@@ -20,6 +20,7 @@ class Authentication {
     var str = "name="+name+"&"
         str = str + "email="+email+"&"
         str = str + "password="+password+"&"
+        str = str + "sex="+sex+"&"
         str = str + "img="+img+"&"
         str = str + "languages="+languages+"&"
         str = str + "nationality="+nationality
