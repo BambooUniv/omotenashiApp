@@ -32,4 +32,16 @@ class MainViewController: UIViewController {
     }
     */
 
+  @IBAction func locationButton(sender: AnyObject) {
+    print("location")
+  }
+  @IBAction func toiletButton(sender: AnyObject) {
+    print("location")
+  }
+  @IBAction func sickButton(sender: AnyObject) {
+    print("location")
+  }
+  @IBAction func mealButton(sender: AnyObject) {
+    print("location")
+  }
 }
