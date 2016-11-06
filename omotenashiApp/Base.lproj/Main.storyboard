@@ -24,18 +24,30 @@
                                 <rect key="frame" x="190" y="318" width="160" height="211"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
                                 <state key="normal" image="food"/>
+                                <connections>
+                                    <action selector="mealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLb-Zd-QOx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="-2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msb-TC-kNC" userLabel="sickButton">
                                 <rect key="frame" x="25" y="318" width="160" height="213"/>
                                 <state key="normal" image="sick"/>
+                                <connections>
+                                    <action selector="sickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U70-7I-Lgz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emi-Sy-tsO" userLabel="toiletButton">
                                 <rect key="frame" x="190" y="102" width="160" height="212"/>
                                 <state key="normal" image="toilet"/>
+                                <connections>
+                                    <action selector="toiletButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XKj-Gx-zRd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9S-07-JsN" userLabel="placeButton">
                                 <rect key="frame" x="25" y="102" width="160" height="211"/>
                                 <state key="normal" image="place"/>
+                                <connections>
+                                    <action selector="locationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0m-dN-hg1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyA-V7-z87" userLabel="helpButton">
                                 <rect key="frame" x="25" y="537" width="325" height="73"/>
