@@ -10,11 +10,11 @@ import UIKit
 
 class Authentication {
   
-  class func signup(name: String, email: String, password: String, sex: String, img: String, languages: String, nationality: String)->Bool {
+  class func signup(_ name: String, email: String, password: String, sex: String, img: String, languages: String, nationality: String)->Bool {
     
     // POSTでAPIを叩く
-    let url = NSURL(string:Const.apiSignupUrl)
-    let request = NSMutableURLRequest(URL: url!)
+    let url = URL(string:Const.apiSignupUrl)
+    let request = NSMutableURLRequest(url: url!)
 
     // パラメータの作成
     var str = "name="+name+"&"
@@ -25,17 +25,17 @@ class Authentication {
         str = str + "languages="+languages+"&"
         str = str + "nationality="+nationality
     
-    let strData = str.dataUsingEncoding(NSUTF8StringEncoding)
-    request.HTTPMethod = "POST"
-    request.HTTPBody = strData
-    request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
+    let strData = str.data(using: String.Encoding.utf8)
+    request.httpMethod = "POST"
+    request.httpBody = strData
+    request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
     request.timeoutInterval = 10.0
     
-    var response: NSURLResponse?
+    var response: URLResponse?
     do {
       
       // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
-      let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+      let data = try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response)
       if (data != false) {
         return true
       }
@@ -51,31 +51,31 @@ class Authentication {
   /*----------------------------------------
   * メールアドレスとパスワードでサインイン処理を行う
   *----------------------------------------*/
-  class func signin(email: String, password: String)->Bool {
+  class func signin(_ email: String, password: String)->Bool {
     
     // POSTでAPIを叩く
-    let url = NSURL(string:"http:omotenashi.prodrb.com/api/signin.php")
-    let request = NSMutableURLRequest(URL: url!)
+    let url = URL(string:"http:omotenashi.prodrb.com/api/signin.php")
+    let request = NSMutableURLRequest(url: url!)
     let str = "email=" + email + "&password=" + password
-    let strData = str.dataUsingEncoding(NSUTF8StringEncoding)
-    request.HTTPMethod = "POST"
-    request.HTTPBody = strData
-    request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
+    let strData = str.data(using: String.Encoding.utf8)
+    request.httpMethod = "POST"
+    request.httpBody = strData
+    request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData
     request.timeoutInterval = 10.0
     
-    var response: NSURLResponse?
+    var response: URLResponse?
     do {
       
        // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
-       let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-       let userInfo:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+       let data = try NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: &response)
+       let userInfo:NSDictionary = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
        
        if userInfo != false {
        
         // サインインできたらユーザ情報をUserDefaultsに辞書型で保存1
-        let userDefault = NSUserDefaults.standardUserDefaults()
-        userDefault.setObject(userInfo, forKey: "userInfo") // ユーザ情報を保存
-        userDefault.setObject(true, forKey: "isSignin") // サインイン情報を保存
+        let userDefault = UserDefaults.standard
+        userDefault.set(userInfo, forKey: "userInfo") // ユーザ情報を保存
+        userDefault.set(true, forKey: "isSignin") // サインイン情報を保存
         userDefault.synchronize()
         
         
@@ -95,26 +95,26 @@ class Authentication {
    *----------------------------------------*/
   class func signout() {
     
-    let userDefault = NSUserDefaults.standardUserDefaults()
-    let isSignin = userDefault.objectForKey("isSignin") as? Bool
+    let userDefault = UserDefaults.standard
+    let isSignin = userDefault.object(forKey: "isSignin") as? Bool
     
     if (isSignin == true) {
-      userDefault.setObject(false, forKey: "isSignin")
+      userDefault.set(false, forKey: "isSignin")
     }
     
     // サインイン画面に遷移
     let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-    let signInViewController = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
+    let signInViewController = storyboard.instantiateViewController(withIdentifier: "signin") as! SignInViewController
 
     
     // MEMO: これだとサインアウトボタンを押すたびにViewControllerが無限に生成されて
     //        メモリを圧迫するので要リファクタリング
-    var tc = UIApplication.sharedApplication().keyWindow?.rootViewController;
-    tc?.dismissViewControllerAnimated(true, completion: nil)
+    var tc = UIApplication.shared.keyWindow?.rootViewController;
+    tc?.dismiss(animated: true, completion: nil)
     while ((tc!.presentedViewController) != nil) {
       tc = tc!.presentedViewController;
     }
-    tc?.presentViewController(signInViewController, animated: true, completion: nil)
+    tc?.present(signInViewController, animated: true, completion: nil)
   }
   
   

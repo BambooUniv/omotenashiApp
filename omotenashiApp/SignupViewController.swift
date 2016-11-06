@@ -26,10 +26,10 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     // Do any additional setup after loading the view.
     
     // UIViewPickerの生成
-    var sexPickerView = UIPickerView()
-    var nationalityPickerView = UIPickerView()
-    var language1PickerView = UIPickerView()
-    var language2PickerView = UIPickerView()
+    let sexPickerView = UIPickerView()
+    let nationalityPickerView = UIPickerView()
+    let language1PickerView = UIPickerView()
+    let language2PickerView = UIPickerView()
     
     // 識別用のタグを設定
     sexPickerView.tag = 1
@@ -57,7 +57,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     // Dispose of any resources that can be recreated.
   }
   
-  @IBAction func signupButton(sender: AnyObject) {
+  @IBAction func signupButton(_ sender: AnyObject) {
     let nameStr = self.nameTextField.text!
     let emailStr = self.emailTextField.text!
     let passwordStr = self.passwordTextField.text!
@@ -73,18 +73,18 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     if (isSignup == true) {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       let viewController = storyboard.instantiateInitialViewController()! as UIViewController
-      self.presentViewController(viewController, animated: true, completion: nil)
+      self.present(viewController, animated: true, completion: nil)
     }
   }
   
   /*----------------------------------
    * UIPickerViewDelegate
    *--------------------------------*/
-  func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
   
-  func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     var number = 0
     if (pickerView.tag == 1) {
       number = sexPickOption.count
@@ -98,7 +98,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     return number
   }
   
-  func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     if (pickerView.tag == 1) {
       return sexPickOption[row]
     } else if (pickerView.tag == 2) {
@@ -111,7 +111,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     return sexPickOption[row]
   }
   
-  func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     if (pickerView.tag == 1) {
       sexTextField.text = sexPickOption[row]
     } else if (pickerView.tag == 2) {

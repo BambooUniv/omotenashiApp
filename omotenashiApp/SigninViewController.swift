@@ -16,7 +16,7 @@ class SignInViewController: UIViewController {
     super.viewDidLoad()
   }
   
-  @IBAction func signinButton(sender: AnyObject) {
+  @IBAction func signinButton(_ sender: AnyObject) {
     let emailStr = self.emailTextField.text!
     let passwordStr = self.passwordTextField.text!
     
@@ -25,7 +25,7 @@ class SignInViewController: UIViewController {
     if (isSignin == true) {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       let viewController = storyboard.instantiateInitialViewController()! as UIViewController
-      self.presentViewController(viewController, animated: true, completion: nil)
+      self.present(viewController, animated: true, completion: nil)
     }
   }
 }
