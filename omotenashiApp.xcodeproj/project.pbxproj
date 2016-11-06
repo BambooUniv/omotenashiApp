@@ -20,6 +20,7 @@
 		236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359421DBF08C10087B2CE /* SigninViewController.swift */; };
 		2373095C1DC5BE9F0034B85E /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373095B1DC5BE9F0034B85E /* Const.swift */; };
 		238AD85F1DCF0E790035AEFA /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238AD85E1DCF0E790035AEFA /* Help.swift */; };
+		238AD8611DCF1D200035AEFA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238AD8601DCF1D200035AEFA /* CoreLocation.framework */; };
 		23AC225D1DBF409300199203 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC225C1DBF409300199203 /* SignupViewController.swift */; };
 		23AC22611DBF593200199203 /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC22601DBF593200199203 /* CustomUITextField.swift */; };
 		3FCB5DEA2D486649A168FD67 /* Pods_omotenashiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */; };
@@ -68,6 +69,7 @@
 		236359421DBF08C10087B2CE /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		2373095B1DC5BE9F0034B85E /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		238AD85E1DCF0E790035AEFA /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		238AD8601DCF1D200035AEFA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		23AC225C1DBF409300199203 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		23AC22601DBF593200199203 /* CustomUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
 		343705C4D2B9E8261E0D2394 /* Pods-omotenashiAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				238AD8611DCF1D200035AEFA /* CoreLocation.framework in Frameworks */,
 				3FCB5DEA2D486649A168FD67 /* Pods_omotenashiApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +202,7 @@
 		F6E1CD53AF8ED7BCC3C04C20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				238AD8601DCF1D200035AEFA /* CoreLocation.framework */,
 				4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */,
 				BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */,
 				87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */,
@@ -283,6 +287,7 @@
 				TargetAttributes = {
 					236359031DBF01740087B2CE = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 978RFFMTAV;
 					};
 					2363591A1DBF01740087B2CE = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -639,6 +644,7 @@
 			baseConfigurationReference = 22825C1374D83358ED762829 /* Pods-omotenashiApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = omotenashiApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Univ.omotenashiApp;
@@ -651,6 +657,7 @@
 			baseConfigurationReference = 4129F556552004C32E5F95A8 /* Pods-omotenashiApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = omotenashiApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Univ.omotenashiApp;

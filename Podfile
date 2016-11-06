@@ -6,7 +6,6 @@ target 'omotenashiApp' do
   use_frameworks!
 
   # Pods for omotenashiApp
-  pod 'MagicalRecord'
 
   target 'omotenashiAppTests' do
     inherit! :search_paths
