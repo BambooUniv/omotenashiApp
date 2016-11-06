@@ -10,13 +10,13 @@ import UIKit
 
 class Help {
   
-  class func sendHelpWithType(userId: Int, helpType: String, latitude: Float, longitude: Float) {
+  class func sendHelpWithType(userId: String, content: String, latitude: Double, longitude: Double) {
     // POSTでAPIを叩く
-    let url = NSURL(string:Const.apiSignupUrl)
+    let url = NSURL(string:Const.apiHelpCreateUrl)
     let request = NSMutableURLRequest(URL: url!)
     
     // パラメータの作成
-    var str = "name=tset"
+    let str = "user_id="+userId+"&content="+content+"&latitude="+String(latitude)+"&longitude="+String(longitude)
     
     let strData = str.dataUsingEncoding(NSUTF8StringEncoding)
     request.HTTPMethod = "POST"

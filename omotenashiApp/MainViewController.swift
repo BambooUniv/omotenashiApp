@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
 
         // Do any additional setup after loading the view.
     }
@@ -33,7 +34,11 @@ class MainViewController: UIViewController {
     */
 
   @IBAction func locationButton(sender: AnyObject) {
-    print("location")
+    let userDefault = NSUserDefaults.standardUserDefaults()
+    let userInfo = userDefault.objectForKey("userInfo") as? [String: String]
+    let userId: String! = userInfo!["id"]
+    
+    Help.sendHelpWithType(userId, content: "location", latitude: 1.123132131, longitude: 2.2342342342)
   }
   @IBAction func toiletButton(sender: AnyObject) {
     print("location")
