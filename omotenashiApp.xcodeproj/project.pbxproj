@@ -288,6 +288,11 @@
 					236359031DBF01740087B2CE = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 978RFFMTAV;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					2363591A1DBF01740087B2CE = {
 						CreatedOnToolsVersion = 7.3.1;

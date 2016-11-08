@@ -26,6 +26,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
       
         locationManager = CLLocationManager()
         locationManager.delegate = self
+        locationManager.allowsBackgroundLocationUpdates = true
         if (status == CLAuthorizationStatus.NotDetermined) {
           locationManager.requestWhenInUseAuthorization()
         }
@@ -90,10 +91,13 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     if let location = manager.location {
       self.latitude = location.coordinate.latitude
       self.longitude = location.coordinate.longitude
+        
+        
     }
   }
   
   func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    print(error)
     print("error")
   }
 }
