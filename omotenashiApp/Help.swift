@@ -30,6 +30,7 @@ class Help {
         do {
           // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
           let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+
           
         } catch (let e) {
           print(e)
@@ -55,7 +56,21 @@ class Help {
         var response: NSURLResponse?
         do {
           // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
+            print("tset")
             let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+            print(data.dynamicType)
+            //let jsonData = try NSJSONSerialization.JSONObjectWithData(data, options: <#T##NSJSONReadingOptions#>)
+            //print(jsonData)
+            
+            /*
+            // JSONデータをパース
+            do {
+                let returnHelpRequest: ReturnHelpRequest = try Unbox(jsonData)
+                print(returnHelpRequest)
+            } catch let error {
+                    print(error)
+            }
+ */
             
           
         } catch (let e) {
@@ -85,8 +100,24 @@ struct ReturnHelpRequest {
     let longitude: Double
     let created: Int
     let updated: Int
-    let is_resolved: Int
-    let resolved_user_id: Int
+    let is_resolved: Int?
+    let resolved_user_id: Int?
     let distance: Int
     let direction: Int
+}
+
+extension ReturnHelpRequest: Unboxable {
+    init(unboxer: Unboxer) {
+        self.id = unboxer.unbox("id")
+        self.user_id = unboxer.unbox("user_id")
+        self.content = unboxer.unbox("content")
+        self.latitude = unboxer.unbox("latitude")
+        self.longitude = unboxer.unbox("longitude")
+        self.created = unboxer.unbox("created")
+        self.updated = unboxer.unbox("updated")
+        self.is_resolved = unboxer.unbox("is_resolved")
+        self.resolved_user_id = unboxer.unbox("resolve_user_id")
+        self.distance = unboxer.unbox("distance")
+        self.direction = unboxer.unbox("direction")
+    }
 }
