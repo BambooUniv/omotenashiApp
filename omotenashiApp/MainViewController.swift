@@ -62,24 +62,44 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     let userInfo = userDefault.objectForKey("userInfo") as? [String: String]
     let userId: String! = userInfo!["id"]
     Help.sendHelpWithType(userId, content: "location", latitude: self.latitude, longitude: self.longitude)
+    
+    //探索中画面へ遷移
+    let storyboard: UIStoryboard = self.storyboard!
+    let nextView = storyboard.instantiateViewControllerWithIdentifier("Search") as! SearchViewController
+    self.presentViewController(nextView, animated: true, completion: nil)
   }
   @IBAction func toiletButton(sender: AnyObject) {
     let userDefault = NSUserDefaults.standardUserDefaults()
     let userInfo = userDefault.objectForKey("userInfo") as? [String: String]
     let userId: String! = userInfo!["id"]
     Help.sendHelpWithType(userId, content: "toilet", latitude: self.latitude, longitude: self.longitude)
+    
+    //探索中画面へ遷移
+    let storyboard: UIStoryboard = self.storyboard!
+    let nextView = storyboard.instantiateViewControllerWithIdentifier("Search") as! SearchViewController
+    self.presentViewController(nextView, animated: true, completion: nil)
   }
   @IBAction func sickButton(sender: AnyObject) {
     let userDefault = NSUserDefaults.standardUserDefaults()
     let userInfo = userDefault.objectForKey("userInfo") as? [String: String]
     let userId: String! = userInfo!["id"]
     Help.sendHelpWithType(userId, content: "sick", latitude: self.latitude, longitude: self.longitude)
+    
+    //探索中画面へ遷移
+    let storyboard: UIStoryboard = self.storyboard!
+    let nextView = storyboard.instantiateViewControllerWithIdentifier("Search") as! SearchViewController
+    self.presentViewController(nextView, animated: true, completion: nil)
   }
   @IBAction func mealButton(sender: AnyObject) {
     let userDefault = NSUserDefaults.standardUserDefaults()
     let userInfo = userDefault.objectForKey("userInfo") as? [String: String]
     let userId: String! = userInfo!["id"]
     Help.sendHelpWithType(userId, content: "meal", latitude: self.latitude, longitude: self.longitude)
+    
+    //探索中画面へ遷移
+    let storyboard: UIStoryboard = self.storyboard!
+    let nextView = storyboard.instantiateViewControllerWithIdentifier("Search") as! SearchViewController
+    self.presentViewController(nextView, animated: true, completion: nil)
   }
   
   
