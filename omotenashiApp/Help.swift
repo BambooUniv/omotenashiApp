@@ -41,7 +41,7 @@ class Help {
     // 自分の現在位置から100m(distance)以内のお助けリクエストが存在するか確認する処理
     class func getHelpWithLocation(latitude: Double, longitude: Double, distance: Int) {
         // POSTでAPIを叩く
-        let url = NSURL(string:Const.apiHelpCreateUrl)
+        let url = NSURL(string:Const.apiHelpSearchUrl)
         let request = NSMutableURLRequest(URL: url!)
         
         // パラメータの作成
@@ -56,22 +56,13 @@ class Help {
         var response: NSURLResponse?
         do {
           // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
-            print("tset")
             let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-            print(data.dynamicType)
-            //let jsonData = try NSJSONSerialization.JSONObjectWithData(data, options: <#T##NSJSONReadingOptions#>)
-            //print(jsonData)
-            
-            /*
-            // JSONデータをパース
             do {
-                let returnHelpRequest: ReturnHelpRequest = try Unbox(jsonData)
-                print(returnHelpRequest)
+                let helpRequest: ReturnHelpRequest = try Unbox(data)
+                print(helpRequest);
             } catch let error {
-                    print(error)
+                print(error);
             }
- */
-            
           
         } catch (let e) {
             print(e)
