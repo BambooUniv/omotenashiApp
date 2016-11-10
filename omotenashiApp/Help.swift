@@ -31,7 +31,6 @@ class Help {
           // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
           let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
 
-          
         } catch (let e) {
           print(e)
         }
@@ -59,7 +58,25 @@ class Help {
             let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
             do {
                 let helpRequest: ReturnHelpRequest = try Unbox(data)
-                print(helpRequest);
+                
+                //ローカル通知
+                let notification = UILocalNotification()
+                //ロック中にスライドで〜〜のところの文字
+                notification.alertAction = "アプリを開く"
+                //通知の本文
+                notification.alertBody = String(helpRequest.distance) + "m先で困っている人がいます！！"
+                //通知される時間（とりあえず10秒後に設定）
+                notification.fireDate = NSDate(timeIntervalSinceNow:0.1)
+                //通知音
+                notification.soundName = UILocalNotificationDefaultSoundName
+                //アインコンバッジの数字
+                notification.applicationIconBadgeNumber = 1
+                //通知を識別するID
+                notification.userInfo = ["notifyID":"gohan"]
+                //通知をスケジューリング
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                
+                
             } catch let error {
                 print(error);
             }
