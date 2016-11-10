@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,38 +20,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bxi-vV-3cq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIA-h9-Dyd" userLabel="foodButton">
-                                <rect key="frame" x="190" y="318" width="160" height="211"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
-                                <state key="normal" image="food"/>
-                                <connections>
-                                    <action selector="mealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLb-Zd-QOx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="-2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msb-TC-kNC" userLabel="sickButton">
                                 <rect key="frame" x="25" y="318" width="160" height="213"/>
-                                <state key="normal" image="sick"/>
+                                <state key="normal" backgroundImage="sick"/>
+                                <state key="highlighted" backgroundImage="sick"/>
                                 <connections>
                                     <action selector="sickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U70-7I-Lgz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emi-Sy-tsO" userLabel="toiletButton">
                                 <rect key="frame" x="190" y="102" width="160" height="212"/>
-                                <state key="normal" image="toilet"/>
+                                <state key="normal" backgroundImage="toilet"/>
+                                <state key="highlighted" backgroundImage="toilet"/>
                                 <connections>
                                     <action selector="toiletButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XKj-Gx-zRd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9S-07-JsN" userLabel="placeButton">
                                 <rect key="frame" x="25" y="102" width="160" height="211"/>
-                                <state key="normal" image="place"/>
+                                <state key="normal" backgroundImage="place"/>
+                                <state key="highlighted" backgroundImage="place"/>
                                 <connections>
                                     <action selector="locationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0m-dN-hg1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyA-V7-z87" userLabel="helpButton">
                                 <rect key="frame" x="25" y="537" width="325" height="73"/>
-                                <state key="normal" image="help"/>
+                                <state key="normal" backgroundImage="help"/>
+                                <state key="highlighted" backgroundImage="help"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お困りの項目を選択してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0m-At-oed">
                                 <rect key="frame" x="60" y="73" width="255" height="21"/>
@@ -59,11 +55,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DS3-hH-zKh">
-                                <rect key="frame" x="120" y="629" width="135" height="30"/>
-                                <state key="normal" title="助け人探索中画面へ"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIA-h9-Dyd" userLabel="foodButton">
+                                <rect key="frame" x="190" y="318" width="160" height="211"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
+                                <state key="normal" backgroundImage="food"/>
+                                <state key="highlighted" backgroundImage="food"/>
                                 <connections>
-                                    <segue destination="cr0-g7-bYU" kind="presentation" identifier="" id="SBr-6t-3h3"/>
+                                    <action selector="mealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLb-Zd-QOx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,7 +76,7 @@
         <!--Search View Controller-->
         <scene sceneID="6i8-QM-HJ6">
             <objects>
-                <viewController id="cr0-g7-bYU" customClass="SearchViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Search" id="cr0-g7-bYU" customClass="SearchViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="isu-SW-ypv"/>
                         <viewControllerLayoutGuide type="bottom" id="oze-cd-JZj"/>
@@ -97,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjB-Uq-CQw">
-                                <rect key="frame" x="97" y="348" width="180" height="30"/>
+                                <rect key="frame" x="97" y="592" width="180" height="30"/>
                                 <state key="normal" title="助け人探索結果出力画面へ"/>
                                 <connections>
                                     <segue destination="BBl-sx-nkU" kind="presentation" id="aC0-mr-JOT"/>
@@ -106,6 +104,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggo-DC-ClR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
