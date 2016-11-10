@@ -25,8 +25,9 @@ class SpinningView: UIView{
         super.awakeFromNib()
         setup()
     }
-}
+    
+    func setup(){
+        circleLayer.lineWidth = 4
+    }
 
-func setup(){
-    circleLayer.line
 }
