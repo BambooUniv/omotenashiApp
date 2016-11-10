@@ -26,6 +26,7 @@
 		3FCB5DEA2D486649A168FD67 /* Pods_omotenashiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */; };
 		A0F6BFAF3005DC32F46EC10B /* Pods_omotenashiAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */; };
 		B493FA4F6A02BC1983656600 /* Pods_omotenashiAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */; };
+		CA980F551DD46FB400238455 /* SpinningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA980F541DD46FB400238455 /* SpinningView.swift */; };
 		CAD39ED21DBF31D500497D77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED11DBF31D500497D77 /* MainViewController.swift */; };
 		CAD39ED41DBF35A900497D77 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED31DBF35A900497D77 /* SearchViewController.swift */; };
 		CAD39ED61DBF48DE00497D77 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED51DBF48DE00497D77 /* SearchResultViewController.swift */; };
@@ -80,6 +81,7 @@
 		5D5CEAE5DF22C72F03982CEA /* Pods-omotenashiAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA980F541DD46FB400238455 /* SpinningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinningView.swift; sourceTree = "<group>"; };
 		CAD39ED11DBF31D500497D77 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CAD39ED31DBF35A900497D77 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CAD39ED51DBF48DE00497D77 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				23AC22601DBF593200199203 /* CustomUITextField.swift */,
+				CA980F541DD46FB400238455 /* SpinningView.swift */,
 			);
 			name = customView;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				238AD85F1DCF0E790035AEFA /* Help.swift in Sources */,
 				236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */,
 				2351E22E1DC0A2D400F50C27 /* Authentication.swift in Sources */,
+				CA980F551DD46FB400238455 /* SpinningView.swift in Sources */,
 				2363590A1DBF01740087B2CE /* ViewController.swift in Sources */,
 				236359101DBF01740087B2CE /* omotenashiApp.xcdatamodeld in Sources */,
 				23AC22611DBF593200199203 /* CustomUITextField.swift in Sources */,
