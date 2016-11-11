@@ -40,7 +40,15 @@ class SearchViewController: UIViewController {
         strokeAnimationGroup.repeatDuration = CFTimeInterval.infinity
         strokeAnimationGroup.animations = [strokeStartAnimation, strokeEndAnimation]
         ovalShapeLayer.addAnimation(strokeAnimationGroup, forKey: nil)
-
+        
+        /*------------------------------
+         * SpinningViewクラスのインスタンスを作成
+         *------------------------------*/
+        // 回る円の位置を指定
+        let rect = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let SpinningCircle = SpinningView(frame: rect)
+        SpinningCircle.layoutSubviews()
+        
         // Do any additional setup after loading the view.
     }
 
