@@ -18,6 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
+    
+    /*-------------------------
+     * ユーザに通知の許可を求める処理
+     *------------------------*/
+    let notiSettings = UIUserNotificationSettings(forTypes: [.Alert,.Sound,.Badge], categories: nil)
+    application.registerUserNotificationSettings(notiSettings)
+    application.registerForRemoteNotifications()
+
+    
+    
     /*-------------------------
      * サインイン判定
      *------------------------*/

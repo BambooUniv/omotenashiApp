@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Unbox
 
 class Help {
   
@@ -29,7 +30,7 @@ class Help {
         do {
           // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
           let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-          
+
         } catch (let e) {
           print(e)
         }
@@ -37,13 +38,13 @@ class Help {
     
     
     // 自分の現在位置から100m(distance)以内のお助けリクエストが存在するか確認する処理
-    class func getHelpWithLocation(userId: String, latitude: Double, longitude: Double, distance: Int) {
+    class func getHelpWithLocation(latitude: Double, longitude: Double, distance: Int) {
         // POSTでAPIを叩く
-        let url = NSURL(string:Const.apiHelpCreateUrl)
+        let url = NSURL(string:Const.apiHelpSearchUrl)
         let request = NSMutableURLRequest(URL: url!)
         
         // パラメータの作成
-        let str = "user_id="+userId+"&latitude="+String(latitude)+"&longitude="+String(longitude)+"&distance="+String(distance)
+        let str = "latitude="+String(latitude)+"&longitude="+String(longitude)+"&distance="+String(distance)
         
         let strData = str.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPMethod = "POST"
@@ -55,11 +56,76 @@ class Help {
         do {
           // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
             let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-            print(data)
-            
+            do {
+                let helpRequest: ReturnHelpRequest = try Unbox(data)
+                
+                //ローカル通知
+                let notification = UILocalNotification()
+                //ロック中にスライドで〜〜のところの文字
+                notification.alertAction = "アプリを開く"
+                //通知の本文
+                notification.alertBody = String(helpRequest.distance) + "m先で困っている人がいます！！"
+                //通知される時間（とりあえず10秒後に設定）
+                notification.fireDate = NSDate(timeIntervalSinceNow:0.1)
+                //通知音
+                notification.soundName = UILocalNotificationDefaultSoundName
+                //アインコンバッジの数字
+                notification.applicationIconBadgeNumber = 1
+                //通知を識別するID
+                notification.userInfo = ["notifyID":"gohan"]
+                //通知をスケジューリング
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                
+                
+            } catch let error {
+                print(error);
+            }
           
         } catch (let e) {
             print(e)
         }
+    }
+}
+
+struct HelpRequest {
+    let id: Int
+    let user_id: Int
+    let content: String
+    let latitude: Double
+    let longitude: Double
+    let created: Int
+    let updated: Int
+    let is_resolved: Int
+    let resolved_user_id: Int
+}
+
+
+struct ReturnHelpRequest {
+    let id: Int
+    let user_id: Int
+    let content: String
+    let latitude: Double
+    let longitude: Double
+    let created: Int
+    let updated: Int
+    let is_resolved: Int?
+    let resolved_user_id: Int?
+    let distance: Int
+    let direction: Int
+}
+
+extension ReturnHelpRequest: Unboxable {
+    init(unboxer: Unboxer) {
+        self.id = unboxer.unbox("id")
+        self.user_id = unboxer.unbox("user_id")
+        self.content = unboxer.unbox("content")
+        self.latitude = unboxer.unbox("latitude")
+        self.longitude = unboxer.unbox("longitude")
+        self.created = unboxer.unbox("created")
+        self.updated = unboxer.unbox("updated")
+        self.is_resolved = unboxer.unbox("is_resolved")
+        self.resolved_user_id = unboxer.unbox("resolve_user_id")
+        self.distance = unboxer.unbox("distance")
+        self.direction = unboxer.unbox("direction")
     }
 }
