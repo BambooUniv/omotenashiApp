@@ -6,6 +6,7 @@ target 'omotenashiApp' do
   use_frameworks!
 
   # Pods for omotenashiApp
+  pod 'Unbox', '1.9'
 
   target 'omotenashiAppTests' do
     inherit! :search_paths
