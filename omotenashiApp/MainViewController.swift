@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class MainViewController: UIViewController, CLLocationManagerDelegate {
-  
+
     var locationManager: CLLocationManager!
     var latitude: Double!
     var longitude: Double!
