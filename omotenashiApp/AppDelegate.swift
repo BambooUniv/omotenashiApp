@@ -22,16 +22,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /*-------------------------
      * ユーザに通知の許可を求める処理
      *------------------------*/
-    let notiSettings = UIUserNotificationSettings(forTypes: [.Alert,.Sound,.Badge], categories: nil)
+    let actionA = UIMutableUserNotificationAction()
+    actionA.identifier = "actionA"
+    actionA.title = "助ける"
+    actionA.activationMode = UIUserNotificationActivationMode.Background
+    actionA.authenticationRequired = false
+    actionA.destructive = false
+    
+    let actionB = UIMutableUserNotificationAction()
+    actionB.identifier = "actionB"
+    actionB.title = "助けない"
+    actionB.activationMode = UIUserNotificationActivationMode.Background
+    actionB.authenticationRequired = false
+    actionB.destructive = true
+    
+    let category = UIMutableUserNotificationCategory()
+    category.identifier = "custom"
+    category.setActions([actionA, actionB], forContext: UIUserNotificationActionContext.Minimal)
+    category.setActions([actionA, actionB], forContext: UIUserNotificationActionContext.Default)
+    
+    
+    let notiSettings = UIUserNotificationSettings(forTypes: [.Alert,.Sound,.Badge], categories: NSSet(object: category) as? Set<UIUserNotificationCategory>)
     application.registerUserNotificationSettings(notiSettings)
     application.registerForRemoteNotifications()
+    
+    
 
-    
-    
+    let ud = NSUserDefaults.standardUserDefaults()
+    /*------------------------------
+     * helpInfoの初期化
+     *----------------------------*/
+    if (!ud.boolForKey("helpInfo")) {
+        Help.initHelpUserDefault()
+    }
+ 
     /*-------------------------
      * サインイン判定
      *------------------------*/
-    let ud = NSUserDefaults.standardUserDefaults()
     let isSignin: Bool? = ud.objectForKey("isSignin") as? Bool
     
     // サインインしていない場合
@@ -44,6 +71,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     return true
   }
+    
+    // 起動中に通知を受信した時とバックグラウンドから復帰した時の動作
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        
+        // アプリ起動中(フォアグラウンド)に通知が届いた場合
+        if (application.applicationState == UIApplicationState.Active) {
+            
+            var alert = UIAlertView()
+            alert.title = "アラートのタイトル"
+            alert.message = "アラートの本文"
+            notification.alertAction = "OK"
+            alert.addButtonWithTitle(notification.alertAction!)
+            alert.show()
+            
+            print("アプリ起動中(フォアグラウンド)に通知が届いた場合")
+            
+            // アプリがバックグラウンドから復帰した場合
+        }
+    }
 
   func applicationWillResignActive(application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -57,6 +103,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func applicationWillEnterForeground(application: UIApplication) {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+  }
+    
+  func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: (() -> Void)) {
+    // ここでBackgroundから復帰したときの処理
+    print(identifier)
+    completionHandler()
   }
 
   func applicationDidBecomeActive(application: UIApplication) {

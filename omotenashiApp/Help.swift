@@ -10,6 +10,20 @@ import UIKit
 import Unbox
 
 class Help {
+    
+    // お助けリクエストに関するUserDefaultが設定されていない場合初期化する関数
+    class func initHelpUserDefault() {
+        
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        let helpInfo = [
+            "IsActive": false,           // 現在お助けリクエストを承諾中かどうか
+            "activeHelpId": "",        // 承諾しているお助けリクエストのID
+            "notifiedHelpIdList": [],  // 既に通知が来たお助けリクエストのIDの配列
+        ]
+        
+        userDefault.setObject(helpInfo, forKey: "helpInfo") // リクエスト関連情報の保存
+        userDefault.synchronize()
+    }
   
     // お助けリクエストを作成する処理
     class func sendHelpWithType(userId: String, content: String, latitude: Double, longitude: Double) {
@@ -59,22 +73,58 @@ class Help {
             do {
                 let helpRequest: ReturnHelpRequest = try Unbox(data)
                 
-                //ローカル通知
-                let notification = UILocalNotification()
-                //ロック中にスライドで〜〜のところの文字
-                notification.alertAction = "アプリを開く"
-                //通知の本文
-                notification.alertBody = String(helpRequest.distance) + "m先で困っている人がいます！！"
-                //通知される時間（とりあえず10秒後に設定）
-                notification.fireDate = NSDate(timeIntervalSinceNow:0.1)
-                //通知音
-                notification.soundName = UILocalNotificationDefaultSoundName
-                //アインコンバッジの数字
-                notification.applicationIconBadgeNumber = 1
-                //通知を識別するID
-                notification.userInfo = ["notifyID":"gohan"]
-                //通知をスケジューリング
-                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                // 既にそのお助けリクエストの通知を受け取っていないか確認
+                let userDefault = NSUserDefaults.standardUserDefaults()
+                var helpInfo:Dictionary = userDefault.objectForKey("helpInfo") as! Dictionary<String, AnyObject>
+                let notifiedHelpIdList = helpInfo["notifiedHelpIdList"]?.mutableCopy() as! NSMutableArray
+                
+                let isNotified = notifiedHelpIdList.indexOfObject(helpRequest.id)
+                if (isNotified == NSNotFound) {
+                    //ローカル通知
+                    let notification = UILocalNotification()
+                    //ロック中にスライドで〜〜のところの文字
+                    notification.alertAction = "アプリを開く"
+                    //通知の本文
+                    notification.alertBody = String(helpRequest.distance) + "m先で困っている人がいます！！"
+                    //通知される時間（とりあえず10秒後に設定）
+                    notification.fireDate = NSDate(timeIntervalSinceNow:0.1)
+                    //通知音
+                    notification.soundName = UILocalNotificationDefaultSoundName
+                    //アインコンバッジの数字
+                    notification.applicationIconBadgeNumber = 1
+                    //通知を識別するID
+                    notification.userInfo = ["notifyID":"gohan"]
+                    //通知をスケジューリング
+                    UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                    
+                    
+                    
+                    
+                    // 受け取った通知のIDをリストに加える
+                    notifiedHelpIdList.addObject(helpRequest.id)
+                    helpInfo["notifiedHelpIdList"] = notifiedHelpIdList
+                    userDefault.setObject(helpInfo, forKey: "helpInfo")
+                }
+//                
+//                
+//               
+//                
+//                //ローカル通知
+//                let notification = UILocalNotification()
+//                //ロック中にスライドで〜〜のところの文字
+//                notification.alertAction = "アプリを開く"
+//                //通知の本文
+//                notification.alertBody = String(helpRequest.distance) + "m先で困っている人がいます！！"
+//                //通知される時間（とりあえず10秒後に設定）
+//                notification.fireDate = NSDate(timeIntervalSinceNow:0.1)
+//                //通知音
+//                notification.soundName = UILocalNotificationDefaultSoundName
+//                //アインコンバッジの数字
+//                notification.applicationIconBadgeNumber = 1
+//                //通知を識別するID
+//                notification.userInfo = ["notifyID":"gohan"]
+//                //通知をスケジューリング
+//                UIApplication.sharedApplication().scheduleLocalNotification(notification)
                 
                 
             } catch let error {
