@@ -33,7 +33,7 @@ import UIKit
         animation.toValue = 1
         animation.duration = 2
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        animation.repeatCount = MAXFLOAT
+        animation.repeatCount = 3.0
         return animation
     }()
     
@@ -46,6 +46,8 @@ import UIKit
     
     @IBInspectable var animating: Bool = true {
         didSet {
+            
+            print("てすと１")
             updateAnimation()
         }
     }
@@ -56,10 +58,13 @@ import UIKit
         circleLayer.strokeColor = UIColor(red: 0.8078, green: 0.2549, blue: 0.2392, alpha: 1.0).CGColor
         layer.addSublayer(circleLayer)
         tintColorDidChange()
+        print("test2")
         updateAnimation()
     }
     
     func updateAnimation() {
+        
+        print("test3")
         if animating {
             circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEnd")
         }
