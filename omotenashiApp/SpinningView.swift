@@ -27,16 +27,6 @@ import UIKit
         setup()
     }
     
-    let strokeEndAnimation: CAAnimation = {
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.fromValue = 0
-        animation.toValue = 1
-        animation.duration = 2
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        animation.repeatCount = 3.0
-        return animation
-    }()
-    
     @IBInspectable var lineWidth: CGFloat = 4 {
         didSet {
             circleLayer.lineWidth = lineWidth
@@ -56,6 +46,8 @@ import UIKit
         circleLayer.lineWidth = lineWidth
         circleLayer.fillColor = nil
         circleLayer.strokeColor = UIColor(red: 0.8078, green: 0.2549, blue: 0.2392, alpha: 1.0).CGColor
+        circleLayer.strokeEnd = 0.0
+        circleLayer.strokeStart = 0.0
         layer.addSublayer(circleLayer)
         tintColorDidChange()
         print("test2")
@@ -72,6 +64,16 @@ import UIKit
             circleLayer.removeAnimationForKey("strokeEnd")
         }
     }
+    
+    let strokeEndAnimation: CAAnimation = {
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 2
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.repeatCount = MAXFLOAT
+        return animation
+    }()
     
     override func tintColorDidChange() {
         super.tintColorDidChange()
