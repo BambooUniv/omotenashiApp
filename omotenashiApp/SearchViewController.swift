@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var spinningView: SpinningView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +40,7 @@ class SearchViewController: UIViewController {
 //        strokeAnimationGroup.duration = 1.5
 //        strokeAnimationGroup.repeatDuration = CFTimeInterval.infinity
 //        strokeAnimationGroup.animations = [strokeStartAnimation, strokeEndAnimation]
-//        ovalShapeLayer.addAnimation(strokeAnimationGroup, forKey: nil)        
+//        ovalShapeLayer.addAnimation(strokeAnimationGroup, forKey: nil)
         
         // Do any additional setup after loading the view.
     }
@@ -59,5 +60,9 @@ class SearchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewDidAppear(animated: Bool) {
+        self.spinningView.updateAnimation()
+    }
 
 }

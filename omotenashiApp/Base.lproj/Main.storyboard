@@ -90,6 +90,13 @@
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-eM-fe9" customClass="SpinningView" customModule="omotenashiApp" customModuleProvider="target">
                                 <rect key="frame" x="67" y="249" width="240" height="247"/>
+                                <color key="tintColor" red="0.94504662959999997" green="0.4315397413" blue="0.2747148894" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="助け人画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-r6-JiH">
                                 <rect key="frame" x="145" y="97" width="85" height="21"/>
@@ -108,6 +115,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="spinningView" destination="5wU-eM-fe9" id="tjH-Aq-Ao6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ggo-DC-ClR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
