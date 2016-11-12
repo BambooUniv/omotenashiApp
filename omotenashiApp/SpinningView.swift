@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SpinningView: UIView{
+
+@IBDesignable class SpinningView: UIView{
     
     let circleLayer = CAShapeLayer()
     
@@ -26,11 +27,50 @@ class SpinningView: UIView{
         setup()
     }
     
+    let strokeEndAnimation: CAAnimation = {
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 2
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animation.repeatCount = MAXFLOAT
+        return animation
+    }()
+    
+    @IBInspectable var lineWidth: CGFloat = 4 {
+        didSet {
+            circleLayer.lineWidth = lineWidth
+            setNeedsLayout()
+        }
+    }
+    
+    @IBInspectable var animating: Bool = true {
+        didSet {
+            updateAnimation()
+        }
+    }
+    
     func setup(){
-        circleLayer.lineWidth = 4
+        circleLayer.lineWidth = lineWidth
         circleLayer.fillColor = nil
         circleLayer.strokeColor = UIColor(red: 0.8078, green: 0.2549, blue: 0.2392, alpha: 1.0).CGColor
         layer.addSublayer(circleLayer)
+        tintColorDidChange()
+        updateAnimation()
+    }
+    
+    func updateAnimation() {
+        if animating {
+            circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEnd")
+        }
+        else {
+            circleLayer.removeAnimationForKey("strokeEnd")
+        }
+    }
+    
+    override func tintColorDidChange() {
+        super.tintColorDidChange()
+        circleLayer.strokeColor = tintColor.CGColor
     }
     
     override func layoutSubviews() {
@@ -46,5 +86,9 @@ class SpinningView: UIView{
         circleLayer.position = center
         circleLayer.path = path.CGPath
     }
-
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        setup()
+    }
 }
