@@ -28,14 +28,5 @@ class SignInViewController: UIViewController {
           self.presentViewController(viewController, animated: true, completion: nil)
         }
     })
-    
-    /*
-    let isSignin: Bool = Authentication.signin(emailStr, password: passwordStr)
-    if (isSignin == true) {
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let viewController = storyboard.instantiateInitialViewController()! as UIViewController
-      self.presentViewController(viewController, animated: true, completion: nil)
-    }
-     */
   }
 }
