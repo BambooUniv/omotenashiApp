@@ -77,15 +77,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // アプリ起動中(フォアグラウンド)に通知が届いた場合
         if (application.applicationState == UIApplicationState.Active) {
+            let alert = UIAlertController(title: "お助けリクエストが届きました！", message: "近くに困っている人がいます", preferredStyle: UIAlertControllerStyle.Alert)
+            let cancelAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.Destructive, handler: {
+                (action: UIAlertAction!) -> Void in
+                    print("キャンセル")
+            })
+            let acceptAction = UIAlertAction(title: "助ける", style: UIAlertActionStyle.Default, handler: {
+                (action: UIAlertAction!) -> Void in
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyboard.instantiateViewControllerWithIdentifier("searchResult") as! SearchResultViewController
+                self.window?.rootViewController?.presentViewController(viewController, animated: true, completion: nil)
+            })
             
-            var alert = UIAlertView()
-            alert.title = "アラートのタイトル"
-            alert.message = "アラートの本文"
-            notification.alertAction = "OK"
-            alert.addButtonWithTitle(notification.alertAction!)
-            alert.show()
+            alert.addAction(cancelAction)
+            alert.addAction(acceptAction)
+            self.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
             
-            print("アプリ起動中(フォアグラウンド)に通知が届いた場合")
         }
     }
 
