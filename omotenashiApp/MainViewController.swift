@@ -111,7 +111,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     if let location = manager.location {
       self.latitude = location.coordinate.latitude
       self.longitude = location.coordinate.longitude
-        
+      Help.getHelpWithLocation(self.latitude, longitude: self.longitude, distance: 200)
         
     }
   }
