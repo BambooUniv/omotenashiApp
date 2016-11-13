@@ -57,6 +57,9 @@ class Help {
                 let isNotified = notifiedHelpIdList.indexOfObject(helpRequest.id)
                 if (isNotified == NSNotFound) {
                     
+                    // お助けリクエスト情報を保存する
+                    self.setActiveHelpInfo(helpRequest)
+                    
                     let notification = Notification.createDefaultNotification(String(helpRequest.distance), alertAction: "アプリを開く")
                     //通知をスケジューリング
                     UIApplication.sharedApplication().scheduleLocalNotification(notification)
@@ -73,6 +76,31 @@ class Help {
         })
         task.resume()
     
+    }
+    
+    // 自分が承認したお助けリクエストの情報を取得する
+    class func getActiveHelpInfo() -> AnyObject{
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        let activeHelpInfo = userDefault.objectForKey("helpActiveInfo")
+        
+        return activeHelpInfo!
+    }
+    
+    class func setActiveHelpInfo(helpInfo: ReturnHelpRequest) {
+        
+        let helpActiveInfo = [
+            "id": helpInfo.id,
+            "name": helpInfo.name,
+            "sex": helpInfo.sex,
+            "content": helpInfo.content,
+            "nationality": helpInfo.nationality,
+            "distance": helpInfo.distance,
+            "direction": helpInfo.direction
+        ]
+        
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        userDefault.setObject(helpActiveInfo, forKey: "helpActiveInfo") // リクエスト関連情報の保存
+        userDefault.synchronize()
     }
 }
 
@@ -92,6 +120,9 @@ struct HelpRequest {
 struct ReturnHelpRequest {
     let id: Int
     let user_id: Int
+    let sex: String
+    let name: String
+    let nationality: String
     let content: String
     let latitude: Double
     let longitude: Double
@@ -106,6 +137,9 @@ struct ReturnHelpRequest {
 extension ReturnHelpRequest: Unboxable {
     init(unboxer: Unboxer) {
         self.id = unboxer.unbox("id")
+        self.sex = unboxer.unbox("sex")
+        self.name = unboxer.unbox("name")
+        self.nationality = unboxer.unbox("nationality")
         self.user_id = unboxer.unbox("user_id")
         self.content = unboxer.unbox("content")
         self.latitude = unboxer.unbox("latitude")
