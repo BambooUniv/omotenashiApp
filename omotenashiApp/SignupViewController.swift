@@ -26,10 +26,10 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     // Do any additional setup after loading the view.
     
     // UIViewPickerの生成
-    var sexPickerView = UIPickerView()
-    var nationalityPickerView = UIPickerView()
-    var language1PickerView = UIPickerView()
-    var language2PickerView = UIPickerView()
+    let sexPickerView = UIPickerView()
+    let nationalityPickerView = UIPickerView()
+    let language1PickerView = UIPickerView()
+    let language2PickerView = UIPickerView()
     
     // 識別用のタグを設定
     sexPickerView.tag = 1
@@ -68,13 +68,13 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
 
     
     // サインアップ処理
-    let isSignup: Bool = Authentication.signup(nameStr, email: emailStr, password: passwordStr, sex: sexStr, img: imgStr, languages: languagesStr, nationality: nationalityStr)
-    // サインアップできたらメイン画面へ遷移
-    if (isSignup == true) {
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let viewController = storyboard.instantiateInitialViewController()! as UIViewController
-      self.presentViewController(viewController, animated: true, completion: nil)
-    }
+    Authentication.signup(nameStr, email: emailStr, password: passwordStr, sex: sexStr, img: imgStr, languages: languagesStr, nationality: nationalityStr, completionHandler: {(isSignup) -> Void in
+        if (isSignup == true) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateInitialViewController()! as UIViewController
+            self.presentViewController(viewController, animated: true, completion: nil)
+        }
+    })
   }
   
   /*----------------------------------

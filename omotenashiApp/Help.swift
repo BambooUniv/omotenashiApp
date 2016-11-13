@@ -25,95 +25,54 @@ class Help {
         userDefault.synchronize()
     }
   
+    
     // お助けリクエストを作成する処理
     class func sendHelpWithType(userId: String, content: String, latitude: Double, longitude: Double) {
-        // POSTでAPIを叩く
-        let url = NSURL(string:Const.apiHelpCreateUrl)
-        let request = NSMutableURLRequest(URL: url!)
         
-        // パラメータの作成
-        let str = "user_id="+userId+"&content="+content+"&latitude="+String(latitude)+"&longitude="+String(longitude)
+        let params = ["user_id":userId, "content":content, "latitude":String(latitude), "longitude": String(longitude)]
+        let request = Http.createPostRequest(Const.apiHelpCreateUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
+        })
+        task.resume()
         
-        let strData = str.dataUsingEncoding(NSUTF8StringEncoding)
-        request.HTTPMethod = "POST"
-        request.HTTPBody = strData
-        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
-        request.timeoutInterval = 10.0
-        
-        var response: NSURLResponse?
-        do {
-          // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
-          let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
-
-        } catch (let e) {
-          print(e)
-        }
     }
     
     
     // 自分の現在位置から100m(distance)以内のお助けリクエストが存在するか確認する処理
     class func getHelpWithLocation(latitude: Double, longitude: Double, distance: Int) {
-        // POSTでAPIを叩く
-        let url = NSURL(string:Const.apiHelpSearchUrl)
-        let request = NSMutableURLRequest(URL: url!)
         
-        // パラメータの作成
-        let str = "latitude="+String(latitude)+"&longitude="+String(longitude)+"&distance="+String(distance)
-        
-        let strData = str.dataUsingEncoding(NSUTF8StringEncoding)
-        request.HTTPMethod = "POST"
-        request.HTTPBody = strData
-        request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData
-        request.timeoutInterval = 10.0
-        
-        var response: NSURLResponse?
-        do {
-          // MEMO:NSURLConnectionは今後廃止されるのでNSURLSessionで書き直す必要あり
-            let data = try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
+        let params = ["latitude":String(latitude), "longitude":String(longitude), "distance":String(distance)]
+        let request = Http.createPostRequest(Const.apiHelpSearchUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
             do {
-                let helpRequest: ReturnHelpRequest = try Unbox(data)
-                
+                let helpRequest: ReturnHelpRequest = try Unbox(data!)
                 // 既にそのお助けリクエストの通知を受け取っていないか確認
                 let userDefault = NSUserDefaults.standardUserDefaults()
                 var helpInfo:Dictionary = userDefault.objectForKey("helpInfo") as! Dictionary<String, AnyObject>
                 let notifiedHelpIdList = helpInfo["notifiedHelpIdList"]?.mutableCopy() as! NSMutableArray
-                
                 let isNotified = notifiedHelpIdList.indexOfObject(helpRequest.id)
                 if (isNotified == NSNotFound) {
-                    //ローカル通知
-                    let notification = UILocalNotification()
-                    //ロック中にスライドで〜〜のところの文字
-                    notification.alertAction = "アプリを開く"
-                    //通知の本文
-                    notification.alertBody = String(helpRequest.distance) + "m先で困っている人がいます！！"
-                    //通知される時間（とりあえず10秒後に設定）
-                    notification.fireDate = NSDate(timeIntervalSinceNow:0.1)
-                    //通知音
-                    notification.soundName = UILocalNotificationDefaultSoundName
-                    //アインコンバッジの数字
-                    notification.applicationIconBadgeNumber = 1
-                    //通知を識別するID
-                    notification.userInfo = ["notifyID":"gohan"]
+                    
+                    let notification = Notification.createDefaultNotification(String(helpRequest.distance), alertAction: "アプリを開く")
                     //通知をスケジューリング
                     UIApplication.sharedApplication().scheduleLocalNotification(notification)
-                    
-                    
-                    
                     
                     // 受け取った通知のIDをリストに加える
                     notifiedHelpIdList.addObject(helpRequest.id)
                     helpInfo["notifiedHelpIdList"] = notifiedHelpIdList
                     userDefault.setObject(helpInfo, forKey: "helpInfo")
                 }
-                
-                
             } catch let error {
-                print(error);
+               print(error);
             }
-          
-        } catch (let e) {
-            print(e)
-        }
+            
+        })
+        task.resume()
+    
     }
 }
 
