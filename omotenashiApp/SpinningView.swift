@@ -36,8 +36,6 @@ import UIKit
     
     @IBInspectable var animating: Bool = true {
         didSet {
-            
-            print("てすと１")
             updateAnimation()
         }
     }
@@ -45,34 +43,58 @@ import UIKit
     func setup(){
         circleLayer.lineWidth = lineWidth
         circleLayer.fillColor = nil
-        circleLayer.strokeColor = UIColor(red: 0.8078, green: 0.2549, blue: 0.2392, alpha: 1.0).CGColor
-        circleLayer.strokeEnd = 0.0
-        circleLayer.strokeStart = 0.0
+        circleLayer.strokeColor = UIColor(red: 0.8078, green: 0.2549, blue: 0.2392, alpha: 0.0).CGColor
+//        circleLayer.strokeEnd = 0.0
+//        circleLayer.strokeStart = 0.0
         layer.addSublayer(circleLayer)
-        tintColorDidChange()
-        print("test2")
+//        tintColorDidChange()
+        print("test")
+        
         updateAnimation()
     }
     
     func updateAnimation() {
         
-        print("test3")
         if animating {
             circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEnd")
+            circleLayer.addAnimation(strokeStartAnimation, forKey: "strokeStart")
         }
         else {
             circleLayer.removeAnimationForKey("strokeEnd")
+            circleLayer.removeAnimationForKey("strokeStart")
         }
     }
     
     let strokeEndAnimation: CAAnimation = {
+        
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.fromValue = 0
         animation.toValue = 1
         animation.duration = 2
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        animation.repeatCount = MAXFLOAT
-        return animation
+        
+        let group = CAAnimationGroup()
+        group.duration = 2.5
+        group.repeatCount = MAXFLOAT
+        group.animations = [animation]
+        
+        return group
+    }()
+    
+    let strokeStartAnimation: CAAnimation = {
+        let animation = CABasicAnimation(keyPath: "strokeStart")
+        animation.beginTime = 0.5
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 2
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        
+        let group = CAAnimationGroup()
+        group.duration = 2.5
+        group.repeatCount = MAXFLOAT
+        group.animations = [animation]
+        
+        return group
     }()
     
     override func tintColorDidChange() {
