@@ -9,10 +9,20 @@
 import UIKit
 
 class SearchResultViewController: UIViewController {
+    
+    @IBOutlet weak var distanceCircleRotation: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        /*--------------------------------
+         * 距離と方角の円盤を回転させる
+         ---------------------------------*/
+        //角度計算
+        var angle:CGFloat = CGFloat((270.0 * M_PI) / 180.0)
+        //回転するためのアフィン変換
+        distanceCircleRotation.transform = CGAffineTransformMakeRotation(angle)
+        
         // Do any additional setup after loading the view.
     }
 

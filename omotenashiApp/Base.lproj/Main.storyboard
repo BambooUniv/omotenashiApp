@@ -52,7 +52,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お困りの項目を選択してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0m-At-oed">
                                 <rect key="frame" x="60" y="73" width="255" height="21"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIA-h9-Dyd" userLabel="foodButton">
@@ -139,22 +139,29 @@
                                 <rect key="frame" x="0.0" y="-2" width="375" height="669"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="助け人探索結果出力画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2s-Qs-YBK">
-                                <rect key="frame" x="94" y="105" width="187" height="21"/>
+                                <rect key="frame" x="94" y="41" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="distance" translatesAutoresizingMaskIntoConstraints="NO" id="pNh-tN-uIg">
+                                <rect key="frame" x="-613" y="94" width="1600" height="1600"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="distanceCircleRotation" destination="pNh-tN-uIg" id="6WJ-FF-gYq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkZ-lb-EZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216.5" y="210.5"/>
+            <point key="canvasLocation" x="1430.5" y="224.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="750" height="1334"/>
+        <image name="distance" width="3388" height="3388"/>
         <image name="food" width="317" height="419"/>
         <image name="help" width="648" height="149"/>
         <image name="place" width="317" height="419"/>
