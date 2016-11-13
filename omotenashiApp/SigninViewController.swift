@@ -21,11 +21,12 @@ class SignInViewController: UIViewController {
     let passwordStr = self.passwordTextField.text!
     
     // サインイン処理
-    let isSignin: Bool = Authentication.signin(emailStr, password: passwordStr)
-    if (isSignin == true) {
-      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let viewController = storyboard.instantiateInitialViewController()! as UIViewController
-      self.presentViewController(viewController, animated: true, completion: nil)
-    }
+    Authentication.signin(emailStr, password: passwordStr, completionHandler: {(isSignin: Bool)->Void in
+        if (isSignin == true) {
+          let storyboard = UIStoryboard(name: "Main", bundle: nil)
+          let viewController = storyboard.instantiateInitialViewController()! as UIViewController
+          self.presentViewController(viewController, animated: true, completion: nil)
+        }
+    })
   }
 }
