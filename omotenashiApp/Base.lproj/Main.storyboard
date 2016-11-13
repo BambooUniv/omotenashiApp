@@ -126,7 +126,7 @@
         <!--Search Result View Controller-->
         <scene sceneID="GTc-rB-Mj3">
             <objects>
-                <viewController id="BBl-sx-nkU" customClass="SearchResultViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchResult" id="BBl-sx-nkU" customClass="SearchResultViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k0B-W2-jc6"/>
                         <viewControllerLayoutGuide type="bottom" id="Ocz-Pl-ild"/>
