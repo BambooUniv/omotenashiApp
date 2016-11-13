@@ -78,7 +78,11 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         //角度を表示
         self.directionDisplay.text = "".stringByAppendingFormat("%.2f", newHeading.magneticHeading)
         //画像を回転
-        
+        //角度計算
+        let angle:CGFloat = CGFloat(stringByAppendingFormat("%.2f", newHeading.magneticHeading))
+        //回転するためのアフィン変換
+        distanceCircleRotation.transform = CGAffineTransformMakeRotation(angle)
+
     }
 
 }
