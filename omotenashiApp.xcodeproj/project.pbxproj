@@ -173,10 +173,10 @@
 				236359421DBF08C10087B2CE /* SigninViewController.swift */,
 				23AC225C1DBF409300199203 /* SignupViewController.swift */,
 				2351E22D1DC0A2D400F50C27 /* Authentication.swift */,
-				2373095B1DC5BE9F0034B85E /* Const.swift */,
 				238AD85E1DCF0E790035AEFA /* Help.swift */,
 				234198BF1DD5B9A90075ADFE /* Notification.swift */,
 				23912D231DD6EC960067D1BA /* Http.swift */,
+				2373095B1DC5BE9F0034B85E /* Const.swift */,
 			);
 			path = omotenashiApp;
 			sourceTree = "<group>";

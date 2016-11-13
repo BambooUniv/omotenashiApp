@@ -86,8 +86,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             alert.show()
             
             print("アプリ起動中(フォアグラウンド)に通知が届いた場合")
-            
-            // アプリがバックグラウンドから復帰した場合
         }
     }
 
