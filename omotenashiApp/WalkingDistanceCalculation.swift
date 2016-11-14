@@ -6,4 +6,12 @@
 //  Copyright © 2016年 TMT. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import CoreLocation
+
+class walkingDistanceCalculation {
+
+    
+    
+}
+
