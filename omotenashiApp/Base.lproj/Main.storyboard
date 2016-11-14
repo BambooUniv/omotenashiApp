@@ -45,12 +45,21 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aiz-RM-cY2">
                                 <rect key="frame" x="44" y="377" width="292" height="233"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-G6-nl9">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-G6-nl9" customClass="CustomButton" customModule="omotenashiApp" customModuleProvider="target">
                                         <rect key="frame" x="84" y="186" width="124" height="30"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
                                         <state key="normal" title="設定変更">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.85106382979999995" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.4303115904726979" green="0.57958102413800516" blue="0.69858475130890052" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
+                                                <color key="value" red="0.3780831711" green="0.65172659349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightedBackgroundColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="manwoman" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-Q1-EgT">
                                         <rect key="frame" x="17" y="77" width="38" height="38"/>
