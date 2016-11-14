@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jm5-pB-Z2v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jm5-pB-Z2v">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtD-rG-wcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863.5" y="1000.5"/>
+            <point key="canvasLocation" x="655.5" y="1204.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
@@ -106,9 +106,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="3OE-tu-fL4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-eM-fe9" customClass="SpinningView" customModule="omotenashiApp" customModuleProvider="target">
                                 <rect key="frame" x="67" y="249" width="240" height="247"/>
                                 <color key="tintColor" red="0.94504662959999997" green="0.4315397413" blue="0.2747148894" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,10 +125,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjB-Uq-CQw">
                                 <rect key="frame" x="97" y="592" width="180" height="30"/>
                                 <state key="normal" title="助け人探索結果出力画面へ"/>
-                                <connections>
-                                    <segue destination="BBl-sx-nkU" kind="presentation" id="aC0-mr-JOT"/>
-                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="3OE-tu-fL4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -153,7 +150,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ocz-Pl-ild"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PV2-Nc-dwo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8Ax-ZE-P75">
@@ -173,18 +170,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYw-e8-4BQ">
+                                <rect key="frame" x="67" y="243" width="240" height="240"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="5P4-XU-dky"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="directionDisplay" destination="j1O-Mb-Dpo" id="SMH-co-dM4"/>
                         <outlet property="distanceCircleRotation" destination="pNh-tN-uIg" id="6WJ-FF-gYq"/>
+                        <outlet property="foreignerImageView" destination="iYw-e8-4BQ" id="w6y-sL-ZoP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkZ-lb-EZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242.5" y="224.5"/>
+            <point key="canvasLocation" x="1466.5" y="1140.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="keM-wB-Vja">
@@ -215,7 +217,4 @@
         <image name="sick" width="317" height="419"/>
         <image name="toilet" width="317" height="419"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="0jp-9W-TbT"/>
-    </inferredMetricsTieBreakers>
 </document>

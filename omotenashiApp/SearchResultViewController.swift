@@ -15,10 +15,14 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet weak var directionDisplay: UITextField!
     
+    
     var locationManager: CLLocationManager!
+    @IBOutlet weak var foreignerImageView: UIImageView!
 
     override func viewDidLoad() {
             super.viewDidLoad()
+        
+        print("テスト")
         
 //        /*--------------------------------
 //         * 距離と方角の円盤を回転させる
@@ -40,7 +44,21 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             
             locationManager.startUpdatingHeading()
         }
+        
+        /*-----------------------------------
+         * キャラの絵を表示する
+         ------------------------------------*/
+        //表示する画像を設定する
+        let maleForeignerImage = UIImage(named: "maleForeigner")
+        
+        //画像をUIImageViewに設定する
+        foreignerImageView.image = maleForeignerImage
+        
+        //画像の表示する座標を指定する(高さの半分，幅の半分)
+        foreignerImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.view.bounds.height/2)
 
+        //UIImageViewをViewに追加する
+        self.view.addSubview(foreignerImageView)
         
         // Do any additional setup after loading the view.
     }
