@@ -35,32 +35,28 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jw4-h4-pua">
                                 <rect key="frame" x="44" y="377" width="292" height="233"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="70" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNg-XV-dfF">
+                                        <rect key="frame" x="8" y="0.0" width="276" height="153"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="103"/>
+                                        <color key="textColor" red="0.61176470588235299" green="0.55294117647058827" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzC-6v-wTL">
-                                        <rect key="frame" x="85" y="102" width="122" height="30"/>
-                                        <state key="normal" title="ポイント交換"/>
+                                        <rect key="frame" x="4" y="172" width="284" height="53"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="15"/>
+                                        <state key="normal" title="　　ポイント交換">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.85106382979999995" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exchange" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-RZ-JsL">
+                                        <rect key="frame" x="85" y="186" width="25" height="25"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aiz-RM-cY2">
                                 <rect key="frame" x="44" y="377" width="292" height="233"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-G6-nl9" customClass="CustomButton" customModule="omotenashiApp" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="186" width="124" height="30"/>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
-                                        <state key="normal" title="設定変更">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.85106382979999995" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="0.4303115904726979" green="0.57958102413800516" blue="0.69858475130890052" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
-                                                <color key="value" red="0.3780831711" green="0.65172659349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightedBackgroundColor">
-                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="manwoman" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-Q1-EgT">
                                         <rect key="frame" x="17" y="77" width="38" height="38"/>
                                     </imageView>
@@ -94,8 +90,25 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="0yz-dS-BQN">
                                         <rect key="frame" x="17" y="7" width="29" height="47"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-G6-nl9">
+                                        <rect key="frame" x="4" y="172" width="284" height="53"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="設定変更">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.85106382979999995" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.4303115904726979" green="0.57958102413800516" blue="0.69858475130890052" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
+                                                <color key="value" red="0.3780831711" green="0.65172659349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightedBackgroundColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.31034482758620691" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.31034482758620691" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMB-ey-S62">
                                 <rect key="frame" x="55" y="319" width="101" height="30"/>
@@ -123,7 +136,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="CtI-ad-1OK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="pointButton" destination="TzC-6v-wTL" id="2kc-g7-igR"/>
                         <outlet property="pointView" destination="Jw4-h4-pua" id="IEc-0Z-XD7"/>
+                        <outlet property="settingButton" destination="0lV-G6-nl9" id="vzo-Ti-b0P"/>
                         <outlet property="settingView" destination="aiz-RM-cY2" id="3IO-Wo-I49"/>
                     </connections>
                 </viewController>
@@ -317,6 +332,7 @@
     <resources>
         <image name="background" width="750" height="1334"/>
         <image name="distance" width="3388" height="3388"/>
+        <image name="exchange" width="84" height="57"/>
         <image name="food" width="317" height="419"/>
         <image name="help" width="648" height="149"/>
         <image name="language" width="99" height="51"/>
