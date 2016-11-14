@@ -6,42 +6,24 @@
     </dependencies>
     <scenes>
         <!--Item-->
-        <scene sceneID="cMX-ge-eyx">
-            <objects>
-                <viewController id="9ag-sA-gU9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TVq-SG-n1o"/>
-                        <viewControllerLayoutGuide type="bottom" id="LE1-Zf-9lm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iYj-bd-Zv6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yqQ-6I-URR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="foq-K7-M18" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="199" y="946"/>
-        </scene>
-        <!--Item-->
         <scene sceneID="aKg-Vk-XbL">
             <objects>
-                <viewController id="OoA-y2-uNk" sceneMemberID="viewController">
+                <viewController id="OoA-y2-uNk" customClass="UserSettingViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u5L-wd-T7K"/>
                         <viewControllerLayoutGuide type="bottom" id="0k7-ji-3c9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="N9a-pV-hHJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="CtI-ad-1OK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtD-rG-wcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="946"/>
+            <point key="canvasLocation" x="863.5" y="1000.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
@@ -162,7 +144,7 @@
             </objects>
             <point key="canvasLocation" x="1492.5" y="248.5"/>
         </scene>
-        <!--Search Result View Controller-->
+        <!--Item-->
         <scene sceneID="GTc-rB-Mj3">
             <objects>
                 <viewController storyboardIdentifier="searchResult" id="BBl-sx-nkU" customClass="SearchResultViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,7 +153,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ocz-Pl-ild"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PV2-Nc-dwo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8Ax-ZE-P75">
@@ -194,6 +176,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="5P4-XU-dky"/>
                     <connections>
                         <outlet property="directionDisplay" destination="j1O-Mb-Dpo" id="SMH-co-dM4"/>
                         <outlet property="distanceCircleRotation" destination="pNh-tN-uIg" id="6WJ-FF-gYq"/>
@@ -215,7 +198,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4zj-gg-dDd"/>
                         <segue destination="OoA-y2-uNk" kind="relationship" relationship="viewControllers" id="u1U-8J-lea"/>
-                        <segue destination="9ag-sA-gU9" kind="relationship" relationship="viewControllers" id="Lb0-Fr-F6d"/>
+                        <segue destination="BBl-sx-nkU" kind="relationship" relationship="viewControllers" id="0jp-9W-TbT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Bv-Eo-Mfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -232,4 +215,7 @@
         <image name="sick" width="317" height="419"/>
         <image name="toilet" width="317" height="419"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0jp-9W-TbT"/>
+    </inferredMetricsTieBreakers>
 </document>
