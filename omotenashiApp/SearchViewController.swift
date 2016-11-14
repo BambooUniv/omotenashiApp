@@ -64,5 +64,12 @@ class SearchViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         self.spinningView.updateAnimation()
     }
+    
+    @IBAction func moveSearchResult(sender: AnyObject) {
+        //探索結果画面へ遷移
+        let storyboard: UIStoryboard = self.storyboard!
+        let nextView = storyboard.instantiateViewControllerWithIdentifier("SearchResult") as! SearchResultViewController
+        self.presentViewController(nextView, animated: true, completion: nil)
+    }
 
 }
