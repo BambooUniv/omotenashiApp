@@ -109,10 +109,17 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
   // 現在値が更新されるたびに呼び出される関数
   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if let location = manager.location {
-      self.latitude = location.coordinate.latitude
-      self.longitude = location.coordinate.longitude
-      Help.getHelpWithLocation(self.latitude, longitude: self.longitude, distance: 200)
-        
+        self.latitude = location.coordinate.latitude
+        self.longitude = location.coordinate.longitude
+
+        // 現在の位置情報UserDefaultに保存
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        userDefault.setObject("latitude", forKey: String(self.latitude))
+        userDefault.setObject("lontitude", forKey: String(self.longitude))
+        userDefault.synchronize()
+
+        Help.getHelpWithLocation(self.latitude, longitude: self.longitude, distance: 200)
+
     }
   }
   
