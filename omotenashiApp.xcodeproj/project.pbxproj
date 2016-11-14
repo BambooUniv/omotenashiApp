@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231FF0051DD9582E003E8211 /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231FF0041DD9582E003E8211 /* UserSettingViewController.swift */; };
+		231FF0071DD9585F003E8211 /* OmotenashiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231FF0061DD9585F003E8211 /* OmotenashiViewController.swift */; };
 		234198C01DD5B9A90075ADFE /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234198BF1DD5B9A90075ADFE /* Notification.swift */; };
 		2351E22E1DC0A2D400F50C27 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2351E22D1DC0A2D400F50C27 /* Authentication.swift */; };
 		236359081DBF01740087B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359071DBF01740087B2CE /* AppDelegate.swift */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		22825C1374D83358ED762829 /* Pods-omotenashiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiApp/Pods-omotenashiApp.debug.xcconfig"; sourceTree = "<group>"; };
+		231FF0041DD9582E003E8211 /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
+		231FF0061DD9585F003E8211 /* OmotenashiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmotenashiViewController.swift; sourceTree = "<group>"; };
 		234198BF1DD5B9A90075ADFE /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		2351E22D1DC0A2D400F50C27 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		236359041DBF01740087B2CE /* omotenashiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omotenashiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,11 +176,13 @@
 				236359401DBF08300087B2CE /* Signin.storyboard */,
 				236359421DBF08C10087B2CE /* SigninViewController.swift */,
 				23AC225C1DBF409300199203 /* SignupViewController.swift */,
+				231FF0041DD9582E003E8211 /* UserSettingViewController.swift */,
 				2351E22D1DC0A2D400F50C27 /* Authentication.swift */,
 				238AD85E1DCF0E790035AEFA /* Help.swift */,
 				234198BF1DD5B9A90075ADFE /* Notification.swift */,
 				23912D231DD6EC960067D1BA /* Http.swift */,
 				2373095B1DC5BE9F0034B85E /* Const.swift */,
+				231FF0061DD9585F003E8211 /* OmotenashiViewController.swift */,
 			);
 			path = omotenashiApp;
 			sourceTree = "<group>";
@@ -374,7 +380,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		35215AEF2EE8DD1674F27880 /* [CP] Check Pods Manifest.lock */ = {
@@ -389,7 +395,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		517AC97384D8632F99871238 /* [CP] Embed Pods Frameworks */ = {
@@ -419,7 +425,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B07D940B6A0606DE45D6328E /* [CP] Copy Pods Resources */ = {
@@ -510,6 +516,8 @@
 				236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */,
 				2351E22E1DC0A2D400F50C27 /* Authentication.swift in Sources */,
 				CA980F551DD46FB400238455 /* SpinningView.swift in Sources */,
+				231FF0051DD9582E003E8211 /* UserSettingViewController.swift in Sources */,
+				231FF0071DD9585F003E8211 /* OmotenashiViewController.swift in Sources */,
 				2363590A1DBF01740087B2CE /* ViewController.swift in Sources */,
 				236359101DBF01740087B2CE /* omotenashiApp.xcdatamodeld in Sources */,
 				23AC22611DBF593200199203 /* CustomUITextField.swift in Sources */,

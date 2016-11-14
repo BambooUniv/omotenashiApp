@@ -50,7 +50,6 @@ class Help {
             (data, resp, err) in
             do {
                 let helpRequest: ReturnHelpRequest = try Unbox(data!)
-                print(helpRequest)
                 // 既にそのお助けリクエストの通知を受け取っていないか確認
                 let userDefault = NSUserDefaults.standardUserDefaults()
                 var helpInfo:Dictionary = userDefault.objectForKey("helpInfo") as! Dictionary<String, AnyObject>
