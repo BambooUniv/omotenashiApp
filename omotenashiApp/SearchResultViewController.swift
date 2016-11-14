@@ -48,18 +48,15 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         /*-----------------------------------
          * キャラの絵を表示する
          ------------------------------------*/
-        //UIImageViewを作成する．
-        foreignerImageView = UIImageView(frame: CGRectMake(0, 0, 100, 120))
-        
         //表示する画像を設定する
-        let maleForeignerImage:UIImage! = UIImage(named: "maleForeigner")
+        let maleForeignerImage = UIImage(named: "maleForeigner")
         
         //画像をUIImageViewに設定する
         foreignerImageView.image = maleForeignerImage
         
         //画像の表示する座標を指定する(高さの半分，幅の半分)
         foreignerImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.view.bounds.height/2)
-        
+
         //UIImageViewをViewに追加する
         self.view.addSubview(foreignerImageView)
         
