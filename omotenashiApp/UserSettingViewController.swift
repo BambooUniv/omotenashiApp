@@ -29,6 +29,13 @@ class UserSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // UserDefaultの取得
+        let ud = NSUserDefaults.standardUserDefaults()
+        let userInfo = ud.objectForKey("userInfo") as? [String: String]
+        
+        
+        
+        
         // 設定画面を表示する
         pointView.hidden = true
         settingView.hidden = false
@@ -50,5 +57,10 @@ class UserSettingViewController: UIViewController {
     @IBAction func showPointButton(sender: AnyObject) {
         pointView.hidden = false
         settingView.hidden = true
+    }
+    
+    // ユーザ情報に合わせて画面の表示更新する関数
+    func setViewInfoByUserInfo(userInfo: Dictionary<String, String>) {
+        
     }
 }
