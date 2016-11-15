@@ -11,6 +11,7 @@
 		231FF0071DD9585F003E8211 /* OmotenashiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231FF0061DD9585F003E8211 /* OmotenashiViewController.swift */; };
 		234198C01DD5B9A90075ADFE /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234198BF1DD5B9A90075ADFE /* Notification.swift */; };
 		2351E22E1DC0A2D400F50C27 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2351E22D1DC0A2D400F50C27 /* Authentication.swift */; };
+		2356FD6B1DDAED57005259A2 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2356FD6A1DDAED57005259A2 /* MyTabBarController.swift */; };
 		236359081DBF01740087B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359071DBF01740087B2CE /* AppDelegate.swift */; };
 		2363590A1DBF01740087B2CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359091DBF01740087B2CE /* ViewController.swift */; };
 		2363590D1DBF01740087B2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2363590B1DBF01740087B2CE /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		231FF0061DD9585F003E8211 /* OmotenashiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmotenashiViewController.swift; sourceTree = "<group>"; };
 		234198BF1DD5B9A90075ADFE /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		2351E22D1DC0A2D400F50C27 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		2356FD6A1DDAED57005259A2 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		236359041DBF01740087B2CE /* omotenashiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omotenashiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236359071DBF01740087B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236359091DBF01740087B2CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				23912D231DD6EC960067D1BA /* Http.swift */,
 				2373095B1DC5BE9F0034B85E /* Const.swift */,
 				231FF0061DD9585F003E8211 /* OmotenashiViewController.swift */,
+				2356FD6A1DDAED57005259A2 /* MyTabBarController.swift */,
 			);
 			path = omotenashiApp;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				CAD39ED21DBF31D500497D77 /* MainViewController.swift in Sources */,
 				2373095C1DC5BE9F0034B85E /* Const.swift in Sources */,
 				23912D241DD6EC960067D1BA /* Http.swift in Sources */,
+				2356FD6B1DDAED57005259A2 /* MyTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
