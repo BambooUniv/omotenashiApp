@@ -124,18 +124,19 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         //角度を表示
         self.directionDisplay.text = "".stringByAppendingFormat("%.2f", newHeading.magneticHeading)
         
+        //角度をラジアンに変換して回転
+        distanceCircleRotation.transform = CGAffineTransformMakeRotation( CGFloat(-newHeading.trueHeading * M_PI/180))
+        
         //外国人キャラも角度に応じて回転
         let activeHelpInfo = Help.getActiveHelpInfo()
         let foreignerDirection = activeHelpInfo["direction"]   //ユーザーから見た外国人のいる北からの角度
-        let foreignerDirectionString = NSNumberFormatter().numberFromString(String(foreignerDirection!))
-        let foreignerDirectionCGFloat:CGFloat = CGFloat(foreignerDirectionString!)
+        let foreignerDirectionString = String(foreignerDirection!)
+        let foreignerDirectionDouble:Double = NSString(string: foreignerDirectionString).doubleValue
+        print("test")
+        print(foreignerDirectionDouble)
         //回転中心座標
         let centralCoordinate:CGPoint = CGPoint(x: -613, y:94)
-        
-        self.foreignerImageView.image = maleForeignerImage.rotate(foreignerDirectionCGFloat, point: centralCoordinate)
-        
-        //角度をラジアンに変換して回転
-        distanceCircleRotation.transform = CGAffineTransformMakeRotation( CGFloat(-newHeading.trueHeading * M_PI/180))
+        self.foreignerImageView.image = maleForeignerImage.rotate( CGFloat(-foreignerDirectionDouble * M_PI/180), point: centralCoordinate )
 
     }
     
@@ -158,7 +159,6 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             let activeHelpInfo = Help.getActiveHelpInfo()
             let foreignerLatitude = activeHelpInfo["latitude"]     //外国人緯度
             let foreignerLongitude = activeHelpInfo["longitude"]   //外国人経度
-            let foreignerDirection = activeHelpInfo["direction"]   //ユーザーから見た外国人のいる北からの角度
             
             print("外国人")
             print(String(foreignerLatitude!))
