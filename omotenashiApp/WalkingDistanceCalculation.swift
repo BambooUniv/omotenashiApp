@@ -11,7 +11,10 @@ import CoreLocation
 
 class walkingDistanceCalculation {
 
+    //ユーザーの位置
+    let hanedaLocation = CLLocation()
     
+    //助けを待っている外国人の位置
     
 }
 

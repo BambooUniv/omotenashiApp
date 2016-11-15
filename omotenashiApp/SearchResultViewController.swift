@@ -18,11 +18,24 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
     var locationManager: CLLocationManager!
     @IBOutlet weak var foreignerImageView: UIImageView!
+    
+    var width:CGFloat = 0    //画像の幅
+    var height:CGFloat = 0   //画像の高さ
+    var imageX:CGFloat = 0   //外国人キャラクターの始点X座標
+    var imageY:CGFloat = 0   //外国人キャラクターの始点Y座標
 
     override func viewDidLoad() {
             super.viewDidLoad()
         
-        print("テスト")
+        //ユーザーの位置
+        //let userLocation = CLLocation(latitude: ,longitude: )
+        
+        //助けを待っている外国人の位置
+        //let foreignerLocation = CLLocation(latitude: _latitude, longitude: _longitude)
+        
+        //ユーザーと外国人の距離
+        //let distance = userLocation.distanceFromLocation(foreignerLocation)
+        
         
 //        /*--------------------------------
 //         * 距離と方角の円盤を回転させる
@@ -43,6 +56,7 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             locationManager.headingOrientation = .Portrait
             
             locationManager.startUpdatingHeading()
+            locationManager.startUpdatingLocation() // 位置情報の取得
         }
         
         /*-----------------------------------
@@ -51,11 +65,23 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         //表示する画像を設定する
         let maleForeignerImage = UIImage(named: "maleForeigner")
         
+        //画像の幅・高さを取得
+        width = maleForeignerImage!.size.width
+        height = maleForeignerImage!.size.height
+        
         //画像をUIImageViewに設定する
         foreignerImageView.image = maleForeignerImage
         
+        print(imageX)
+        
         //画像の表示する座標を指定する(高さの半分，幅の半分)
-        foreignerImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.view.bounds.height/2)
+        foreignerImageView.layer.position = CGPoint(x: imageX, y: imageY)
+        
+//        //画像サイズ・位置設定
+//        let rect:CGRect = CGRect(x:imageX, y:imageY, width: width, height: height)
+//        
+//        //foreignerImageView frame をCGRectで作った短形に合わせる
+//        foreignerImageView.frame = rect;
 
         //UIImageViewをViewに追加する
         self.view.addSubview(foreignerImageView)
@@ -98,6 +124,48 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         //角度をラジアンに変換して回転
         distanceCircleRotation.transform = CGAffineTransformMakeRotation( CGFloat(-newHeading.trueHeading * M_PI/180))
 
+    }
+    
+    /*--------------------------------------
+     * 位置情報関係のDelegate
+     *-------------------------------------*/
+    // 現在値が更新されるたびに呼び出される関数
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = manager.location {
+            //ユーザーの位置
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            
+            print("ユーザー")
+            print(latitude)
+            print(longitude)
+            
+            //外国人の位置
+            let activeHelpInfo = Help.getActiveHelpInfo()
+            let foreignerLatitude = activeHelpInfo["latitude"]
+            let foreignerLongitude = activeHelpInfo["longitude"]
+            
+            print("外国人")
+            print(String(foreignerLatitude!))
+            print(String(foreignerLongitude!))
+            
+            let foreignerLatitudeDouble:Double = Double(String(foreignerLatitude!))!
+            let foreignerLongitudeDouble:Double = Double(String(foreignerLongitude!))!
+            
+            //ユーザーと外国人の位置の距離を計算
+            let userLocation = CLLocation(latitude: latitude,longitude: longitude)
+            let foreignerLocation = CLLocation(latitude: foreignerLatitudeDouble, longitude: foreignerLongitudeDouble)
+            let distance = userLocation.distanceFromLocation(foreignerLocation)
+            print(distance)
+            
+            
+
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error)
+        print("error")
     }
 
 }

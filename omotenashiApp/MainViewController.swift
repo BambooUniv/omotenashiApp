@@ -111,13 +111,13 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     if let location = manager.location {
         self.latitude = location.coordinate.latitude
         self.longitude = location.coordinate.longitude
-
+        
         // 現在の位置情報UserDefaultに保存
         let userDefault = NSUserDefaults.standardUserDefaults()
-        userDefault.setObject("latitude", forKey: String(self.latitude))
-        userDefault.setObject("lontitude", forKey: String(self.longitude))
+        userDefault.setObject("_latitude", forKey: String(self.latitude))
+        userDefault.setObject("_lontitude", forKey: String(self.longitude))
         userDefault.synchronize()
-
+        
         Help.getHelpWithLocation(self.latitude, longitude: self.longitude, distance: 200)
 
     }
