@@ -31,6 +31,7 @@
 		3FCB5DEA2D486649A168FD67 /* Pods_omotenashiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1B4DB6B2922D3AD6FEBDFD /* Pods_omotenashiApp.framework */; };
 		A0F6BFAF3005DC32F46EC10B /* Pods_omotenashiAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */; };
 		B493FA4F6A02BC1983656600 /* Pods_omotenashiAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */; };
+		CA4A48861DDAEC72009D92A6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A48851DDAEC72009D92A6 /* UIImageExtension.swift */; };
 		CA56FC821DD9A04E008EA867 /* WalkingDistanceCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56FC811DD9A04E008EA867 /* WalkingDistanceCalculation.swift */; };
 		CA980F551DD46FB400238455 /* SpinningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA980F541DD46FB400238455 /* SpinningView.swift */; };
 		CAD39ED21DBF31D500497D77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD39ED11DBF31D500497D77 /* MainViewController.swift */; };
@@ -92,6 +93,7 @@
 		5D5CEAE5DF22C72F03982CEA /* Pods-omotenashiAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-omotenashiAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-omotenashiAppTests/Pods-omotenashiAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		87604341F493DCAA99E0BC29 /* Pods_omotenashiAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA29A0D1432F1FD87638D3BD /* Pods_omotenashiAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_omotenashiAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA4A48851DDAEC72009D92A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		CA56FC811DD9A04E008EA867 /* WalkingDistanceCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkingDistanceCalculation.swift; sourceTree = "<group>"; };
 		CA980F541DD46FB400238455 /* SpinningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinningView.swift; sourceTree = "<group>"; };
 		CAD39ED11DBF31D500497D77 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				CA980F541DD46FB400238455 /* SpinningView.swift */,
 				CA56FC811DD9A04E008EA867 /* WalkingDistanceCalculation.swift */,
 				23B330111DD9CE6000EB7823 /* CustomButton.swift */,
+				CA4A48851DDAEC72009D92A6 /* UIImageExtension.swift */,
 			);
 			name = customView;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				CAD39ED41DBF35A900497D77 /* SearchViewController.swift in Sources */,
 				23B330121DD9CE6000EB7823 /* CustomButton.swift in Sources */,
 				23AC225D1DBF409300199203 /* SignupViewController.swift in Sources */,
+				CA4A48861DDAEC72009D92A6 /* UIImageExtension.swift in Sources */,
 				238AD85F1DCF0E790035AEFA /* Help.swift in Sources */,
 				236359431DBF08C10087B2CE /* SigninViewController.swift in Sources */,
 				2351E22E1DC0A2D400F50C27 /* Authentication.swift in Sources */,
