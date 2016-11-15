@@ -9,16 +9,20 @@ import UIKit
 
 class UserSettingViewController: UIViewController {
     
-    // 画面を切り替えるTabBar
+    // 共通している画面の要素
+    @IBOutlet weak var usernameLabel: UILabel!
     
     // ポイント画面関する要素
     @IBOutlet weak var pointView: UIView!
-    
+    @IBOutlet weak var pointLabel: UILabel!
     
     
     // 設定画面に関する要素
     @IBOutlet weak var settingView: UIView!
-    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var languageLabel1: UILabel!
+    @IBOutlet weak var languageLabel2: UILabel!
+    @IBOutlet weak var sexLabel: UILabel!
     
     
     @IBOutlet weak var settingButton: UIButton!
@@ -33,6 +37,8 @@ class UserSettingViewController: UIViewController {
         let ud = NSUserDefaults.standardUserDefaults()
         let userInfo = ud.objectForKey("userInfo") as? [String: String]
         
+        // 画面の更新
+        setViewInfoByUserInfo(userInfo!)
         
         
         
@@ -61,6 +67,20 @@ class UserSettingViewController: UIViewController {
     
     // ユーザ情報に合わせて画面の表示更新する関数
     func setViewInfoByUserInfo(userInfo: Dictionary<String, String>) {
-        
+        self.usernameLabel.text = userInfo["name"]
+        self.locationLabel.text = userInfo["nationality"]
+        self.sexLabel.text = userInfo["sex"]
+        let languages = userInfo["languages"]?.componentsSeparatedByString(",")
+        print(userInfo["languages"])
+        if (languages?[0] != nil) {
+            languageLabel1.text = languages![0]
+        }
+        if (languages?[1] != nil) {
+            languageLabel2.text = languages![1]
+        }
+        self.pointLabel.text = userInfo["point"]
+ 
     }
+    
+    
 }
