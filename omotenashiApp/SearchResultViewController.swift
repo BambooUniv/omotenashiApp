@@ -15,6 +15,7 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet weak var directionDisplay: UITextField!
     
+    var foreignerImageView:UIImageView!
     
     var locationManager: CLLocationManager!
     
@@ -62,11 +63,14 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
          * キャラの絵を表示する
          ------------------------------------*/
         //表示する画像を設定する
-        let maleForeignerImage = UIImage(named: "maleForeigner")
+        let maleForeignerImage = UIImage(named: "maleForeigner")!
         
         //画像の幅・高さを取得
-        width = maleForeignerImage!.size.width
-        height = maleForeignerImage!.size.height
+        width = maleForeignerImage.size.width
+        height = maleForeignerImage.size.height
+        
+        //UIImageViewインスタンス生成
+        foreignerImageView = UIImageView(image:maleForeignerImage)
         
         //画像をUIImageViewに設定する
         foreignerImageView.image = maleForeignerImage
