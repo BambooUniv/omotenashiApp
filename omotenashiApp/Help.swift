@@ -79,23 +79,34 @@ class Help {
     }
     
     // 自分が承認したお助けリクエストの情報を取得する
-    class func getActiveHelpInfo() -> AnyObject{
+    class func getActiveHelpInfo() -> Dictionary<String, String>{
         let userDefault = NSUserDefaults.standardUserDefaults()
-        let activeHelpInfo = userDefault.objectForKey("helpActiveInfo")
+        let activeHelpInfo = userDefault.objectForKey("helpActiveInfo") as! Dictionary<String, String>
         
-        return activeHelpInfo!
+        return activeHelpInfo
     }
     
     class func setActiveHelpInfo(helpInfo: ReturnHelpRequest) {
+        let id = String(helpInfo.id)
+        let name = String(helpInfo.name)
+        let sex = String(helpInfo.sex)
+        let content = String(helpInfo.content)
+        let nationality = String(helpInfo.nationality)
+        let distance = String(helpInfo.distance)
+        let direction = String(helpInfo.direction)
+        let latitude = String(helpInfo.latitude)
+        let longitude = String(helpInfo.longitude)
         
         let helpActiveInfo = [
-            "id": helpInfo.id,
-            "name": helpInfo.name,
-            "sex": helpInfo.sex,
-            "content": helpInfo.content,
-            "nationality": helpInfo.nationality,
-            "distance": helpInfo.distance,
-            "direction": helpInfo.direction
+            "id": id,
+            "name": name,
+            "sex": sex,
+            "content": content,
+            "nationality": nationality,
+            "distance": distance,
+            "direction": direction,
+            "latitude": latitude,
+            "longitude": longitude
         ]
         
         let userDefault = NSUserDefaults.standardUserDefaults()
