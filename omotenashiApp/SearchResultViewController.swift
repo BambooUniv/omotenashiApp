@@ -21,7 +21,7 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
     var width:CGFloat = 0    //画像の幅
     var height:CGFloat = 0   //画像の高さ
-    var imageX:CGFloat = 0   //外国人キャラクターの始点X座標
+    var imageX:CGFloat = 20   //外国人キャラクターの始点X座標
     var imageY:CGFloat = 0   //外国人キャラクターの始点Y座標
 
     override func viewDidLoad() {
@@ -75,19 +75,14 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         //画像をUIImageViewに設定する
         foreignerImageView.image = maleForeignerImage
         
-        print(imageX)
-        
-        //画像の表示する座標を指定する(高さの半分，幅の半分)
-        foreignerImageView.layer.position = CGPoint(x: imageX, y: imageY)
-        
 //        //画像サイズ・位置設定
-//        let rect:CGRect = CGRect(x:imageX, y:imageY, width: width, height: height)
+//        let rect:CGRect = CGRectMake(imageX, imageY, width/17, height/17)
 //        
 //        //foreignerImageView frame をCGRectで作った短形に合わせる
 //        foreignerImageView.frame = rect;
-
-        //UIImageViewをViewに追加する
-        self.view.addSubview(foreignerImageView)
+//
+//        //UIImageViewをViewに追加する
+//        self.view.addSubview(foreignerImageView)
         
         // Do any additional setup after loading the view.
     }
@@ -136,8 +131,9 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = manager.location {
             //ユーザーの位置
-            let latitude = location.coordinate.latitude
-            let longitude = location.coordinate.longitude
+            let latitude = location.coordinate.latitude     //ユーザー緯度
+            let longitude = location.coordinate.longitude   //ユーザー経度
+            
             
             print("ユーザー")
             print(latitude)
@@ -145,12 +141,14 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             
             //外国人の位置
             let activeHelpInfo = Help.getActiveHelpInfo()
-            let foreignerLatitude = activeHelpInfo["latitude"]
-            let foreignerLongitude = activeHelpInfo["longitude"]
+            let foreignerLatitude = activeHelpInfo["latitude"]     //外国人緯度
+            let foreignerLongitude = activeHelpInfo["longitude"]   //外国人経度
+            let foreignerDirection = activeHelpInfo["direction"]   //ユーザーから見た外国人のいる北からの角度
             
             print("外国人")
             print(String(foreignerLatitude!))
             print(String(foreignerLongitude!))
+            print(String(foreignerLatitude!))
             
             let foreignerLatitudeDouble:Double = Double(String(foreignerLatitude!))!
             let foreignerLongitudeDouble:Double = Double(String(foreignerLongitude!))!
@@ -162,7 +160,24 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             print(distance)
             
             
+            
+            /*---------------------------------------
+             *　外国人キャラを表示
+             *---------------------------------------*/
+            
+            let imageX: CGFloat = CGFloat(distance)
+            print(imageX)
+            
+            //画像サイズ・位置設定
+            let rect:CGRect = CGRectMake(imageX, imageY, width/17, height/17)
+            
+            //foreignerImageView frame をCGRectで作った短形に合わせる
+            foreignerImageView.frame = rect;
+            
+            //UIImageViewをViewに追加する
+            self.view.addSubview(foreignerImageView)
 
+            
         }
     }
     
