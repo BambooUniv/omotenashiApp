@@ -119,6 +119,10 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         //角度を表示
         self.directionDisplay.text = "".stringByAppendingFormat("%.2f", newHeading.magneticHeading)
+        
+        //外国人キャラも角度に応じて回転
+        
+        
         //角度をラジアンに変換して回転
         distanceCircleRotation.transform = CGAffineTransformMakeRotation( CGFloat(-newHeading.trueHeading * M_PI/180))
 
