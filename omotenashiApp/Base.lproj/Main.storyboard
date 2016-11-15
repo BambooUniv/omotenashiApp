@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jm5-pB-Z2v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jm5-pB-Z2v">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--test-->
         <scene sceneID="aKg-Vk-XbL">
             <objects>
                 <viewController id="OoA-y2-uNk" customClass="UserSettingViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,13 +133,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="CtI-ad-1OK"/>
+                    <tabBarItem key="tabBarItem" title="test" image="help" id="CtI-ad-1OK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="languageLabel1" destination="ujf-1h-PLN" id="17d-7S-byd"/>
+                        <outlet property="languageLabel2" destination="sjb-De-u0f" id="znu-Jb-xHX"/>
+                        <outlet property="locationLabel" destination="tyC-2N-pBZ" id="xEK-60-tMk"/>
                         <outlet property="pointButton" destination="TzC-6v-wTL" id="2kc-g7-igR"/>
+                        <outlet property="pointLabel" destination="fNg-XV-dfF" id="9DG-yN-j8j"/>
                         <outlet property="pointView" destination="Jw4-h4-pua" id="IEc-0Z-XD7"/>
                         <outlet property="settingButton" destination="0lV-G6-nl9" id="vzo-Ti-b0P"/>
                         <outlet property="settingView" destination="aiz-RM-cY2" id="3IO-Wo-I49"/>
+                        <outlet property="sexLabel" destination="S8N-yL-sLM" id="VND-HR-Ja5"/>
+                        <outlet property="usernameLabel" destination="mPF-bm-6Qt" id="gYU-bS-D5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtD-rG-wcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
