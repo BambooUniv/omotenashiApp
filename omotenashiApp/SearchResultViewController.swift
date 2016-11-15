@@ -17,7 +17,6 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
     
     var locationManager: CLLocationManager!
-    @IBOutlet weak var foreignerImageView: UIImageView!
     
     var width:CGFloat = 0    //画像の幅
     var height:CGFloat = 0   //画像の高さ
