@@ -23,6 +23,10 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     var height:CGFloat = 0   //画像の高さ
     var imageX:CGFloat = 20   //外国人キャラクターの始点X座標
     var imageY:CGFloat = 0   //外国人キャラクターの始点Y座標
+    
+    //表示する画像を設定する
+    let maleForeignerImage = UIImage(named: "maleForeigner")!
+
 
     override func viewDidLoad() {
             super.viewDidLoad()
@@ -62,8 +66,8 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         /*-----------------------------------
          * キャラの絵を表示する
          ------------------------------------*/
-        //表示する画像を設定する
-        let maleForeignerImage = UIImage(named: "maleForeigner")!
+//        //表示する画像を設定する
+//        let maleForeignerImage = UIImage(named: "maleForeigner")!
         
         //画像の幅・高さを取得
         width = maleForeignerImage.size.width
@@ -119,6 +123,17 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         //角度を表示
         self.directionDisplay.text = "".stringByAppendingFormat("%.2f", newHeading.magneticHeading)
+        
+        //外国人キャラも角度に応じて回転
+        let activeHelpInfo = Help.getActiveHelpInfo()
+        let foreignerDirection = activeHelpInfo["direction"]   //ユーザーから見た外国人のいる北からの角度
+        let foreignerDirectionString = NSNumberFormatter().numberFromString(String(foreignerDirection!))
+        let foreignerDirectionCGFloat:CGFloat = CGFloat(foreignerDirectionString!)
+        //回転中心座標
+        let centralCoordinate:CGPoint = CGPoint(x: -613, y:94)
+        
+        self.foreignerImageView.image = maleForeignerImage.rotate(foreignerDirectionCGFloat, point: centralCoordinate)
+        
         //角度をラジアンに変換して回転
         distanceCircleRotation.transform = CGAffineTransformMakeRotation( CGFloat(-newHeading.trueHeading * M_PI/180))
 
