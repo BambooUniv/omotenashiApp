@@ -133,7 +133,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="test" image="help" id="CtI-ad-1OK"/>
+                    <tabBarItem key="tabBarItem" title="test" image="I" id="CtI-ad-1OK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="languageLabel1" destination="ujf-1h-PLN" id="17d-7S-byd"/>
@@ -311,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="1466.5" y="1140.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab Bar Controller-->
         <scene sceneID="keM-wB-Vja">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jm5-pB-Z2v" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jm5-pB-Z2v" customClass="MyTabBarController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="aPq-xh-ibc">
                         <autoresizingMask key="autoresizingMask"/>
@@ -332,6 +332,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="I" width="750" height="1334"/>
         <image name="background" width="750" height="1334"/>
         <image name="distance" width="3388" height="3388"/>
         <image name="exchange" width="84" height="57"/>
