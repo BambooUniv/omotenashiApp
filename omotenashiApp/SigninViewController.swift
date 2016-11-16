@@ -10,15 +10,25 @@ import QuartzCore
 
 class SignInViewController: UIViewController {
   @IBOutlet weak var emailTextField: UITextField!
+  @IBOutlet weak var newUser: UIButton!
   @IBOutlet weak var passwordTextField: UITextField!
+  @IBOutlet weak var signinButton: UIButton!
 
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    //textFildの角を丸くする
+    //textFild,UIButtonの角を丸くする
     emailTextField.layer.cornerRadius = 4.0  //丸角の半径
     passwordTextField.layer.cornerRadius = 4.0
+    signinButton.layer.cornerRadius = 4.0
+    
+//    //新規登録ボタン
+//    newUser.layer.cornerRadius = 4.0
+//    let newUserColor: UIColor = UIColor(red: 147, green: 118, blue: 64,alpha: 1.0)
+//    newUser.layer.borderColor = newUserColor.CGColor
+//    newUser.layer.borderWidth = 2.0
+
     
     // 影設定
     emailTextField.layer.shadowOpacity = 0.15

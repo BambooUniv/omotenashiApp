@@ -17,6 +17,7 @@ class CustomUITextField: UITextField {
       
       // 角丸設定
       self.layer.cornerRadius = 40.0
+      self.clipsToBounds = true
         
       // 余白設定
       self.leftView = UIView(frame: CGRect(x: 0,y: 0,width: 10,height: 5))
