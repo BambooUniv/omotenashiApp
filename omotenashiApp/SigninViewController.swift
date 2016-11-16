@@ -40,6 +40,12 @@ class SignInViewController: UIViewController {
     emailTextField.layer.shadowOffset = CGSizeMake(1.0, 1.0)
     passwordTextField.layer.shadowOffset = CGSizeMake(1.0, 1.0)
     
+    //テキストボックスに余白を入れる
+    emailTextField.leftView = UIView(frame: CGRectMake(0,0,8, emailTextField.frame.size.height))
+    emailTextField.leftViewMode = UITextFieldViewMode.Always
+    passwordTextField.leftView = UIView(frame: CGRectMake(0,0,8, passwordTextField.frame.size.height))
+    passwordTextField.leftViewMode = UITextFieldViewMode.Always
+
     
   }
   
