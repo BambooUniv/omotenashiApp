@@ -118,7 +118,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         userDefault.setObject("_lontitude", forKey: String(self.longitude))
         userDefault.synchronize()
         
-        Help.getHelpWithLocation(self.latitude, longitude: self.longitude, distance: 200)
+        Help.getHelpWithLocation(self.latitude, longitude: self.longitude, distance: 100)
 
     }
   }
