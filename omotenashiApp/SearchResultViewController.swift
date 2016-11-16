@@ -11,11 +11,14 @@ import CoreLocation
 
 class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
+    @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var distanceCircleRotation: UIImageView!
     
     @IBOutlet weak var directionDisplay: UITextField!
     
-    var foreignerImageView:UIImageView!
+    @IBOutlet weak var manImageView: UIImageView!
+   // var foreignerImageView:UIImageView!
+    var foreignerDirectionString :String?
     
     var locationManager: CLLocationManager!
     
@@ -24,30 +27,14 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     var imageX:CGFloat = 20   //外国人キャラクターの始点X座標
     var imageY:CGFloat = 0   //外国人キャラクターの始点Y座標
     
+    var test: CGFloat = 0
+    
     //表示する画像を設定する
-    let maleForeignerImage = UIImage(named: "maleForeigner")!
+    //let maleForeignerImage = UIImage(named: "maleForeigner")!
 
 
     override func viewDidLoad() {
             super.viewDidLoad()
-        
-        //ユーザーの位置
-        //let userLocation = CLLocation(latitude: ,longitude: )
-        
-        //助けを待っている外国人の位置
-        //let foreignerLocation = CLLocation(latitude: _latitude, longitude: _longitude)
-        
-        //ユーザーと外国人の距離
-        //let distance = userLocation.distanceFromLocation(foreignerLocation)
-        
-        
-//        /*--------------------------------
-//         * 距離と方角の円盤を回転させる
-//         ---------------------------------*/
-//        //角度計算
-//        let angle:CGFloat = CGFloat((270.0 * M_PI) / 180.0)
-//        //回転するためのアフィン変換
-//        distanceCircleRotation.transform = CGAffineTransformMakeRotation(angle)
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
@@ -63,32 +50,6 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             locationManager.startUpdatingLocation() // 位置情報の取得
         }
         
-        /*-----------------------------------
-         * キャラの絵を表示する
-         ------------------------------------*/
-//        //表示する画像を設定する
-//        let maleForeignerImage = UIImage(named: "maleForeigner")!
-        
-        //画像の幅・高さを取得
-        width = maleForeignerImage.size.width
-        height = maleForeignerImage.size.height
-        
-        //UIImageViewインスタンス生成
-        foreignerImageView = UIImageView(image:maleForeignerImage)
-        
-        //画像をUIImageViewに設定する
-        foreignerImageView.image = maleForeignerImage
-        
-//        //画像サイズ・位置設定
-//        let rect:CGRect = CGRectMake(imageX, imageY, width/17, height/17)
-//        
-//        //foreignerImageView frame をCGRectで作った短形に合わせる
-//        foreignerImageView.frame = rect;
-//
-//        //UIImageViewをViewに追加する
-//        self.view.addSubview(foreignerImageView)
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -122,23 +83,25 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     //　iPhoneの向きが変わると呼ばれる
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         //角度を表示
-        self.directionDisplay.text = "".stringByAppendingFormat("%.2f", newHeading.magneticHeading)
+        print(newHeading.trueHeading)
+        
+        self.directionDisplay.text = "".stringByAppendingFormat("%.2f", newHeading.trueHeading)
         
         //角度をラジアンに変換して回転
         distanceCircleRotation.transform = CGAffineTransformMakeRotation( CGFloat(-newHeading.trueHeading * M_PI/180))
         
-        //外国人キャラも角度に応じて回転
-        let activeHelpInfo = Help.getActiveHelpInfo()
-        let foreignerDirection = activeHelpInfo["direction"]   //ユーザーから見た外国人のいる北からの角度
-        let foreignerDirectionString = String(foreignerDirection!)
-        let foreignerDirectionDouble:Double = NSString(string: foreignerDirectionString).doubleValue
-        print("test")
-        print(foreignerDirectionDouble)
-        //回転中心座標
-        let centralCoordinate:CGPoint = CGPoint(x: -613, y:94)
-        self.foreignerImageView.image = maleForeignerImage.rotate( CGFloat(-foreignerDirectionDouble * M_PI/180), point: centralCoordinate )
+        if (self.foreignerDirectionString == nil) {
+            let activeHelpInfo = Help.getActiveHelpInfo()
+            let foreignerDirection = activeHelpInfo["direction"]   //ユーザーから見た外国人のいる北からの角度
+            foreignerDirectionString = String(foreignerDirection!)
+        }
+        
+        
+        self.wrapperView.layer.anchorPoint = CGPointMake(0.5, 0.5)
+        self.wrapperView.transform = CGAffineTransformMakeRotation(CGFloat(-newHeading.trueHeading * M_PI/180))
 
     }
+    
     
     /*--------------------------------------
      * 位置情報関係のDelegate
@@ -150,20 +113,10 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             let latitude = location.coordinate.latitude     //ユーザー緯度
             let longitude = location.coordinate.longitude   //ユーザー経度
             
-            
-            print("ユーザー")
-            print(latitude)
-            print(longitude)
-            
             //外国人の位置
             let activeHelpInfo = Help.getActiveHelpInfo()
             let foreignerLatitude = activeHelpInfo["latitude"]     //外国人緯度
             let foreignerLongitude = activeHelpInfo["longitude"]   //外国人経度
-            
-            print("外国人")
-            print(String(foreignerLatitude!))
-            print(String(foreignerLongitude!))
-            print(String(foreignerLatitude!))
             
             let foreignerLatitudeDouble:Double = Double(String(foreignerLatitude!))!
             let foreignerLongitudeDouble:Double = Double(String(foreignerLongitude!))!
@@ -172,25 +125,9 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             let userLocation = CLLocation(latitude: latitude,longitude: longitude)
             let foreignerLocation = CLLocation(latitude: foreignerLatitudeDouble, longitude: foreignerLongitudeDouble)
             let distance = userLocation.distanceFromLocation(foreignerLocation)
-            print(distance)
             
-            
-            
-            /*---------------------------------------
-             *　外国人キャラを表示
-             *---------------------------------------*/
-            
-            let imageX: CGFloat = CGFloat(distance)
-            print(imageX)
-            
-            //画像サイズ・位置設定
-            let rect:CGRect = CGRectMake(imageX, imageY, width/17, height/17)
-            
-            //foreignerImageView frame をCGRectで作った短形に合わせる
-            foreignerImageView.frame = rect;
-            
-            //UIImageViewをViewに追加する
-            self.view.addSubview(foreignerImageView)
+            let y :CGFloat = getPointFromDistance(distance)
+            manImageView.transform = CGAffineTransformMakeTranslation(0, y)
 
             
         }
@@ -199,6 +136,12 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print(error)
         print("error")
+    }
+    
+    func getPointFromDistance(distance: Double) -> CGFloat {
+        let distancePoint = 520 - ((520 * distance) / 100)
+        
+        return CGFloat(distancePoint)
     }
 
 }
