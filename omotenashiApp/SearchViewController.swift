@@ -49,7 +49,7 @@ class SearchViewController: UIViewController {
                 
                 let storyboard: UIStoryboard = self.storyboard!
                 let nextView = storyboard.instantiateViewControllerWithIdentifier("Seached") as! SeachedViewController
-                self.presentViewController(nextView, animated: true, completion: nil)
+                self.presentViewController(nextView, animated: false, completion: nil)
             }
         })
     }

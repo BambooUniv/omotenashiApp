@@ -12,6 +12,7 @@ class SeachedViewController :UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var omotenashiButton: UIButton!
     
+    @IBOutlet weak var userImage: UIImageView!
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidDisappear(animated)
@@ -20,6 +21,12 @@ class SeachedViewController :UIViewController {
         let userInfo = appDelegate.requestId?.componentsSeparatedByString(",")
         self.nameLabel!.text = userInfo![1]
         NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(self.onTimer(_:)), userInfo: userInfo![0], repeats: true)
+        
+        // 画像設定
+        let id = userInfo![2]
+        self.userImage.sd_setImageWithURL(NSURL(string: "http://omotenashi.prodrb.com/api/img/" + id))
+        self.userImage.layer.cornerRadius = 89
+        self.userImage.layer.masksToBounds = true
         
     }
     
@@ -48,6 +55,8 @@ class SeachedViewController :UIViewController {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let userInfo = appDelegate.requestId?.componentsSeparatedByString(",")
         Help.didOmotenashi(userInfo![0]) // おもてなし完了
+        
+        
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! MainViewController
