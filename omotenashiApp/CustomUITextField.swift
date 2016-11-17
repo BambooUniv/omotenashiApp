@@ -13,10 +13,10 @@ class CustomUITextField: UITextField {
   
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
+    override func awakeFromNib() {
       
       // 角丸設定
-      self.layer.cornerRadius = 40.0
+      self.layer.cornerRadius = 4.0
       self.clipsToBounds = true
         
       // 余白設定
