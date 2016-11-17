@@ -41,9 +41,7 @@ class SearchViewController: UIViewController {
         let userDefault = NSUserDefaults.standardUserDefaults()
         let userInfo = userDefault.objectForKey("userInfo") as! Dictionary<String, String>
         let requestId = userInfo["id"]!
-        print(userInfo["id"]!)
         Help.confirmedHelpRequest(requestId, completionHandler: {(result: String)->Void in
-            print(result)
             if (result != "false") {
                 
                 var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

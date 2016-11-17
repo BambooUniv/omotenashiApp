@@ -47,8 +47,11 @@ class SeachedViewController :UIViewController {
     @IBAction func didOmotenashi(sender: AnyObject) {
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let userInfo = appDelegate.requestId?.componentsSeparatedByString(",")
-        print(userInfo![0])
-        Help.didOmotenashi(userInfo![0])
+        Help.didOmotenashi(userInfo![0]) // おもてなし完了
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("Main") as! MainViewController
+        self.presentViewController(viewController, animated: true, completion: nil)
     }
     
 }

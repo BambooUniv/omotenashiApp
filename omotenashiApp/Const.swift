@@ -26,6 +26,7 @@ struct Const {
   static let apiHelpGetDistanceUrl = Const.apiBaseUrl + "/help/get_distance.php"
   static let apiHelpSetDistanceUrl = Const.apiBaseUrl + "/help/set_distance.php"
   static let apiHelpDidOmotenashiUrl = Const.apiBaseUrl + "/help/did_omotenashi.php"
+  static let apiHelpDidAcceptedUrl = Const.apiBaseUrl + "/help/is_accepted.php"
   
   
 }
