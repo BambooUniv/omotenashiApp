@@ -6,6 +6,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 extension NSMutableData {
     func appendString(string: String) {
@@ -22,6 +23,7 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
     // ポイント画面関する要素
     @IBOutlet weak var pointView: UIView!
     @IBOutlet weak var pointLabel: UILabel!
+    @IBOutlet weak var userImageLabel: UIImageView!
     
     
     // 設定画面に関する要素
@@ -48,7 +50,6 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         setViewInfoByUserInfo(userInfo!)
         
         
-       openImagePicker()
         
         
         // 設定画面を表示する
@@ -63,6 +64,33 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         
     }
     
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        for touch: UITouch in touches {
+            let tag = touch.view!.tag
+            switch tag {
+            case 1:
+                self.userImageLabel.alpha = 0.8
+            default:
+                break
+            }
+        }
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesEnded(touches, withEvent: event)
+        for touch: UITouch in touches {
+            let tag = touch.view!.tag
+            switch tag {
+            case 1:
+                self.userImageLabel.alpha = 1.0
+                openImagePicker()
+            default:
+                break
+            }
+        }
+    }
     
     @IBAction func showSettingButton(sender: AnyObject) {
         pointView.hidden = true
@@ -135,11 +163,13 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
                 return
             }
             // レスポンスを出力
-            print("******* response = \(response)")
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("****** response data = \(responseString!)")
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
             dispatch_async(dispatch_get_main_queue(),{
-                //アップロード完了
+                //self.userImageLabel.sd_setImageWithURL(NSURL(string: "http://omotenashi.prodrb.com/api/img/2"))
+                let imgUrl = "http://omotenashi.prodrb.com/api/img/" + responseString
+                self.userImageLabel.sd_setImageWithPreviousCachedImageWithURL(NSURL(string: imgUrl), placeholderImage: nil, options: SDWebImageOptions.RefreshCached, progress: nil, completed: nil)
+                self.userImageLabel.layer.cornerRadius = 83
+                self.userImageLabel.layer.masksToBounds = true
             });
         }
         task.resume()
