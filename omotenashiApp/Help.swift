@@ -39,6 +39,19 @@ class Help {
         
     }
     
+    
+    class func didOmotenashi(helpId: String) {
+        let params = ["helpId":helpId]
+        let request = Http.createPostRequest(Const.apiHelpDidOmotenashiUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
+        })
+        task.resume()
+        
+    }
+    
+    
     // 自分のリクエストが承認されたかどうか確認する関数
     class func confirmedHelpRequest(requestId: String, completionHandler: (String) -> Void) {
         var result = "false"

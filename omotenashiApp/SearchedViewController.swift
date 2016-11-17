@@ -44,5 +44,10 @@ class SeachedViewController :UIViewController {
         })
     }
     
+    @IBAction func didOmotenashi(sender: AnyObject) {
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let userInfo = appDelegate.requestId?.componentsSeparatedByString(",")
+        Help.didOmotenashi(userInfo![0])
+    }
     
 }
