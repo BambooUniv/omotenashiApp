@@ -46,6 +46,7 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             super.viewDidLoad()
         
         initImageView()
+        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(self.onTimer(_:)), userInfo: nil, repeats: true)
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
@@ -139,8 +140,6 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             
             let ud = NSUserDefaults.standardUserDefaults()
             let helpInfo = ud.objectForKey("confirmedInfo") as! Dictionary <String,String>
-            print(helpInfo)
-            print(distance)
             Help.setHelpDistance(helpInfo["id"]!, distance: String(distance))
             
             let y :CGFloat = getPointFromDistance(distance)
@@ -165,10 +164,28 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         return CGFloat(distancePoint)
     }
     
+    
     func initImageView() {
         let activeHelpInfo = Help.getActiveHelpInfo()
         
         
+    }
+    
+    func onTimer(sender: NSTimer) {
+        let ud = NSUserDefaults.standardUserDefaults()
+        let helpInfo = ud.objectForKey("confirmedInfo") as! Dictionary <String,String>
+        Help.isAccepted(helpInfo["id"]!, completionHander: {(reuslt: String) -> Void in
+            if (reuslt == "true") {
+                var point = ud.objectForKey("point")
+                point = (point! as! Int) + 10
+                ud.setObject(point, forKey: "point")
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyboard.instantiateViewControllerWithIdentifier("Master") as! MainViewController
+                self.presentViewController(viewController, animated: true, completion: nil)
+                
+            }
+        })
     }
 
 }

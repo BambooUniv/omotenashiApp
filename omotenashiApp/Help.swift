@@ -22,6 +22,7 @@ class Help {
         ]
         
         userDefault.setObject(helpInfo, forKey: "helpInfo") // リクエスト関連情報の保存
+        userDefault.setObject(0, forKey: "point")
         userDefault.synchronize()
     }
   
@@ -172,6 +173,31 @@ class Help {
         task.resume()
     }
     
+    class func isAccepted(id: String, completionHander:(String) -> Void) {
+        var result = "false"
+        print(id)
+        let params = ["id": id]
+        let request = Http.createPostRequest(Const.apiHelpDidAcceptedUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
+            let data = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
+            print(data)
+            if (data == "true") {
+                dispatch_async(dispatch_get_main_queue(), {
+                    result = "true"
+                    completionHander(result)
+                })
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {
+                    completionHander(result)
+                })
+            }
+        })
+        task.resume()
+    
+    }
+    
     class func setActiveHelpInfo(helpInfo: ReturnHelpRequest) {
         let id = String(helpInfo.id)
         let name = String(helpInfo.name)
@@ -221,6 +247,7 @@ struct ReturnHelpRequest {
     let name: String
     let nationality: String
     let content: String
+    
     let latitude: Double
     let longitude: Double
     let created: Int

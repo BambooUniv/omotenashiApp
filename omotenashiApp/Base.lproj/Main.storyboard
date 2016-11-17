@@ -155,7 +155,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Main" storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="MainViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -428,7 +428,7 @@
         <!--My Tab Bar Controller-->
         <scene sceneID="keM-wB-Vja">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jm5-pB-Z2v" customClass="MyTabBarController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Master" automaticallyAdjustsScrollViewInsets="NO" id="jm5-pB-Z2v" customClass="MyTabBarController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="aPq-xh-ibc">
                         <autoresizingMask key="autoresizingMask"/>
