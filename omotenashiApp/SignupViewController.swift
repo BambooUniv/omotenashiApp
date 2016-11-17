@@ -9,6 +9,7 @@ import QuartzCore
 
 class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
   
+    @IBOutlet weak var cancelUIButton: UIButton!
   @IBOutlet weak var nameTextField: CustomUITextField!
   @IBOutlet weak var emailTextField: CustomUITextField!
   @IBOutlet weak var passwordTextField: CustomUITextField!
@@ -58,6 +59,14 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     // Dispose of any resources that can be recreated.
   }
   
+  //キャンセルボタンを押した時の処理
+    @IBAction func cancelButton(sender: AnyObject) {
+        //signin画面へ遷移
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
+            self.presentViewController(nextView, animated: false, completion: nil)
+    }
+    
   @IBAction func signupButton(sender: AnyObject) {
     let nameStr = self.nameTextField.text!
     let emailStr = self.emailTextField.text!
