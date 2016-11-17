@@ -7,8 +7,11 @@
 import UIKit
 import QuartzCore
 
-class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate {
   
+    @IBOutlet weak var inputFormView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var cancelUIButton: UIButton!
   @IBOutlet weak var nameTextField: CustomUITextField!
   @IBOutlet weak var emailTextField: CustomUITextField!
   @IBOutlet weak var passwordTextField: CustomUITextField!
@@ -50,14 +53,66 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     self.language1TextField.inputView = language1PickerView
     self.language2TextField.inputView = language2PickerView
     
+    nameTextField.delegate = self
+    emailTextField.delegate = self
+    passwordTextField.delegate = self
+    sexTextField.delegate = self
+    nationalityTextField.delegate = self
+    language1TextField.delegate = self
+    language2TextField.delegate = self
 
   }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: "keyboardWillBeShown:",
+                                                         name: UIKeyboardWillShowNotification,
+                                                         object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: "keyboardWillBeHidden:",
+                                                         name: UIKeyboardWillHideNotification,
+                                                         object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self,
+                                                            name: UIKeyboardWillShowNotification,
+                                                            object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self,
+                                                            name: UIKeyboardWillHideNotification,
+                                                            object: nil)
+    }
+    
+    func keyboardWillBeShown(notification: NSNotification) {
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification) {
+    }
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
   
+  //キャンセルボタンを押した時の処理
+    @IBAction func cancelButton(sender: AnyObject) {
+        //signin画面へ遷移
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
+            self.presentViewController(nextView, animated: false, completion: nil)
+    }
+    
   @IBAction func signupButton(sender: AnyObject) {
     let nameStr = self.nameTextField.text!
     let emailStr = self.emailTextField.text!
