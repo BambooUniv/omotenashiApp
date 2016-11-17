@@ -137,6 +137,12 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             let foreignerLocation = CLLocation(latitude: foreignerLatitudeDouble, longitude: foreignerLongitudeDouble)
             let distance = userLocation.distanceFromLocation(foreignerLocation)
             
+            let ud = NSUserDefaults.standardUserDefaults()
+            let helpInfo = ud.objectForKey("confirmedInfo") as! Dictionary <String,String>
+            print(helpInfo)
+            print(distance)
+            Help.setHelpDistance(helpInfo["id"]!, distance: String(distance))
+            
             let y :CGFloat = getPointFromDistance(distance)
             self.manInfoImageView.transform = CGAffineTransformMakeTranslation(0, y)
 

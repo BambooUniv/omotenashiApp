@@ -39,6 +39,19 @@ class Help {
         
     }
     
+    
+    class func didOmotenashi(helpId: String) {
+        let params = ["helpId":helpId]
+        let request = Http.createPostRequest(Const.apiHelpDidOmotenashiUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
+        })
+        task.resume()
+        
+    }
+    
+    
     // 自分のリクエストが承認されたかどうか確認する関数
     class func confirmedHelpRequest(requestId: String, completionHandler: (String) -> Void) {
         var result = "false"
@@ -102,6 +115,16 @@ class Help {
     
     }
     
+    class func setHelpDistance(id: String, distance: String) {
+        let params = ["id":id, "distance":distance]
+        let request = Http.createPostRequest(Const.apiHelpSetDistanceUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
+        })
+        task.resume()
+    }
+    
     // 自分が承認したお助けリクエストの情報を取得する
     class func getActiveHelpInfo() -> Dictionary<String, String>{
         let userDefault = NSUserDefaults.standardUserDefaults()
@@ -116,7 +139,6 @@ class Help {
         var _helpId = String(helpId)
         var _userId = String(userId)
         
-        print(userId)
         
         let params = ["user_id":_userId, "help_id":_helpId,]
         let request = Http.createPostRequest(Const.apiHelpsetConfirmUrl, params: params)
@@ -126,6 +148,28 @@ class Help {
         })
         task.resume()
         
+    }
+    
+    class func getDistanceFromServer(id: String, completionHander: (String) -> Void) {
+        var result = "false"
+        let params = ["id": id, "test": "tst"]
+        let request = Http.createPostRequest(Const.apiHelpGetDistanceUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
+            let data = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
+            if (data != "false") {
+                dispatch_async(dispatch_get_main_queue(), {
+                    result = data
+                    completionHander(result)
+                })
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {
+                    completionHander(result)
+                })
+            }
+        })
+        task.resume()
     }
     
     class func setActiveHelpInfo(helpInfo: ReturnHelpRequest) {
