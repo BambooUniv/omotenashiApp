@@ -88,10 +88,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 let ud = NSUserDefaults.standardUserDefaults()
                 let userInfo = ud.objectForKey("userInfo") as! Dictionary<String, String>
-                print(userInfo)
                 let id = userInfo["id"]!
                 let helpInfo = Help.getActiveHelpInfo()
                 let helpId = helpInfo["id"]
+                
+                // 承認したリクエスとを保存
+                ud.setObject(helpInfo, forKey: "confirmedInfo")
                 
                 Help.informConfirmHelp(id, helpId: helpId!)
                 
@@ -123,7 +125,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
   func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: (() -> Void)) {
     // ここでBackgroundから復帰したときの処理
-    print(identifier)
     completionHandler()
   }
 

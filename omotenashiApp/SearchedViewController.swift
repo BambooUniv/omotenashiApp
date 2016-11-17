@@ -11,17 +11,20 @@ class SeachedViewController :UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     
-    var helpInfo :Array = [""]
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidDisappear(animated)
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        print(appDelegate.requestId)
+        let userInfo = appDelegate.requestId?.componentsSeparatedByString(",")
+        self.nameLabel!.text = userInfo![1]
+        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(self.onTimer(_:)), userInfo: userInfo![0], repeats: true)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -29,5 +32,12 @@ class SeachedViewController :UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func onTimer(sender: NSTimer) {
+        Help.getDistanceFromServer(String(sender.userInfo), completionHander: {(distance: String) -> Void in
+            self.distanceLabel.text = distance
+        })
+    }
+    
     
 }
