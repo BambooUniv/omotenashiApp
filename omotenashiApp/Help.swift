@@ -139,7 +139,7 @@ class Help {
     
     class func getDistanceFromServer(id: String, completionHander: (String) -> Void) {
         var result = "false"
-        let params = ["id": id]
+        let params = ["id": id, "test": "tst"]
         let request = Http.createPostRequest(Const.apiHelpGetDistanceUrl, params: params)
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let task = session.dataTaskWithRequest(request, completionHandler: {

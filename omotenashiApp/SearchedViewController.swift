@@ -10,6 +10,7 @@ import UIKit
 class SeachedViewController :UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var omotenashiButton: UIButton!
     
     
     override func viewWillAppear(animated: Bool) {
@@ -25,6 +26,10 @@ class SeachedViewController :UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // ボタンの装飾
+        omotenashiButton.backgroundColor = UIColor(red: CGFloat(156)/255.0, green: CGFloat(141)/255.0, blue: CGFloat(42)/255.0, alpha: 1.0)
+        omotenashiButton.layer.cornerRadius = 7
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -34,7 +39,7 @@ class SeachedViewController :UIViewController {
     }
     
     func onTimer(sender: NSTimer) {
-        Help.getDistanceFromServer(String(sender.userInfo), completionHander: {(distance: String) -> Void in
+        Help.getDistanceFromServer(String(sender.userInfo!), completionHander: {(distance: String) -> Void in
             self.distanceLabel.text = distance
         })
     }
