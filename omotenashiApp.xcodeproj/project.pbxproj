@@ -12,6 +12,7 @@
 		234198C01DD5B9A90075ADFE /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234198BF1DD5B9A90075ADFE /* Notification.swift */; };
 		2351E22E1DC0A2D400F50C27 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2351E22D1DC0A2D400F50C27 /* Authentication.swift */; };
 		2356FD6B1DDAED57005259A2 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2356FD6A1DDAED57005259A2 /* MyTabBarController.swift */; };
+		235834C11DDDEC6E00B7DA6F /* StaticSpiningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235834C01DDDEC6E00B7DA6F /* StaticSpiningView.swift */; };
 		236359081DBF01740087B2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359071DBF01740087B2CE /* AppDelegate.swift */; };
 		2363590A1DBF01740087B2CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236359091DBF01740087B2CE /* ViewController.swift */; };
 		2363590D1DBF01740087B2CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2363590B1DBF01740087B2CE /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		234198BF1DD5B9A90075ADFE /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		2351E22D1DC0A2D400F50C27 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		2356FD6A1DDAED57005259A2 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		235834C01DDDEC6E00B7DA6F /* StaticSpiningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticSpiningView.swift; sourceTree = "<group>"; };
 		236359041DBF01740087B2CE /* omotenashiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = omotenashiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236359071DBF01740087B2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236359091DBF01740087B2CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				23AC22601DBF593200199203 /* CustomUITextField.swift */,
 				CA980F541DD46FB400238455 /* SpinningView.swift */,
+				235834C01DDDEC6E00B7DA6F /* StaticSpiningView.swift */,
 				CA56FC811DD9A04E008EA867 /* WalkingDistanceCalculation.swift */,
 				23B330111DD9CE6000EB7823 /* CustomButton.swift */,
 				CA4A48851DDAEC72009D92A6 /* UIImageExtension.swift */,
@@ -526,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD39ED41DBF35A900497D77 /* SearchViewController.swift in Sources */,
+				235834C11DDDEC6E00B7DA6F /* StaticSpiningView.swift in Sources */,
 				23B330121DD9CE6000EB7823 /* CustomButton.swift in Sources */,
 				23AC225D1DBF409300199203 /* SignupViewController.swift in Sources */,
 				CA4A48861DDAEC72009D92A6 /* UIImageExtension.swift in Sources */,

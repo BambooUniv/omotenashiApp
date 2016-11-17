@@ -249,9 +249,21 @@
                                 <color key="textColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-d7-VhG" customClass="SpinningView" customModule="omotenashiApp" customModuleProvider="target">
-                                <rect key="frame" x="75" y="141" width="240" height="215"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-d7-VhG" customClass="StaticSpinningView" customModule="omotenashiApp" customModuleProvider="target">
+                                <rect key="frame" x="67" y="132" width="240" height="247"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="1QP-oD-0jZ">
+                                        <rect key="frame" x="30" y="34" width="180" height="180"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.94504662959999997" green="0.4315397413" blue="0.2747148894" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="計算中" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3z-ci-pOk">
                                 <rect key="frame" x="115" y="501" width="149" height="58"/>
@@ -301,6 +313,7 @@
                         <outlet property="distanceLabel" destination="a3z-ci-pOk" id="th4-5C-0Kh"/>
                         <outlet property="nameLabel" destination="FHf-rS-jUq" id="0xS-Bo-MqQ"/>
                         <outlet property="omotenashiButton" destination="pSE-3p-Y7V" id="OpW-nT-xut"/>
+                        <outlet property="userImage" destination="1QP-oD-0jZ" id="532-fb-49p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oT-wN-AWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -326,7 +339,12 @@
                                 <rect key="frame" x="12" y="28" width="350" height="25"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-eM-fe9" customClass="SpinningView" customModule="omotenashiApp" customModuleProvider="target">
-                                <rect key="frame" x="67" y="249" width="240" height="247"/>
+                                <rect key="frame" x="67" y="132" width="240" height="247"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-44-QZT">
+                                        <rect key="frame" x="30" y="34" width="180" height="180"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="tintColor" red="0.94504662959999997" green="0.4315397413" blue="0.2747148894" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
@@ -472,6 +490,7 @@
         <image name="maleForeigner" width="2433" height="2433"/>
         <image name="manwoman" width="134" height="161"/>
         <image name="national_france" width="106" height="140"/>
+        <image name="person" width="295" height="295"/>
         <image name="place" width="256" height="352"/>
         <image name="sick" width="256" height="352"/>
         <image name="thumbnail" width="295" height="295"/>
