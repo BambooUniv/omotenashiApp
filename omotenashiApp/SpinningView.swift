@@ -37,7 +37,6 @@ import UIKit
     @IBInspectable var animating: Bool = true {
         didSet {
             
-            print("てすと１")
             updateAnimation()
         }
     }
@@ -50,13 +49,11 @@ import UIKit
         circleLayer.strokeStart = 0.0
         layer.addSublayer(circleLayer)
         tintColorDidChange()
-        print("test2")
         updateAnimation()
     }
     
     func updateAnimation() {
         
-        print("test3")
         if animating {
             circleLayer.addAnimation(strokeEndAnimation, forKey: "strokeEnd")
         }

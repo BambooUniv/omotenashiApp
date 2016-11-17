@@ -14,33 +14,9 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*---------------------
-         * くるくる回って人のイラストの周りを回転するものを作成
-         *----------------------*/
-        //円のCALayerを作成
-//        let ovalShapeLayer = CAShapeLayer()
-//        ovalShapeLayer.strokeColor = UIColor.blueColor().CGColor   //輪郭は青色
-//        ovalShapeLayer.fillColor = UIColor.whiteColor().CGColor    //図形の中の色は白色
-//        ovalShapeLayer.lineWidth = 5.0                             //輪郭の線の太さは5.0pt
-//        ovalShapeLayer.lineDashPattern = [2,3]
-//        //図形は円形
-//        ovalShapeLayer.path = UIBezierPath(ovalInRect: CGRect(x: view.bounds.size.width/2, y: view.bounds.size.height/2, width: 100.0, height: 100.0)).CGPath
-//        //作成したCALayerを画面に追加
-//        view.layer.addSublayer(ovalShapeLayer)
-//        //輪郭の線をアニメーションする
-//        let strokeStartAnimation = CABasicAnimation(keyPath: "strokeStart")
-//        strokeStartAnimation.fromValue = -0.5
-//        strokeStartAnimation.toValue = 1.0
-//        
-//        let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
-//        strokeEndAnimation.fromValue = 0.0
-//        strokeEndAnimation.toValue = 1.0
-//        
-//        let strokeAnimationGroup = CAAnimationGroup()
-//        strokeAnimationGroup.duration = 1.5
-//        strokeAnimationGroup.repeatDuration = CFTimeInterval.infinity
-//        strokeAnimationGroup.animations = [strokeStartAnimation, strokeEndAnimation]
-//        ovalShapeLayer.addAnimation(strokeAnimationGroup, forKey: nil)
+        // 自分のリクエストが承認されたか確認するタイマーを設定
+        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: #selector(self.onTimer(_:)), userInfo: nil, repeats: true)
+
         
         // Do any additional setup after loading the view.
     }
@@ -61,9 +37,27 @@ class SearchViewController: UIViewController {
     }
     */
     
+    func onTimer(sender: NSTimer) {
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        let userInfo = userDefault.objectForKey("userInfo") as! Dictionary<String, String>
+        let requestId = userInfo["id"]!
+        Help.confirmedHelpRequest(requestId, completionHandler: {(result: String)->Void in
+            if (result != "false") {
+                
+                var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.requestId = result
+                
+                let storyboard: UIStoryboard = self.storyboard!
+                let nextView = storyboard.instantiateViewControllerWithIdentifier("Seached") as! SeachedViewController
+                self.presentViewController(nextView, animated: true, completion: nil)
+            }
+        })
+    }
+    
     override func viewDidAppear(animated: Bool) {
         self.spinningView.updateAnimation()
     }
+    
     
     @IBAction func moveSearchResult(sender: AnyObject) {
         //探索結果画面へ遷移
