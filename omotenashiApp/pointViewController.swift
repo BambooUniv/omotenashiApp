@@ -11,6 +11,7 @@ import UIKit
 
 class PointViewController: UIViewController {
     
+    @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var img1: UIImageView!
@@ -35,16 +36,31 @@ class PointViewController: UIViewController {
     
     
     @IBAction func img1Button(sender: AnyObject) {
-        print("test")
+        showAlert(self.price1)
     }
 
     @IBAction func img2Button(sender: AnyObject) {
+        showAlert(self.price2)
     }
     
     @IBAction func img3Button(sender: AnyObject) {
+        showAlert(self.price3)
     }
     
     @IBAction func img4Button(sender: AnyObject) {
+        showAlert(self.price4)
+    }
+    @IBAction func img5Button(sender: AnyObject) {
+        showAlert(self.price5)
+    }
+    @IBAction func img6Button(sender: AnyObject) {
+        showAlert(self.price6)
+    }
+    @IBAction func img7Button(sender: AnyObject) {
+        showAlert(self.price7)
+    }
+    @IBAction func img8Button(sender: AnyObject) {
+        showAlert(self.price8)
     }
     
     override func viewDidLoad() {
@@ -52,43 +68,31 @@ class PointViewController: UIViewController {
         scrollView.contentSize = CGSize(width: 300, height: 1000)
         
         let ud = NSUserDefaults.standardUserDefaults()
-        point = ud.objectForKey("point") as! Int
+        ud.setObject(800, forKey: "point")
+        ud.synchronize()
         print(point)
+        point = ud.objectForKey("point") as! Int
+        self.pointLabel.text = String(point)
     }
     
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
-        for touch: UITouch in touches {
-        }
-    }
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
-        for touch: UITouch in touches {
-            let tag = touch.view!.tag
-            switch tag {
-            case 1:
-                showAlert()
-            default:
-                break
-            }
-        }
-    }
-    
-    func showAlert() {
+    func showAlert(label: UILabel) {
         let alert: UIAlertController = UIAlertController(title: "交換の確認", message: "200ポイントと商品を交換しますか？", preferredStyle:  UIAlertControllerStyle.Alert)
         
         let defaultAction: UIAlertAction = UIAlertAction(title: "交換する", style: UIAlertActionStyle.Default, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
-            print("OK")
+            let priceStr = label.text?.substringToIndex(label.text!.startIndex.advancedBy(3))
+            
+            self.point = self.point - Int(priceStr!)!
+            self.pointLabel.text = String(self.point)
         })
         
         // キャンセルボタン
         let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.Cancel, handler:{
             // ボタンが押された時の処理を書く（クロージャ実装）
             (action: UIAlertAction!) -> Void in
+            
             print("Cancel")
         })
         
