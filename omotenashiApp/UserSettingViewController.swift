@@ -6,6 +6,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 extension NSMutableData {
     func appendString(string: String) {
@@ -64,12 +65,26 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        for touch: UITouch in touches {
+            let tag = touch.view!.tag
+            switch tag {
+            case 1:
+                self.userImageLabel.alpha = 0.8
+            default:
+                break
+            }
+        }
+    }
+    
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesEnded(touches, withEvent: event)
         for touch: UITouch in touches {
             let tag = touch.view!.tag
             switch tag {
             case 1:
+                self.userImageLabel.alpha = 1.0
                 openImagePicker()
             default:
                 break
@@ -152,7 +167,10 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print("****** response data = \(responseString!)")
             dispatch_async(dispatch_get_main_queue(),{
-                //アップロード完了
+                //self.userImageLabel.sd_setImageWithURL(NSURL(string: "http://omotenashi.prodrb.com/api/img/2"))
+                self.userImageLabel.sd_setImageWithPreviousCachedImageWithURL(NSURL(string: "http://omotenashi.prodrb.com/api/img/2"), placeholderImage: nil, options: SDWebImageOptions.RefreshCached, progress: nil, completed: nil)
+                self.userImageLabel.layer.cornerRadius = 83
+                self.userImageLabel.layer.masksToBounds = true
             });
         }
         task.resume()

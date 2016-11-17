@@ -39,7 +39,7 @@
                                         <rect key="frame" x="4" y="172" width="284" height="53"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="15"/>
                                         <state key="normal" title="　　ポイント交換">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.85106382979999995" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exchange" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-RZ-JsL">
@@ -88,8 +88,8 @@
                                         <rect key="frame" x="4" y="172" width="284" height="53"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
                                         <state key="normal" title="設定変更">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.85106382979999995" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="0.4303115904726979" green="0.57958102413800516" blue="0.69858475130890052" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.4303115904726979" green="0.57958102413800516" blue="0.69858475130890052" alpha="0.0" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">

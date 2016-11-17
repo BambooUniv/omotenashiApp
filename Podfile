@@ -7,6 +7,7 @@ target 'omotenashiApp' do
 
   # Pods for omotenashiApp
   pod 'Unbox', '1.9'
+  pod 'SDWebImage'
 
   target 'omotenashiAppTests' do
     inherit! :search_paths
