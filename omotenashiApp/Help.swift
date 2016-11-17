@@ -41,6 +41,7 @@ class Help {
     
     
     class func didOmotenashi(helpId: String) {
+        print(helpId)
         let params = ["helpId":helpId]
         let request = Http.createPostRequest(Const.apiHelpDidOmotenashiUrl, params: params)
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
