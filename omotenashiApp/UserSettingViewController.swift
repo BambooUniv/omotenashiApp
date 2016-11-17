@@ -163,12 +163,11 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
                 return
             }
             // レスポンスを出力
-            print("******* response = \(response)")
-            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("****** response data = \(responseString!)")
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
             dispatch_async(dispatch_get_main_queue(),{
                 //self.userImageLabel.sd_setImageWithURL(NSURL(string: "http://omotenashi.prodrb.com/api/img/2"))
-                self.userImageLabel.sd_setImageWithPreviousCachedImageWithURL(NSURL(string: "http://omotenashi.prodrb.com/api/img/2"), placeholderImage: nil, options: SDWebImageOptions.RefreshCached, progress: nil, completed: nil)
+                let imgUrl = "http://omotenashi.prodrb.com/api/img/" + responseString
+                self.userImageLabel.sd_setImageWithPreviousCachedImageWithURL(NSURL(string: imgUrl), placeholderImage: nil, options: SDWebImageOptions.RefreshCached, progress: nil, completed: nil)
                 self.userImageLabel.layer.cornerRadius = 83
                 self.userImageLabel.layer.masksToBounds = true
             });
