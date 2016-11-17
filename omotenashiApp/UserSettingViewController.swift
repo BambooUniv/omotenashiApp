@@ -104,15 +104,18 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         picker.dismissViewControllerAnimated(true, completion: nil)
         
         // 画像をリサイズ
-        let resizedImage = resize(image, width: 300, height: 300)
+        let resizedImage = resize(image, width: 300, height: 500)
         
         // 画像の送信部分
         let myUrl = NSURL(string: "http://omotenashi.prodrb.com/api/img/set_image.php")
         let request = NSMutableURLRequest(URL: myUrl!)
         request.HTTPMethod = "POST"
         
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject(true, forKey: "isImg")
+        let userInfo = ud.objectForKey("userInfo") as? [String: String]
         let param = [
-            "user_id": "1"
+            "user_id": userInfo!["id"]!
         ]
         
         let boundary = generateBoundaryString()
