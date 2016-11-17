@@ -22,6 +22,7 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
     // ポイント画面関する要素
     @IBOutlet weak var pointView: UIView!
     @IBOutlet weak var pointLabel: UILabel!
+    @IBOutlet weak var userImageLabel: UIImageView!
     
     
     // 設定画面に関する要素
@@ -48,7 +49,6 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         setViewInfoByUserInfo(userInfo!)
         
         
-       openImagePicker()
         
         
         // 設定画面を表示する
@@ -63,6 +63,19 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         
     }
     
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesEnded(touches, withEvent: event)
+        for touch: UITouch in touches {
+            let tag = touch.view!.tag
+            switch tag {
+            case 1:
+                openImagePicker()
+            default:
+                break
+            }
+        }
+    }
     
     @IBAction func showSettingButton(sender: AnyObject) {
         pointView.hidden = true

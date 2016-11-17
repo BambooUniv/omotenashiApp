@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jm5-pB-Z2v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jm5-pB-Z2v">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -23,7 +23,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="T0a-xc-McJ">
                                 <rect key="frame" x="12" y="28" width="350" height="25"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="7wZ-Ll-Z7y">
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="7wZ-Ll-Z7y">
                                 <rect key="frame" x="106" y="80" width="163" height="163"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jw4-h4-pua">
@@ -145,6 +145,7 @@
                         <outlet property="settingButton" destination="0lV-G6-nl9" id="vzo-Ti-b0P"/>
                         <outlet property="settingView" destination="aiz-RM-cY2" id="3IO-Wo-I49"/>
                         <outlet property="sexLabel" destination="S8N-yL-sLM" id="VND-HR-Ja5"/>
+                        <outlet property="userImageLabel" destination="7wZ-Ll-Z7y" id="Shd-ik-imp"/>
                         <outlet property="usernameLabel" destination="mPF-bm-6Qt" id="gYU-bS-D5h"/>
                     </connections>
                 </viewController>
