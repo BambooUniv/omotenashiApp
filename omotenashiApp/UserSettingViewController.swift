@@ -32,6 +32,7 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var languageLabel1: UILabel!
     @IBOutlet weak var languageLabel2: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var signoutButton: UIButton!
     
     
     @IBOutlet weak var settingButton: UIButton!
@@ -59,6 +60,8 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         // ボタンの装飾
         settingButton.backgroundColor = UIColor(red: CGFloat(156)/255.0, green: CGFloat(141)/255.0, blue: CGFloat(42)/255.0, alpha: 1.0)
         settingButton.layer.cornerRadius = 7
+        signoutButton.backgroundColor = UIColor(red: CGFloat(156)/255.0, green: CGFloat(141)/255.0, blue: CGFloat(42)/255.0, alpha: 1.0)
+        signoutButton.layer.cornerRadius = 7
         pointButton.backgroundColor = UIColor(red: CGFloat(156)/255.0, green: CGFloat(141)/255.0, blue: CGFloat(42)/255.0, alpha: 1.0)
         pointButton.layer.cornerRadius = 7
         
@@ -115,7 +118,9 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         if (languages?[1] != nil) {
             languageLabel2.text = languages![1]
         }
-        self.pointLabel.text = userInfo["point"]
+        
+        let ud = NSUserDefaults.standardUserDefaults()
+        self.pointLabel.text = String(ud.objectForKey("point") as! Int)
  
     }
     
@@ -220,4 +225,7 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     
+    @IBAction func singOutButton(sender: AnyObject) {
+        Authentication.signout()
+    }
 }

@@ -68,6 +68,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       let signInViewController = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
       self.window?.rootViewController = signInViewController
       self.window?.makeKeyAndVisible()
+        
+    } else if isSignin == false {
+      let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+      let signInViewController = storyboard.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
+      self.window?.rootViewController = signInViewController
+      self.window?.makeKeyAndVisible()
+        
     }
     
     return true

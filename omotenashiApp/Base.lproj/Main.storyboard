@@ -41,6 +41,9 @@
                                         <state key="normal" title="　　ポイント交換">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="zo7-eb-P6e" kind="show" id="DkN-gM-mVc"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exchange" translatesAutoresizingMaskIntoConstraints="NO" id="eVa-RZ-JsL">
                                         <rect key="frame" x="85" y="186" width="25" height="25"/>
@@ -49,7 +52,7 @@
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aiz-RM-cY2">
-                                <rect key="frame" x="44" y="377" width="292" height="233"/>
+                                <rect key="frame" x="41" y="377" width="292" height="233"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="manwoman" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-Q1-EgT">
                                         <rect key="frame" x="17" y="77" width="38" height="38"/>
@@ -84,8 +87,27 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="0yz-dS-BQN">
                                         <rect key="frame" x="17" y="7" width="29" height="47"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHZ-gP-jTe">
+                                        <rect key="frame" x="159" y="172" width="131" height="53"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="サインアウト">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.43031159050000001" green="0.57958102410000001" blue="0.69858475129999997" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
+                                                <color key="value" red="0.3780831711" green="0.65172659349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightedBackgroundColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="singOutButton:" destination="OoA-y2-uNk" eventType="touchUpInside" id="ljR-UQ-dCa"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lV-G6-nl9">
-                                        <rect key="frame" x="4" y="172" width="284" height="53"/>
+                                        <rect key="frame" x="1" y="172" width="131" height="53"/>
                                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
                                         <state key="normal" title="設定変更">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,6 +167,7 @@
                         <outlet property="settingButton" destination="0lV-G6-nl9" id="vzo-Ti-b0P"/>
                         <outlet property="settingView" destination="aiz-RM-cY2" id="3IO-Wo-I49"/>
                         <outlet property="sexLabel" destination="S8N-yL-sLM" id="VND-HR-Ja5"/>
+                        <outlet property="signoutButton" destination="gHZ-gP-jTe" id="pam-yo-Ukd"/>
                         <outlet property="userImageLabel" destination="7wZ-Ll-Z7y" id="Shd-ik-imp"/>
                         <outlet property="usernameLabel" destination="mPF-bm-6Qt" id="gYU-bS-D5h"/>
                     </connections>
@@ -152,6 +175,176 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtD-rG-wcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="655.5" y="1204.5"/>
+        </scene>
+        <!--Point View Controller-->
+        <scene sceneID="j2t-gR-NjX">
+            <objects>
+                <viewController id="zo7-eb-P6e" customClass="PointViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z7x-ub-Npp"/>
+                        <viewControllerLayoutGuide type="bottom" id="4C8-lE-qTL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0bl-Ia-dbR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Koh-Gw-Re8">
+                                <rect key="frame" x="12" y="28" width="350" height="25"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lsa-hG-835">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Lb9-Tm-YqF">
+                                <rect key="frame" x="12" y="28" width="350" height="25"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="70" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tp-K8-JNT">
+                                <rect key="frame" x="49" y="80" width="276" height="153"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="103"/>
+                                <color key="textColor" red="0.61176470589999998" green="0.55294117649999996" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Er-gf-CJU">
+                                <rect key="frame" x="20" y="230" width="335" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tlP-o3-uy3">
+                                        <rect key="frame" x="3" y="15" width="332" height="1000"/>
+                                        <subviews>
+                                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="RcY-pf-zAL">
+                                                <rect key="frame" x="27" y="5" width="118" height="118"/>
+                                            </imageView>
+                                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="P7x-6X-KYL">
+                                                <rect key="frame" x="174" y="5" width="118" height="118"/>
+                                            </imageView>
+                                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="fKx-VB-ImI">
+                                                <rect key="frame" x="27" y="152" width="118" height="118"/>
+                                            </imageView>
+                                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="2fu-3I-jo5">
+                                                <rect key="frame" x="172" y="152" width="118" height="118"/>
+                                            </imageView>
+                                            <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="OCS-lM-oBx">
+                                                <rect key="frame" x="27" y="296" width="118" height="118"/>
+                                            </imageView>
+                                            <imageView tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="mxI-bL-yqO">
+                                                <rect key="frame" x="172" y="296" width="118" height="118"/>
+                                            </imageView>
+                                            <imageView tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="4Qw-4O-bFc">
+                                                <rect key="frame" x="174" y="442" width="118" height="118"/>
+                                            </imageView>
+                                            <imageView tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="lLp-Ql-Jrl">
+                                                <rect key="frame" x="27" y="442" width="118" height="118"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nec-Ya-iPd">
+                                                <rect key="frame" x="174" y="93" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-Rp-RH3">
+                                                <rect key="frame" x="174" y="240" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vld-iz-bIj">
+                                                <rect key="frame" x="27" y="383" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-Px-pSD">
+                                                <rect key="frame" x="172" y="383" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3P4-es-Ai2">
+                                                <rect key="frame" x="27" y="530" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PD-H2-uF5">
+                                                <rect key="frame" x="172" y="530" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbL-2t-KMd">
+                                                <rect key="frame" x="27" y="240" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO4-fd-Iy8">
+                                                <rect key="frame" x="27" y="93" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386503067487" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h30-fC-avK">
+                                                <rect key="frame" x="27" y="8" width="118" height="115"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="71" maxX="0.0" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="img1Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="Liy-NT-bGf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anc-fU-rED">
+                                                <rect key="frame" x="174" y="8" width="116" height="115"/>
+                                                <connections>
+                                                    <action selector="img2Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="O7u-x6-1HM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-LE-acS">
+                                                <rect key="frame" x="27" y="153" width="116" height="115"/>
+                                                <connections>
+                                                    <action selector="img3Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="YNg-g8-Atg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyY-JF-yn0">
+                                                <rect key="frame" x="174" y="155" width="116" height="115"/>
+                                                <connections>
+                                                    <action selector="img4Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="dyE-23-pCm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="img1" destination="RcY-pf-zAL" id="Nyf-E6-8dK"/>
+                        <outlet property="img2" destination="P7x-6X-KYL" id="xmT-N4-Uez"/>
+                        <outlet property="img3" destination="fKx-VB-ImI" id="FNv-tr-Ewx"/>
+                        <outlet property="img4" destination="2fu-3I-jo5" id="K3S-B8-Fek"/>
+                        <outlet property="img5" destination="OCS-lM-oBx" id="2m0-0x-Cpb"/>
+                        <outlet property="img6" destination="mxI-bL-yqO" id="Nqe-y6-d1O"/>
+                        <outlet property="img7" destination="4Qw-4O-bFc" id="8tz-pH-Ie2"/>
+                        <outlet property="img8" destination="lLp-Ql-Jrl" id="2LW-js-rOp"/>
+                        <outlet property="price1" destination="NO4-fd-Iy8" id="VRD-sr-Q0m"/>
+                        <outlet property="price2" destination="nec-Ya-iPd" id="qeQ-mq-9bn"/>
+                        <outlet property="price3" destination="s0R-Rp-RH3" id="nGg-QP-PCX"/>
+                        <outlet property="price4" destination="tbL-2t-KMd" id="rW9-xi-QYR"/>
+                        <outlet property="price5" destination="Vld-iz-bIj" id="z3r-2c-b9s"/>
+                        <outlet property="price6" destination="xMH-Px-pSD" id="pY8-AQ-8XA"/>
+                        <outlet property="price7" destination="3P4-es-Ai2" id="h1N-tR-sN3"/>
+                        <outlet property="price8" destination="6PD-H2-uF5" id="LLg-Uo-1xr"/>
+                        <outlet property="scrollView" destination="2Er-gf-CJU" id="qNH-gs-Lt7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAg-qQ-4sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5" y="1204.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
@@ -250,7 +443,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-d7-VhG" customClass="StaticSpinningView" customModule="omotenashiApp" customModuleProvider="target">
-                                <rect key="frame" x="67" y="132" width="240" height="247"/>
+                                <rect key="frame" x="67" y="165" width="240" height="247"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="1QP-oD-0jZ">
                                         <rect key="frame" x="30" y="34" width="180" height="180"/>
@@ -294,13 +487,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The person who helps you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6X-R8-utY">
-                                <rect key="frame" x="35" y="67" width="305" height="26"/>
+                                <rect key="frame" x="35" y="82" width="305" height="26"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="was found." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpq-Ts-un9">
-                                <rect key="frame" x="127" y="93" width="121" height="26"/>
+                                <rect key="frame" x="127" y="108" width="121" height="26"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
                                 <color key="textColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -339,7 +532,7 @@
                                 <rect key="frame" x="12" y="28" width="350" height="25"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-eM-fe9" customClass="SpinningView" customModule="omotenashiApp" customModuleProvider="target">
-                                <rect key="frame" x="67" y="132" width="240" height="247"/>
+                                <rect key="frame" x="67" y="165" width="240" height="247"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-44-QZT">
                                         <rect key="frame" x="30" y="34" width="180" height="180"/>
@@ -492,6 +685,7 @@
         <image name="national_france" width="106" height="140"/>
         <image name="person" width="295" height="295"/>
         <image name="place" width="256" height="352"/>
+        <image name="rayu" width="400" height="400"/>
         <image name="sick" width="256" height="352"/>
         <image name="thumbnail" width="295" height="295"/>
         <image name="toilet" width="256" height="352"/>
