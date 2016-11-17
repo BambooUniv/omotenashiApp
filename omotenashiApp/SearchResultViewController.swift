@@ -16,7 +16,16 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
     @IBOutlet weak var directionDisplay: UITextField!
     
+    /*-----------------------------------
+     * お助けユーザに関する画像群
+     *---------------------------------*/
+    @IBOutlet weak var manInfoImageView: UIView!
     @IBOutlet weak var manImageView: UIImageView!
+    @IBOutlet weak var nationalImageView: UIImageView!
+    @IBOutlet weak var contentImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
    // var foreignerImageView:UIImageView!
     var foreignerDirectionString :String?
     
@@ -35,6 +44,8 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
 
     override func viewDidLoad() {
             super.viewDidLoad()
+        
+        initImageView()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
@@ -127,7 +138,7 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
             let distance = userLocation.distanceFromLocation(foreignerLocation)
             
             let y :CGFloat = getPointFromDistance(distance)
-            manImageView.transform = CGAffineTransformMakeTranslation(0, y)
+            self.manInfoImageView.transform = CGAffineTransformMakeTranslation(0, y)
 
             
         }
@@ -139,9 +150,19 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     func getPointFromDistance(distance: Double) -> CGFloat {
-        let distancePoint = 520 - ((520 * distance) / 100)
+        var distancePoint = 520 - ((520 * distance) / 300)
+        if distancePoint > 365 {
+            distancePoint = 365
+            
+        }
         
         return CGFloat(distancePoint)
+    }
+    
+    func initImageView() {
+        let activeHelpInfo = Help.getActiveHelpInfo()
+        
+        
     }
 
 }

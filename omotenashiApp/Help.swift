@@ -39,6 +39,30 @@ class Help {
         
     }
     
+    // 自分のリクエストが承認されたかどうか確認する関数
+    class func confirmedHelpRequest(requestId: String, completionHandler: (String) -> Void) {
+        var result = "false"
+        let params = ["requestId":requestId]
+        let request = Http.createPostRequest(Const.apiHelpComfirmUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
+            let data = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
+            if (data != "false") {
+                dispatch_async(dispatch_get_main_queue(), {
+                    result = data
+                    completionHandler(result)
+                })
+            } else {
+                dispatch_async(dispatch_get_main_queue(), {
+                    completionHandler(result)
+                })
+            }
+            
+        })
+        task.resume()
+    }
+    
     
     // 自分の現在位置から100m(distance)以内のお助けリクエストが存在するか確認する処理
     class func getHelpWithLocation(latitude: Double, longitude: Double, distance: Int) {
@@ -84,6 +108,24 @@ class Help {
         let activeHelpInfo = userDefault.objectForKey("helpActiveInfo") as! Dictionary<String, String>
         
         return activeHelpInfo
+    }
+    
+    // リクエストを承認したことをサーバーに伝える
+    class func informConfirmHelp(userId: String, helpId: String){
+        
+        var _helpId = String(helpId)
+        var _userId = String(userId)
+        
+        print(userId)
+        
+        let params = ["user_id":_userId, "help_id":_helpId,]
+        let request = Http.createPostRequest(Const.apiHelpsetConfirmUrl, params: params)
+        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let task = session.dataTaskWithRequest(request, completionHandler: {
+            (data, resp, err) in
+        })
+        task.resume()
+        
     }
     
     class func setActiveHelpInfo(helpInfo: ReturnHelpRequest) {

@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+    var requestId: String?
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -84,6 +85,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
             let acceptAction = UIAlertAction(title: "助ける", style: UIAlertActionStyle.Default, handler: {
                 (action: UIAlertAction!) -> Void in
+                
+                let ud = NSUserDefaults.standardUserDefaults()
+                let userInfo = ud.objectForKey("userInfo") as! Dictionary<String, String>
+                print(userInfo)
+                let id = userInfo["id"]!
+                let helpInfo = Help.getActiveHelpInfo()
+                let helpId = helpInfo["id"]
+                
+                Help.informConfirmHelp(id, helpId: helpId!)
+                
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = storyboard.instantiateViewControllerWithIdentifier("searchResult") as! SearchResultViewController
                 self.window?.rootViewController?.presentViewController(viewController, animated: true, completion: nil)

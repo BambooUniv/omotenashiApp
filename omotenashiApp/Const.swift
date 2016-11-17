@@ -21,6 +21,8 @@ struct Const {
   // お助け機能周り
   static let apiHelpCreateUrl = Const.apiBaseUrl + "/help/create.php"
   static let apiHelpSearchUrl = Const.apiBaseUrl + "/help/search.php"
+  static let apiHelpsetConfirmUrl = Const.apiBaseUrl + "/help/set_confirm.php"
+  static let apiHelpComfirmUrl = Const.apiBaseUrl + "/help/confirm.php"
   
   
 }

@@ -221,6 +221,56 @@
             </objects>
             <point key="canvasLocation" x="919.5" y="187.5"/>
         </scene>
+        <!--Seached View Controller-->
+        <scene sceneID="hdk-z8-UYx">
+            <objects>
+                <viewController storyboardIdentifier="Seached" id="9Yh-pV-NI6" customClass="SeachedViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P8g-BP-hdG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Glx-JD-DN1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Hh-ra-bVN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="gAr-8a-JVv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="見つかりました" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6X-R8-utY">
+                                <rect key="frame" x="127" y="62" width="173" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHf-rS-jUq">
+                                <rect key="frame" x="108" y="364" width="187" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcb-d7-VhG" customClass="SpinningView" customModule="omotenashiApp" customModuleProvider="target">
+                                <rect key="frame" x="75" y="141" width="240" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3z-ci-pOk">
+                                <rect key="frame" x="102" y="507" width="187" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="a3z-ci-pOk" id="th4-5C-0Kh"/>
+                        <outlet property="nameLabel" destination="FHf-rS-jUq" id="0xS-Bo-MqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oT-wN-AWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1491.5" y="-445.5"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="6i8-QM-HJ6">
             <objects>
@@ -233,16 +283,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-eM-fe9" customClass="SpinningView" customModule="omotenashiApp" customModuleProvider="target">
-                                <rect key="frame" x="67" y="249" width="240" height="247"/>
-                                <color key="tintColor" red="0.94504662959999997" green="0.4315397413" blue="0.2747148894" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="3OE-tu-fL4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="助け人画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-r6-JiH">
                                 <rect key="frame" x="145" y="97" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -253,9 +296,16 @@
                                 <rect key="frame" x="97" y="592" width="180" height="30"/>
                                 <state key="normal" title="助け人探索結果出力画面へ"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="3OE-tu-fL4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5wU-eM-fe9" customClass="SpinningView" customModule="omotenashiApp" customModuleProvider="target">
+                                <rect key="frame" x="67" y="249" width="240" height="247"/>
+                                <color key="tintColor" red="0.94504662959999997" green="0.4315397413" blue="0.2747148894" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animating" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -300,9 +350,27 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEt-2z-Lhr">
                                 <rect key="frame" x="0.0" y="94" width="375" height="1600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maleForeigner" translatesAutoresizingMaskIntoConstraints="NO" id="dln-g2-8q7">
-                                        <rect key="frame" x="67" y="35" width="240" height="128"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1b-1g-1Zi">
+                                        <rect key="frame" x="29" y="-2" width="316" height="224"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="helpme_m" translatesAutoresizingMaskIntoConstraints="NO" id="mP2-aZ-5MI">
+                                                <rect key="frame" x="183" y="28" width="104" height="80"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maleForeigner" translatesAutoresizingMaskIntoConstraints="NO" id="dln-g2-8q7">
+                                                <rect key="frame" x="79" y="46" width="150" height="128"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="national_france" translatesAutoresizingMaskIntoConstraints="NO" id="alz-Vs-B8e">
+                                                <rect key="frame" x="129" y="165" width="50" height="52"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minamimoto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlN-Su-k4R">
+                                                <rect key="frame" x="179" y="183" width="144" height="21"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                                <color key="textColor" red="0.73333333333333328" green="0.23529411764705882" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -312,9 +380,13 @@
                     <tabBarItem key="tabBarItem" title="Item" id="5P4-XU-dky"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="contentImageView" destination="mP2-aZ-5MI" id="9Vg-et-U3b"/>
                         <outlet property="directionDisplay" destination="j1O-Mb-Dpo" id="SMH-co-dM4"/>
                         <outlet property="distanceCircleRotation" destination="pNh-tN-uIg" id="6WJ-FF-gYq"/>
                         <outlet property="manImageView" destination="dln-g2-8q7" id="fEZ-mV-G2s"/>
+                        <outlet property="manInfoImageView" destination="O1b-1g-1Zi" id="xsV-AO-WXP"/>
+                        <outlet property="nameLabel" destination="AlN-Su-k4R" id="OeY-Nx-Wt5"/>
+                        <outlet property="nationalImageView" destination="alz-Vs-B8e" id="QDT-4q-nls"/>
                         <outlet property="wrapperView" destination="qEt-2z-Lhr" id="ld1-FW-3z4"/>
                     </connections>
                 </viewController>
@@ -349,11 +421,13 @@
         <image name="exchange" width="84" height="57"/>
         <image name="food" width="317" height="419"/>
         <image name="help" width="648" height="149"/>
+        <image name="helpme_m" width="123" height="92"/>
         <image name="language" width="99" height="51"/>
         <image name="line" width="628" height="4"/>
         <image name="location" width="58" height="86"/>
         <image name="maleForeigner" width="2433" height="2433"/>
         <image name="manwoman" width="134" height="161"/>
+        <image name="national_france" width="106" height="140"/>
         <image name="place" width="317" height="419"/>
         <image name="sick" width="317" height="419"/>
         <image name="thumbnail" width="295" height="295"/>
