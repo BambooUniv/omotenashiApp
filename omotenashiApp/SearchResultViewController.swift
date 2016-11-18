@@ -156,8 +156,8 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
     func getPointFromDistance(distance: Double) -> CGFloat {
         var distancePoint = 520 - ((520 * distance) / 300)
-        if distancePoint > 365 {
-            distancePoint = 365
+        if distancePoint > 300 {
+            distancePoint = 300
             
         }
         
