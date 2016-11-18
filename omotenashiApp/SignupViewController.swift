@@ -23,7 +23,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
   @IBOutlet weak var language2TextField: CustomUITextField!
   
   var sexPickOption = ["男性", "女性"]
-  var nationalityPickOption = ["日本", "アメリカ", "イギリス", "中国", "韓国", "ケニア"]
+  var nationalityPickOption = ["日本", "アメリカ", "フランス", "中国"]
   var languagePickOption = ["日本語", "英語", "中国語", "韓国語", "タイ語", "アラビア語"]
     var closeToolBar: UIToolbar!
   

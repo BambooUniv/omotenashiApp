@@ -184,7 +184,7 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         if (nationality == "日本") {
             self.nationalImageView.image = UIImage(named: "national_japan")
         } else if (nationality == "アメリカ") {
-            self.nationalImageView.image = UIImage(named: "national_america")
+            self.nationalImageView.image = UIImage(named: "national_usa")
         } else if (nationality == "フランス") {
             self.nationalImageView.image = UIImage(named: "national_france")
         } else if (nationality == "中国") {
