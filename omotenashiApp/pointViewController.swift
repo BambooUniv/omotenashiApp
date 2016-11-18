@@ -95,7 +95,7 @@ class PointViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize = CGSize(width: 300, height: 1000)
+        scrollView.contentSize = CGSize(width: 300, height: 560)
         
         let ud = NSUserDefaults.standardUserDefaults()
         ud.setObject(800, forKey: "point")
