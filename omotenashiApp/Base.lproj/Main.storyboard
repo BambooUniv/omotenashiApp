@@ -207,7 +207,7 @@
                                 <rect key="frame" x="20" y="230" width="335" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tlP-o3-uy3">
-                                        <rect key="frame" x="3" y="15" width="332" height="1000"/>
+                                        <rect key="frame" x="3" y="5" width="332" height="1000"/>
                                         <subviews>
                                             <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="RcY-pf-zAL">
                                                 <rect key="frame" x="27" y="5" width="118" height="118"/>
@@ -233,6 +233,13 @@
                                             <imageView tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="lLp-Ql-Jrl">
                                                 <rect key="frame" x="27" y="442" width="118" height="118"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO4-fd-Iy8">
+                                                <rect key="frame" x="27" y="93" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386503067487" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nec-Ya-iPd">
                                                 <rect key="frame" x="174" y="93" width="118" height="30"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
@@ -240,51 +247,44 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-Rp-RH3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0R-Rp-RH3">
                                                 <rect key="frame" x="174" y="240" width="118" height="30"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vld-iz-bIj">
-                                                <rect key="frame" x="27" y="383" width="118" height="30"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-Px-pSD">
-                                                <rect key="frame" x="172" y="383" width="118" height="30"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3P4-es-Ai2">
-                                                <rect key="frame" x="27" y="530" width="118" height="30"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PD-H2-uF5">
-                                                <rect key="frame" x="172" y="530" width="118" height="30"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbL-2t-KMd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbL-2t-KMd">
                                                 <rect key="frame" x="27" y="240" width="118" height="30"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO4-fd-Iy8">
-                                                <rect key="frame" x="27" y="93" width="118" height="30"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386503067487" colorSpace="calibratedRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="400pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vld-iz-bIj">
+                                                <rect key="frame" x="27" y="383" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="400pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-Px-pSD">
+                                                <rect key="frame" x="172" y="383" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="500pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3P4-es-Ai2">
+                                                <rect key="frame" x="27" y="530" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="500pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PD-H2-uF5">
+                                                <rect key="frame" x="172" y="530" width="118" height="30"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.72699386499999996" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -314,6 +314,38 @@
                                                     <action selector="img4Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="dyE-23-pCm"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-X8-8Q2">
+                                                <rect key="frame" x="27" y="297" width="116" height="115"/>
+                                                <connections>
+                                                    <action selector="img5Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="Hep-1b-S2h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAC-p8-aOB">
+                                                <rect key="frame" x="172" y="298" width="116" height="115"/>
+                                                <connections>
+                                                    <action selector="img6Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="iS8-6Q-5rN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPA-1H-n1w">
+                                                <rect key="frame" x="27" y="443" width="116" height="115"/>
+                                                <connections>
+                                                    <action selector="img7Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="ytU-BB-dAa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-fm-RjN">
+                                                <rect key="frame" x="172" y="443" width="116" height="115"/>
+                                                <connections>
+                                                    <action selector="img4Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="eNl-a4-5Aq"/>
+                                                    <action selector="img5Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="8o1-77-aa8"/>
+                                                    <action selector="img6Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="V5e-48-4v8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmZ-dS-A8b">
+                                                <rect key="frame" x="176" y="442" width="116" height="115"/>
+                                                <connections>
+                                                    <action selector="img8Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="32N-JG-HAg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -331,6 +363,7 @@
                         <outlet property="img6" destination="mxI-bL-yqO" id="Nqe-y6-d1O"/>
                         <outlet property="img7" destination="4Qw-4O-bFc" id="8tz-pH-Ie2"/>
                         <outlet property="img8" destination="lLp-Ql-Jrl" id="2LW-js-rOp"/>
+                        <outlet property="pointLabel" destination="7tp-K8-JNT" id="3Ee-3B-Epx"/>
                         <outlet property="price1" destination="NO4-fd-Iy8" id="VRD-sr-Q0m"/>
                         <outlet property="price2" destination="nec-Ya-iPd" id="qeQ-mq-9bn"/>
                         <outlet property="price3" destination="s0R-Rp-RH3" id="nGg-QP-PCX"/>
