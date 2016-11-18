@@ -202,7 +202,6 @@ class PointViewController: UIViewController {
     func selectLabel(label: UILabel) {
        let priceStr = label.text?.substringToIndex(label.text!.startIndex.advancedBy(3))
         selectedPoint = Int(priceStr!)!
-        print(selectedPoint)
     }
     
     

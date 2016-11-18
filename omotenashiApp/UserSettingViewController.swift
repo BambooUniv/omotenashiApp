@@ -111,7 +111,6 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         self.locationLabel.text = userInfo["nationality"]
         self.sexLabel.text = userInfo["sex"]
         let languages = userInfo["languages"]?.componentsSeparatedByString(",")
-        print(userInfo["languages"])
         if (languages?[0] != nil) {
             languageLabel1.text = languages![0]
         }
@@ -121,7 +120,6 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         
         let ud = NSUserDefaults.standardUserDefaults()
         let point = ud.objectForKey("point") as! Int
-        print(point)
         self.pointLabel.text = String(point)
  
     }

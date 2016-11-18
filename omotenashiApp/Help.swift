@@ -80,8 +80,11 @@ class Help {
     
     // 自分の現在位置から100m(distance)以内のお助けリクエストが存在するか確認する処理
     class func getHelpWithLocation(latitude: Double, longitude: Double, distance: Int) {
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        var helpInfo:Dictionary = userDefault.objectForKey("userInfo") as! Dictionary<String, AnyObject>
+        let sex = helpInfo["sex"] as! String
         
-        let params = ["latitude":String(latitude), "longitude":String(longitude), "distance":String(distance)]
+        let params = ["latitude":String(latitude), "longitude":String(longitude), "distance":String(distance), "sex": sex]
         let request = Http.createPostRequest(Const.apiHelpSearchUrl, params: params)
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let task = session.dataTaskWithRequest(request, completionHandler: {
@@ -175,14 +178,12 @@ class Help {
     
     class func isAccepted(id: String, completionHander:(String) -> Void) {
         var result = "false"
-        print(id)
         let params = ["id": id]
         let request = Http.createPostRequest(Const.apiHelpDidAcceptedUrl, params: params)
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let task = session.dataTaskWithRequest(request, completionHandler: {
             (data, resp, err) in
             let data = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
-            print(data)
             if (data == "true") {
                 dispatch_async(dispatch_get_main_queue(), {
                     result = "true"

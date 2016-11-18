@@ -34,7 +34,7 @@ class MyTabBarController :UITabBarController {
         self.tabBar.items![1].image = UIImage(named: "tabImageUser")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         self.tabBar.items![2].image = UIImage(named: "tabImageOmotenashi")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         
-        self
+        self.tabBar.items![2].enabled = false
        
     }
 }
