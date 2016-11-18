@@ -53,6 +53,14 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     self.language1TextField.inputView = language1PickerView
     self.language2TextField.inputView = language2PickerView
     
+    //未入力のときの文字を表示
+    self.nameTextField.placeholder = "Minamimoto Sho"
+    self.emailTextField.placeholder = "sample@gmail.com"
+    self.sexTextField.placeholder = "選択してください"
+    self.nationalityTextField.placeholder = "選択してください"
+    self.language1TextField.placeholder = "選択してください"
+    self.language2TextField.placeholder = "選択してください"
+    
     nameTextField.delegate = self
     emailTextField.delegate = self
     passwordTextField.delegate = self
@@ -86,19 +94,19 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                                                             name: UIKeyboardWillHideNotification,
                                                             object: nil)
     }
-    
-    func keyboardWillBeShown(notification: NSNotification) {
-        if let userInfo = notification.userInfo {
-            if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue, animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
-                restoreScrollViewSize()
-                
-                let convertedKeyboardFrame = scrollView.convertRect(keyboardFrame, fromView: nil)
-                let offsetY: CGFloat = CGRectGetMaxY(inputFormView.frame) - CGRectGetMinY(convertedKeyboardFrame)
-                if offsetY < 0 { return }
-                updateScrollViewSize(offsetY, duration: animationDuration)
+        
+        func keyboardWillBeShown(notification: NSNotification) {
+            if let userInfo = notification.userInfo {
+                if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue, animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
+                    restoreScrollViewSize()
+                    
+                    let convertedKeyboardFrame = scrollView.convertRect(keyboardFrame, fromView: nil)
+                    let offsetY: CGFloat = CGRectGetMaxY(inputFormView.frame) - CGRectGetMinY(convertedKeyboardFrame)
+                    if offsetY < 0 { return }
+                    updateScrollViewSize(offsetY, duration: animationDuration)
+                }
             }
         }
-    }
     
     func keyboardWillBeHidden(notification: NSNotification) {
             restoreScrollViewSize()
