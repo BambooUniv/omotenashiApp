@@ -22,7 +22,7 @@ class Help {
         ]
         
         userDefault.setObject(helpInfo, forKey: "helpInfo") // リクエスト関連情報の保存
-        userDefault.setObject(0, forKey: "point")
+        userDefault.setObject(300, forKey: "point")
         userDefault.synchronize()
     }
   

@@ -136,9 +136,6 @@ class PointViewController: UIViewController {
         buyLabel8.hidden = true
         
         let ud = NSUserDefaults.standardUserDefaults()
-        ud.setObject(800, forKey: "point")
-        ud.synchronize()
-        print(point)
         point = ud.objectForKey("point") as! Int
         self.pointLabel.text = String(point)
         
@@ -158,6 +155,9 @@ class PointViewController: UIViewController {
             
             self.point = self.point - self.selectedPoint
             self.pointLabel.text = String(self.point)
+            let ud = NSUserDefaults.standardUserDefaults()
+            ud.setObject(self.point, forKey: "point")
+            ud.synchronize()
             
             self.selectedLabel.hidden = false
             self.selectedButton.enabled = false

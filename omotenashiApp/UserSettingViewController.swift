@@ -120,7 +120,9 @@ class UserSettingViewController: UIViewController, UIImagePickerControllerDelega
         }
         
         let ud = NSUserDefaults.standardUserDefaults()
-        self.pointLabel.text = String(ud.objectForKey("point") as! Int)
+        let point = ud.objectForKey("point") as! Int
+        print(point)
+        self.pointLabel.text = String(point)
  
     }
     
