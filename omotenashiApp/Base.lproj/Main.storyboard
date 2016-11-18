@@ -198,13 +198,13 @@
                                 <rect key="frame" x="12" y="28" width="350" height="25"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="70" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tp-K8-JNT">
-                                <rect key="frame" x="49" y="80" width="276" height="153"/>
+                                <rect key="frame" x="49" y="47" width="276" height="153"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="103"/>
                                 <color key="textColor" red="0.61176470589999998" green="0.55294117649999996" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Er-gf-CJU">
-                                <rect key="frame" x="20" y="230" width="335" height="600"/>
+                                <rect key="frame" x="20" y="197" width="335" height="367"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tlP-o3-uy3">
                                         <rect key="frame" x="3" y="5" width="332" height="1000"/>
@@ -315,7 +315,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-X8-8Q2">
-                                                <rect key="frame" x="27" y="297" width="116" height="115"/>
+                                                <rect key="frame" x="27" y="297" width="116" height="116"/>
                                                 <connections>
                                                     <action selector="img5Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="Hep-1b-S2h"/>
                                                 </connections>
@@ -350,11 +350,51 @@
                                     </view>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNr-S7-prA">
+                                <rect key="frame" x="194" y="594" width="131" height="53"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal" title="サインアウト">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.43031159050000001" green="0.57958102410000001" blue="0.69858475129999997" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
+                                        <color key="value" red="0.3780831711" green="0.65172659349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightedBackgroundColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pushBuy:" destination="zo7-eb-P6e" eventType="touchUpInside" id="nd0-nU-5bA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEX-f8-Nhe">
+                                <rect key="frame" x="36" y="594" width="131" height="53"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
+                                <state key="normal" title="設定変更">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.43031159050000001" green="0.57958102410000001" blue="0.69858475129999997" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
+                                        <color key="value" red="0.3780831711" green="0.65172659349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="nonHighlightedBackgroundColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="OoA-y2-uNk" kind="show" id="EaQ-5l-GnZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="buyButton" destination="YNr-S7-prA" id="Xxm-zk-dqE"/>
+                        <outlet property="cancelButton" destination="IEX-f8-Nhe" id="e3c-Nh-Ost"/>
                         <outlet property="img1" destination="RcY-pf-zAL" id="Nyf-E6-8dK"/>
                         <outlet property="img2" destination="P7x-6X-KYL" id="xmT-N4-Uez"/>
                         <outlet property="img3" destination="fKx-VB-ImI" id="FNv-tr-Ewx"/>
@@ -724,4 +764,7 @@
         <image name="toilet" width="256" height="352"/>
         <image name="user" width="152" height="88"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EaQ-5l-GnZ"/>
+    </inferredMetricsTieBreakers>
 </document>

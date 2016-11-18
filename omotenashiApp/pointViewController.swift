@@ -13,6 +13,8 @@ class PointViewController: UIViewController {
     
     @IBOutlet weak var pointLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var buyButton: UIButton!
     
     @IBOutlet weak var img1: UIImageView!
     @IBOutlet weak var img2: UIImageView!
@@ -73,6 +75,11 @@ class PointViewController: UIViewController {
         print(point)
         point = ud.objectForKey("point") as! Int
         self.pointLabel.text = String(point)
+        
+        cancelButton.backgroundColor = UIColor(red: CGFloat(156)/255.0, green: CGFloat(141)/255.0, blue: CGFloat(42)/255.0, alpha: 1.0)
+        cancelButton.layer.cornerRadius = 7
+        buyButton.backgroundColor = UIColor(red: CGFloat(156)/255.0, green: CGFloat(141)/255.0, blue: CGFloat(42)/255.0, alpha: 1.0)
+        buyButton.layer.cornerRadius = 7
     }
     
     
@@ -102,6 +109,9 @@ class PointViewController: UIViewController {
         // ④ Alertを表示
         presentViewController(alert, animated: true, completion: nil)
 
+    }
+    
+    @IBAction func pushBuy(sender: AnyObject) {
     }
     
     
