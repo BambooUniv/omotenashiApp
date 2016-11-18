@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -219,7 +219,7 @@
                                                 <rect key="frame" x="23" y="603" width="160" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNr-Me-ZNQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
+                                                        <rect key="frame" x="0.0" y="-1" width="160" height="50"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
                                                         <state key="normal" title="キャンセル">
                                                             <color key="titleColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -258,6 +258,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cancelUIButton" destination="HNr-Me-ZNQ" id="tQT-mM-6Nu"/>
+                        <outlet property="cancelView" destination="daI-zs-ivi" id="58X-hl-bMR"/>
                         <outlet property="emailTextField" destination="OlB-4Z-n4M" id="QtH-FH-60r"/>
                         <outlet property="inputFormView" destination="NeA-cN-hCV" id="gRa-ay-tQE"/>
                         <outlet property="language1TextField" destination="Ili-rR-F1O" id="XTX-iF-Vfk"/>
@@ -265,6 +266,7 @@
                         <outlet property="nameTextField" destination="zjt-PZ-kjZ" id="xQz-r9-r31"/>
                         <outlet property="nationalityTextField" destination="NTP-lf-aXG" id="8FF-ID-m7d"/>
                         <outlet property="passwordTextField" destination="weR-Gg-5mQ" id="c6L-iL-2rs"/>
+                        <outlet property="registrationView" destination="EcH-O4-1tA" id="jGe-Pa-7c8"/>
                         <outlet property="scrollView" destination="CcP-iV-NI9" id="Z1h-tx-OB8"/>
                         <outlet property="sexTextField" destination="rTC-vu-wLf" id="6Cc-ky-AbZ"/>
                     </connections>
