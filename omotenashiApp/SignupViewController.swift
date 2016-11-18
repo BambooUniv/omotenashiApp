@@ -8,8 +8,10 @@ import UIKit
 import QuartzCore
 
 class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate,UITextFieldDelegate {
+    @IBOutlet weak var cancelView: UIView!
   
     @IBOutlet weak var inputFormView: UIView!
+    @IBOutlet weak var registrationView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var cancelUIButton: UIButton!
   @IBOutlet weak var nameTextField: CustomUITextField!
@@ -23,11 +25,16 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
   var sexPickOption = ["男性", "女性"]
   var nationalityPickOption = ["日本", "アメリカ", "イギリス", "中国", "韓国", "ケニア"]
   var languagePickOption = ["日本語", "英語", "中国語", "韓国語", "タイ語", "アラビア語"]
+    var closeToolBar: UIToolbar!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
+    
+    cancelView.layer.cornerRadius = 4.0  //丸角の半径
+    registrationView.layer.cornerRadius = 4.0
+    
     
     // UIViewPickerの生成
     let sexPickerView = UIPickerView()
@@ -165,7 +172,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         if (isSignup == true) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateInitialViewController()! as UIViewController
-            self.presentViewController(viewController, animated: true, completion: nil)
+            self.presentViewController(viewController, animated: false, completion: nil)
         }
     })
   }

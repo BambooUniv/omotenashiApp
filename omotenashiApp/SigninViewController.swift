@@ -129,13 +129,17 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     let emailStr = self.emailTextField.text!
     let passwordStr = self.passwordTextField.text!
     
-    // サインイン処理
-    Authentication.signin(emailStr, password: passwordStr, completionHandler: {(isSignin: Bool)->Void in
-        if (isSignin == true) {
-          let storyboard = UIStoryboard(name: "Main", bundle: nil)
-          let viewController = storyboard.instantiateInitialViewController()! as UIViewController
-          self.presentViewController(viewController, animated: true, completion: nil)
-        }
-    })
+    if (Double(emailStr) != nil && Double(passwordStr) != nil) {
+        // サインイン処理
+        Authentication.signin(emailStr, password: passwordStr, completionHandler: {(isSignin: Bool)->Void in
+            if (isSignin == true) {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyboard.instantiateInitialViewController()! as UIViewController
+                self.presentViewController(viewController, animated: true, completion: nil)
+            }
+        })
+    }
+    
+
   }
 }
