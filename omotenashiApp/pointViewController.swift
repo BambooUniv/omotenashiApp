@@ -44,58 +44,96 @@ class PointViewController: UIViewController {
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
     
+    @IBOutlet weak var buyLabel1: UILabel!
+    @IBOutlet weak var buyLabel2: UILabel!
+    @IBOutlet weak var buyLabel3: UILabel!
+    @IBOutlet weak var buyLabel4: UILabel!
+    @IBOutlet weak var buyLabel5: UILabel!
+    @IBOutlet weak var buyLabel6: UILabel!
+    @IBOutlet weak var buyLabel7: UILabel!
+    @IBOutlet weak var buyLabel8: UILabel!
+    
     var point :Int = 0
     var selectedPoint :Int = 0
+    var selectedLabel :UILabel = UILabel()
+    var selectedButton :UIButton = UIButton()
     
     
     @IBAction func img1Button(sender: AnyObject) {
         var button :UIButton = sender as! UIButton
         tapButton(button)
+        selectedLabel = buyLabel1
+        selectedButton = button
         selectLabel(price1)
     }
 
     @IBAction func img2Button(sender: AnyObject) {
         var button :UIButton = sender as! UIButton
         tapButton(button)
+        selectedButton = button
+        selectedLabel = buyLabel2
         selectLabel(price2)
     }
     
     @IBAction func img3Button(sender: AnyObject) {
         var button :UIButton = sender as! UIButton
         tapButton(button)
+        selectedButton = button
+        selectedLabel = buyLabel3
         selectLabel(price3)
     }
     
     @IBAction func img4Button(sender: AnyObject) {
         var button :UIButton = sender as! UIButton
         tapButton(button)
+        selectedButton = button
+        selectedLabel = buyLabel4
         selectLabel(price4)
     }
     @IBAction func img5Button(sender: AnyObject) {
         var button :UIButton = sender as! UIButton
         tapButton(button)
+        selectedButton = button
+        selectedLabel = buyLabel5
         selectLabel(price5)
     }
     @IBAction func img6Button(sender: AnyObject) {
         var button :UIButton = sender as! UIButton
         tapButton(button)
+        selectedButton = button
+        selectedLabel = buyLabel6
         selectLabel(price6)
     }
     @IBAction func img7Button(sender: AnyObject) {
         var button :UIButton = sender as! UIButton
         tapButton(button)
+        selectedButton = button
+        selectedLabel = buyLabel7
         selectLabel(price7)
     }
     @IBAction func img8Button(sender: AnyObject) {
         var button :UIButton = sender as! UIButton
         tapButton(button)
+        selectedLabel = buyLabel8
+        
+        selectedButton = button
         selectLabel(price8
         )
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize = CGSize(width: 300, height: 1000)
+        scrollView.contentSize = CGSize(width: 300, height: 560)
+        
+        // 購入済みラベル非表示
+        buyLabel1.hidden = true
+        buyLabel2.hidden = true
+        buyLabel3.hidden = true
+        buyLabel4.hidden = true
+        buyLabel5.hidden = true
+        buyLabel6.hidden = true
+        buyLabel7.hidden = true
+        buyLabel8.hidden = true
         
         let ud = NSUserDefaults.standardUserDefaults()
         ud.setObject(800, forKey: "point")
@@ -120,6 +158,10 @@ class PointViewController: UIViewController {
             
             self.point = self.point - self.selectedPoint
             self.pointLabel.text = String(self.point)
+            
+            self.selectedLabel.hidden = false
+            self.selectedButton.enabled = false
+            self.selectedButton.layer.borderWidth = 0
         })
         
         // キャンセルボタン
