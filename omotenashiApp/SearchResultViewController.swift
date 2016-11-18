@@ -166,7 +166,33 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
     
     
     func initImageView() {
-        let activeHelpInfo = Help.getActiveHelpInfo()
+        let ud = NSUserDefaults.standardUserDefaults()
+        let helpInfo = ud.objectForKey("confirmedInfo") as! Dictionary <String,String>
+        
+        self.nameLabel.text = helpInfo["name"]
+        let nationality = helpInfo["nationality"]!
+        let content = helpInfo["content"]!
+        
+        if (content == "location") {
+            self.contentImageView.image = UIImage(named: "helpme_p")
+        } else if (content == "toilet") {
+            self.contentImageView.image = UIImage(named: "helpme_t")
+        } else if (content == "sick") {
+            self.contentImageView.image = UIImage(named: "helpme_s")
+        } else if (content == "meal") {
+            self.contentImageView.image = UIImage(named: "helpme_m")
+        }
+        
+        if (nationality == "日本") {
+            self.nationalImageView.image = UIImage(named: "national_japan")
+        } else if (nationality == "アメリカ") {
+            self.nationalImageView.image = UIImage(named: "national_america")
+        } else if (nationality == "フランス") {
+            self.nationalImageView.image = UIImage(named: "national_france")
+        } else if (nationality == "中国") {
+            self.nationalImageView.image = UIImage(named: "national_china")
+        }
+            
         
         
     }
