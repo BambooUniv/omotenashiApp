@@ -221,28 +221,28 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tlP-o3-uy3">
                                         <rect key="frame" x="1" y="2" width="332" height="700"/>
                                         <subviews>
-                                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="RcY-pf-zAL">
+                                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point_t" translatesAutoresizingMaskIntoConstraints="NO" id="RcY-pf-zAL">
                                                 <rect key="frame" x="34" y="0.0" width="118" height="118"/>
                                             </imageView>
-                                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="P7x-6X-KYL">
+                                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point_sh1" translatesAutoresizingMaskIntoConstraints="NO" id="P7x-6X-KYL">
                                                 <rect key="frame" x="181" y="0.0" width="118" height="118"/>
                                             </imageView>
-                                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="fKx-VB-ImI">
+                                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point_tt" translatesAutoresizingMaskIntoConstraints="NO" id="fKx-VB-ImI">
                                                 <rect key="frame" x="34" y="147" width="118" height="118"/>
                                             </imageView>
-                                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="2fu-3I-jo5">
+                                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point_r" translatesAutoresizingMaskIntoConstraints="NO" id="2fu-3I-jo5">
                                                 <rect key="frame" x="179" y="147" width="118" height="118"/>
                                             </imageView>
-                                            <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="OCS-lM-oBx">
+                                            <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point_bt" translatesAutoresizingMaskIntoConstraints="NO" id="OCS-lM-oBx">
                                                 <rect key="frame" x="34" y="291" width="118" height="118"/>
                                             </imageView>
-                                            <imageView tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="mxI-bL-yqO">
+                                            <imageView tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point_bs" translatesAutoresizingMaskIntoConstraints="NO" id="mxI-bL-yqO">
                                                 <rect key="frame" x="179" y="291" width="118" height="118"/>
                                             </imageView>
-                                            <imageView tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="4Qw-4O-bFc">
+                                            <imageView tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point_sb" translatesAutoresizingMaskIntoConstraints="NO" id="4Qw-4O-bFc">
                                                 <rect key="frame" x="181" y="437" width="118" height="118"/>
                                             </imageView>
-                                            <imageView tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="lLp-Ql-Jrl">
+                                            <imageView tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="point_sh2" translatesAutoresizingMaskIntoConstraints="NO" id="lLp-Ql-Jrl">
                                                 <rect key="frame" x="34" y="437" width="118" height="118"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO4-fd-Iy8">
@@ -356,14 +356,6 @@
                                                     <action selector="img8Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="32N-JG-HAg"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-CI-ro6">
-                                                <rect key="frame" x="34" y="0.0" width="118" height="118"/>
-                                                <color key="backgroundColor" red="0.41693509615384616" green="0.41693509615384616" blue="0.41693509615384616" alpha="0.6836363636363636" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <size key="shadowOffset" width="0.0" height="-2"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbf-m6-v98">
                                                 <rect key="frame" x="181" y="0.0" width="118" height="118"/>
                                                 <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
@@ -415,6 +407,14 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-iA-UOK">
                                                 <rect key="frame" x="180" y="438" width="118" height="118"/>
                                                 <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-CI-ro6">
+                                                <rect key="frame" x="34" y="0.0" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509615384616" green="0.41693509615384616" blue="0.41693509615384616" alpha="0.6836363636363636" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -905,7 +905,14 @@
         <image name="national_france" width="106" height="140"/>
         <image name="person" width="295" height="295"/>
         <image name="place" width="256" height="352"/>
-        <image name="rayu" width="400" height="400"/>
+        <image name="point_bs" width="530" height="530"/>
+        <image name="point_bt" width="181" height="180"/>
+        <image name="point_r" width="789" height="789"/>
+        <image name="point_sb" width="154" height="154"/>
+        <image name="point_sh1" width="147" height="146"/>
+        <image name="point_sh2" width="147" height="146"/>
+        <image name="point_t" width="182" height="179"/>
+        <image name="point_tt" width="155" height="155"/>
         <image name="sick" width="256" height="352"/>
         <image name="thumbnail" width="295" height="295"/>
         <image name="toilet" width="256" height="352"/>
