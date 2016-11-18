@@ -86,19 +86,19 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                                                             name: UIKeyboardWillHideNotification,
                                                             object: nil)
     }
-    
-    func keyboardWillBeShown(notification: NSNotification) {
-        if let userInfo = notification.userInfo {
-            if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue, animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
-                restoreScrollViewSize()
-                
-                let convertedKeyboardFrame = scrollView.convertRect(keyboardFrame, fromView: nil)
-                let offsetY: CGFloat = CGRectGetMaxY(inputFormView.frame) - CGRectGetMinY(convertedKeyboardFrame)
-                if offsetY < 0 { return }
-                updateScrollViewSize(offsetY, duration: animationDuration)
+        
+        func keyboardWillBeShown(notification: NSNotification) {
+            if let userInfo = notification.userInfo {
+                if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue, animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
+                    restoreScrollViewSize()
+                    
+                    let convertedKeyboardFrame = scrollView.convertRect(keyboardFrame, fromView: nil)
+                    let offsetY: CGFloat = CGRectGetMaxY(inputFormView.frame) - CGRectGetMinY(convertedKeyboardFrame)
+                    if offsetY < 0 { return }
+                    updateScrollViewSize(offsetY, duration: animationDuration)
+                }
             }
         }
-    }
     
     func keyboardWillBeHidden(notification: NSNotification) {
             restoreScrollViewSize()
