@@ -88,10 +88,39 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func keyboardWillBeShown(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            if let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue, animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey]?.doubleValue {
+                restoreScrollViewSize()
+                
+                let convertedKeyboardFrame = scrollView.convertRect(keyboardFrame, fromView: nil)
+                let offsetY: CGFloat = CGRectGetMaxY(inputFormView.frame) - CGRectGetMinY(convertedKeyboardFrame)
+                if offsetY < 0 { return }
+                updateScrollViewSize(offsetY, duration: animationDuration)
+            }
+        }
     }
     
     func keyboardWillBeHidden(notification: NSNotification) {
+            restoreScrollViewSize()
     }
+    
+    func updateScrollViewSize(moveSize: CGFloat, duration: NSTimeInterval) {
+        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+        UIView.setAnimationDuration(duration)
+        
+        let contentInsets = UIEdgeInsetsMake(0, 0, moveSize, 0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+        scrollView.contentOffset = CGPointMake(0, moveSize)
+        
+        UIView.commitAnimations()
+    }
+
+    func restoreScrollViewSize() {
+        scrollView.contentInset = UIEdgeInsetsZero
+        scrollView.scrollIndicatorInsets = UIEdgeInsetsZero
+    }
+    
     
     // MARK: - UITextFieldDelegate
     
