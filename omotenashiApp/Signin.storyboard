@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -56,7 +56,7 @@
                                                             <color key="titleColor" red="0.57647058819999997" green="0.51372549020000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="fgV-YG-iVQ" kind="show" id="ExF-tz-kod"/>
+                                                            <segue destination="fgV-YG-iVQ" kind="show" animates="NO" id="ExF-tz-kod"/>
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5IG-vo-RiJ">
@@ -112,143 +112,142 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CcP-iV-NI9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-0T-vCa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザ登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-GF-YoE">
+                                <rect key="frame" x="137" y="23" width="100" height="35"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Ybh-zz-AcV">
+                                <rect key="frame" x="12" y="28" width="350" height="25"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CcP-iV-NI9">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4jk-5X-Uoi">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="610"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-0T-vCa">
-                                                <rect key="frame" x="0.0" y="1" width="375" height="667"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザ登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdU-GF-YoE">
-                                                <rect key="frame" x="137" y="22" width="100" height="35"/>
-                                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-cN-hCV">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKn-nZ-j4z">
-                                                        <rect key="frame" x="27" y="58" width="321" height="35"/>
-                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
-                                                        <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weR-Gg-5mQ" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="234" width="335" height="37"/>
-                                                        <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-BM-Ixb">
-                                                        <rect key="frame" x="27" y="201" width="321" height="35"/>
-                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
-                                                        <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyR-Ke-lRB">
-                                                        <rect key="frame" x="27" y="125" width="321" height="35"/>
+                                                        <rect key="frame" x="27" y="7" width="321" height="35"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
                                                         <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTC-vu-wLf" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="312" width="335" height="37"/>
+                                                        <rect key="frame" x="20" y="274" width="335" height="37"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性別" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQB-W3-lQ1">
-                                                        <rect key="frame" x="27" y="274" width="321" height="35"/>
-                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
-                                                        <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTP-lf-aXG" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="384" width="335" height="37"/>
+                                                        <rect key="frame" x="20" y="351" width="335" height="37"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出身国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMi-2v-Bfn">
-                                                        <rect key="frame" x="27" y="350" width="321" height="35"/>
+                                                        <rect key="frame" x="27" y="317" width="321" height="35"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
                                                         <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ili-rR-F1O" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="459" width="335" height="37"/>
+                                                        <rect key="frame" x="20" y="431" width="335" height="37"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="話せる言語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lu-2q-rnB">
-                                                        <rect key="frame" x="27" y="423" width="321" height="35"/>
+                                                        <rect key="frame" x="27" y="395" width="321" height="35"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
                                                         <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OlB-4Z-n4M" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="158" width="335" height="37"/>
-                                                        <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjt-PZ-kjZ" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="90" width="335" height="37"/>
+                                                        <rect key="frame" x="20" y="39" width="335" height="37"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5X3-vo-4xE" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="506" width="335" height="37"/>
+                                                        <rect key="frame" x="20" y="478" width="335" height="37"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Ybh-zz-AcV">
-                                                        <rect key="frame" x="12" y="28" width="350" height="25"/>
-                                                    </imageView>
+                                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weR-Gg-5mQ" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="192" width="335" height="37"/>
+                                                        <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-BM-Ixb">
+                                                        <rect key="frame" x="27" y="159" width="321" height="35"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                        <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyR-Ke-lRB">
+                                                        <rect key="frame" x="27" y="81" width="321" height="35"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                        <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="性別" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQB-W3-lQ1">
+                                                        <rect key="frame" x="27" y="238" width="321" height="35"/>
+                                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="18"/>
+                                                        <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OlB-4Z-n4M" customClass="CustomUITextField" customModule="omotenashiApp" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="114" width="335" height="37"/>
+                                                        <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                 </subviews>
                                             </view>
-                                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daI-zs-ivi">
-                                                <rect key="frame" x="23" y="603" width="160" height="50"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daI-zs-ivi">
+                                                <rect key="frame" x="20" y="538" width="160" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNr-Me-ZNQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
+                                                        <rect key="frame" x="0.0" y="-1" width="160" height="50"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
                                                         <state key="normal" title="キャンセル">
-                                                            <color key="titleColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="cancelButton:" destination="fgV-YG-iVQ" eventType="touchUpInside" id="do2-xC-pM2"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.89019607840000003" green="0.72941176470000002" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.50196078431372548" green="0.44313725490196076" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EcH-O4-1tA">
-                                                <rect key="frame" x="198" y="603" width="160" height="50"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EcH-O4-1tA">
+                                                <rect key="frame" x="195" y="538" width="160" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sj-Qf-Akf">
                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
                                                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="18"/>
                                                         <state key="normal" title="登録">
-                                                            <color key="titleColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="signupButton:" destination="fgV-YG-iVQ" eventType="touchUpInside" id="32Z-qU-0vN"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.89019607840000003" green="0.72941176470000002" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.50196078430000002" green="0.4431372549" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                             </scrollView>
@@ -258,6 +257,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cancelUIButton" destination="HNr-Me-ZNQ" id="tQT-mM-6Nu"/>
+                        <outlet property="cancelView" destination="daI-zs-ivi" id="58X-hl-bMR"/>
                         <outlet property="emailTextField" destination="OlB-4Z-n4M" id="QtH-FH-60r"/>
                         <outlet property="inputFormView" destination="NeA-cN-hCV" id="gRa-ay-tQE"/>
                         <outlet property="language1TextField" destination="Ili-rR-F1O" id="XTX-iF-Vfk"/>
@@ -265,6 +265,7 @@
                         <outlet property="nameTextField" destination="zjt-PZ-kjZ" id="xQz-r9-r31"/>
                         <outlet property="nationalityTextField" destination="NTP-lf-aXG" id="8FF-ID-m7d"/>
                         <outlet property="passwordTextField" destination="weR-Gg-5mQ" id="c6L-iL-2rs"/>
+                        <outlet property="registrationView" destination="EcH-O4-1tA" id="jGe-Pa-7c8"/>
                         <outlet property="scrollView" destination="CcP-iV-NI9" id="Z1h-tx-OB8"/>
                         <outlet property="sexTextField" destination="rTC-vu-wLf" id="6Cc-ky-AbZ"/>
                     </connections>
