@@ -53,6 +53,14 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     self.language1TextField.inputView = language1PickerView
     self.language2TextField.inputView = language2PickerView
     
+    //未入力のときの文字を表示
+    self.nameTextField.placeholder = "Minamimoto Sho"
+    self.emailTextField.placeholder = "sample@gmail.com"
+    self.sexTextField.placeholder = "選択してください"
+    self.nationalityTextField.placeholder = "選択してください"
+    self.language1TextField.placeholder = "選択してください"
+    self.language2TextField.placeholder = "選択してください"
+    
     nameTextField.delegate = self
     emailTextField.delegate = self
     passwordTextField.delegate = self
