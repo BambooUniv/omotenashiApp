@@ -21,7 +21,14 @@ class MyTabBarController :UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.barTintColor = UIColor.rgb(233, g: 203, b: 115, alpha: 1)
+        
         let colorKey = UIColor(red: 156/255, green: 140/255, blue: 42/255, alpha: 1.0)
+        // fontの設定
+        let fontFamily: UIFont! = UIFont.systemFontOfSize(10)
+        // 選択時の設定
+        let selectedAttributes = [NSFontAttributeName: fontFamily, NSForegroundColorAttributeName: colorKey]
+        /// タイトルテキストカラーの設定
+        UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, forState: UIControlState.Selected)
         
         self.tabBar.items![0].image = UIImage(named: "tabImageHelp")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         self.tabBar.items![1].image = UIImage(named: "tabImageUser")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
