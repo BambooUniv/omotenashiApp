@@ -201,8 +201,9 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         Help.isAccepted(helpInfo["id"]!, completionHander: {(reuslt: String) -> Void in
             if (reuslt == "true") {
                 var point = ud.objectForKey("point")
-                point = (point! as! Int) + 10
+                point = (point! as! Int) + 100
                 ud.setObject(point, forKey: "point")
+                ud.synchronize()
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = storyboard.instantiateViewControllerWithIdentifier("Master") as! MainViewController
