@@ -207,7 +207,7 @@
                                 <rect key="frame" x="20" y="197" width="335" height="367"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tlP-o3-uy3">
-                                        <rect key="frame" x="1" y="0.0" width="332" height="700"/>
+                                        <rect key="frame" x="1" y="2" width="332" height="700"/>
                                         <subviews>
                                             <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rayu" translatesAutoresizingMaskIntoConstraints="NO" id="RcY-pf-zAL">
                                                 <rect key="frame" x="34" y="0.0" width="118" height="118"/>
@@ -344,6 +344,70 @@
                                                     <action selector="img8Button:" destination="zo7-eb-P6e" eventType="touchUpInside" id="32N-JG-HAg"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-CI-ro6">
+                                                <rect key="frame" x="34" y="0.0" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509615384616" green="0.41693509615384616" blue="0.41693509615384616" alpha="0.6836363636363636" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbf-m6-v98">
+                                                <rect key="frame" x="181" y="0.0" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ8-0Y-zQf">
+                                                <rect key="frame" x="34" y="147" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE2-sy-AVG">
+                                                <rect key="frame" x="179" y="147" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krd-KK-C9C">
+                                                <rect key="frame" x="34" y="291" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gd-HO-p5K">
+                                                <rect key="frame" x="179" y="291" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFg-wb-b6x">
+                                                <rect key="frame" x="35" y="438" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交換済み" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-iA-UOK">
+                                                <rect key="frame" x="180" y="438" width="118" height="118"/>
+                                                <color key="backgroundColor" red="0.41693509620000002" green="0.41693509620000002" blue="0.41693509620000002" alpha="0.68363636360000002" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="-2"/>
+                                            </label>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -401,6 +465,14 @@
                         <outlet property="button8" destination="ZwS-fm-RjN" id="mXt-Q4-O6s"/>
                         <outlet property="button9" destination="JmZ-dS-A8b" id="b4l-jl-3Io"/>
                         <outlet property="buyButton" destination="YNr-S7-prA" id="Xxm-zk-dqE"/>
+                        <outlet property="buyLabel1" destination="qmn-CI-ro6" id="9lG-OE-gEb"/>
+                        <outlet property="buyLabel2" destination="dbf-m6-v98" id="4wS-YV-ZWz"/>
+                        <outlet property="buyLabel3" destination="DZ8-0Y-zQf" id="jjD-Lb-hSg"/>
+                        <outlet property="buyLabel4" destination="hE2-sy-AVG" id="dd7-lf-tTy"/>
+                        <outlet property="buyLabel5" destination="krd-KK-C9C" id="dHB-0L-8hG"/>
+                        <outlet property="buyLabel6" destination="1Gd-HO-p5K" id="1Za-d3-EdJ"/>
+                        <outlet property="buyLabel7" destination="ZFg-wb-b6x" id="jZl-sT-iCW"/>
+                        <outlet property="buyLabel8" destination="KfO-iA-UOK" id="yNF-5e-5YE"/>
                         <outlet property="cancelButton" destination="IEX-f8-Nhe" id="e3c-Nh-Ost"/>
                         <outlet property="img1" destination="RcY-pf-zAL" id="Nyf-E6-8dK"/>
                         <outlet property="img2" destination="P7x-6X-KYL" id="xmT-N4-Uez"/>
