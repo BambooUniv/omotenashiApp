@@ -21,10 +21,13 @@ class MyTabBarController :UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.barTintColor = UIColor.rgb(233, g: 203, b: 115, alpha: 1)
+        let colorKey = UIColor(red: 156/255, green: 140/255, blue: 42/255, alpha: 1.0)
         
         self.tabBar.items![0].image = UIImage(named: "tabImageHelp")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         self.tabBar.items![1].image = UIImage(named: "tabImageUser")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
         self.tabBar.items![2].image = UIImage(named: "tabImageOmotenashi")!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+        
+        self
        
     }
 }
