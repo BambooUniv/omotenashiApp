@@ -206,7 +206,7 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
                 ud.synchronize()
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let viewController = storyboard.instantiateViewControllerWithIdentifier("Master") as! MainViewController
+                let viewController = storyboard.instantiateViewControllerWithIdentifier("point") as! UserSettingViewController
                 self.presentViewController(viewController, animated: true, completion: nil)
                 
             }

@@ -8,7 +8,7 @@
         <!--ユーザー-->
         <scene sceneID="aKg-Vk-XbL">
             <objects>
-                <viewController id="OoA-y2-uNk" customClass="UserSettingViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="point" id="OoA-y2-uNk" customClass="UserSettingViewController" customModule="omotenashiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u5L-wd-T7K"/>
                         <viewControllerLayoutGuide type="bottom" id="0k7-ji-3c9"/>
