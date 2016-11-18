@@ -100,6 +100,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     let storyboard: UIStoryboard = self.storyboard!
     let nextView = storyboard.instantiateViewControllerWithIdentifier("Search") as! SearchViewController
     self.presentViewController(nextView, animated: true, completion: nil)
+    
   }
   
   
