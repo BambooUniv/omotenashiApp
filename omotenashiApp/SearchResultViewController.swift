@@ -97,8 +97,6 @@ class SearchResultViewController: UIViewController, CLLocationManagerDelegate{
         //角度を表示
         print(newHeading.trueHeading)
         
-        self.directionDisplay.text = "".stringByAppendingFormat("%.2f", newHeading.trueHeading)
-        
         //角度をラジアンに変換して回転
         distanceCircleRotation.transform = CGAffineTransformMakeRotation( CGFloat(-newHeading.trueHeading * M_PI/180))
         
