@@ -172,7 +172,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         if (isSignup == true) {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateInitialViewController()! as UIViewController
-            self.presentViewController(viewController, animated: true, completion: nil)
+            self.presentViewController(viewController, animated: false, completion: nil)
         }
     })
   }
