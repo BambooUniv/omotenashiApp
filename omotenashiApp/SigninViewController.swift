@@ -56,7 +56,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     emailTextField.delegate = self
     passwordTextField.delegate = self
     
+    
+    
+
+    
   }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

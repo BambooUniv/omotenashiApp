@@ -78,8 +78,27 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     nationalityTextField.delegate = self
     language1TextField.delegate = self
     language2TextField.delegate = self
+    
+    var accessoryView :UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 40))
+    accessoryView.backgroundColor = UIColor.lightGrayColor()
+    var button :UIButton = UIButton(frame: CGRectMake(self.view.frame.size.width-100, 10, 100, 20))
+    button.addTarget(self, action: "close", forControlEvents: .TouchUpInside)
+    button.setTitle("閉じる", forState: UIControlState.Normal)
+    button.titleLabel?.textColor = UIColor.blackColor()
+    accessoryView.addSubview(button)
+    language1TextField.inputAccessoryView = accessoryView
+    language2TextField.inputAccessoryView = accessoryView
+    nationalityTextField.inputAccessoryView = accessoryView
+    sexTextField.inputAccessoryView = accessoryView
 
   }
+    
+    func close() {
+        sexTextField.resignFirstResponder()
+        language1TextField.resignFirstResponder()
+        language2TextField.resignFirstResponder()
+        nationalityTextField.resignFirstResponder()
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
