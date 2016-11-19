@@ -62,7 +62,6 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     self.language1TextField.inputView = language1PickerView
     self.language2TextField.inputView = language2PickerView
     
-    self.nationalityTextField.touchesBegan(<#T##touches: Set<UITouch>##Set<UITouch>#>, withEvent: <#T##UIEvent?#>)
     
     //未入力のときの文字を表示
     self.nameTextField.placeholder = "Minamimoto Sho"
@@ -116,6 +115,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                         let offsetY: CGFloat = CGRectGetMaxY(inputFormView.frame) - CGRectGetMinY(convertedKeyboardFrame)
                         if offsetY < 0 { return }
                         updateScrollViewSize(offsetY, duration: animationDuration)
+                        isUp = 0
                     }
                 }
             }
@@ -230,6 +230,9 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
   }
   
+    @IBAction func sexButtonPusy(sender: AnyObject) {
+        isUp = 1
+    }
   
   
   /*

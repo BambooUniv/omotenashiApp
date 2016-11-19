@@ -83,8 +83,9 @@ class Help {
         let userDefault = NSUserDefaults.standardUserDefaults()
         var helpInfo:Dictionary = userDefault.objectForKey("userInfo") as! Dictionary<String, AnyObject>
         let sex = helpInfo["sex"] as! String
+        let languages = helpInfo["languages"] as! String
         
-        let params = ["latitude":String(latitude), "longitude":String(longitude), "distance":String(distance), "sex": sex]
+        let params = ["latitude":String(latitude), "longitude":String(longitude), "distance":String(distance), "sex": sex, "languages":languages]
         let request = Http.createPostRequest(Const.apiHelpSearchUrl, params: params)
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let task = session.dataTaskWithRequest(request, completionHandler: {
